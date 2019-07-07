@@ -190,422 +190,20 @@ img {
 /* Forms
 	 ========================================================================== */
 
-/**
- * 1. Change the font styles in all browsers.
- * 2. Remove the margin in Firefox and Safari.
- */
-
-button,
-input,
-optgroup,
-select,
-textarea {
-	font-family: inherit; /* 1 */
-	font-size: 100%; /* 1 */
-	line-height: 1.15; /* 1 */
-	margin: 0; /* 2 */
-}
-
-/**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
- */
-
-button,
-input { /* 1 */
-	overflow: visible;
-}
-
-/**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
- */
-
-button,
-select { /* 1 */
-	text-transform: none;
-}
-
-/**
- * Correct the inability to style clickable types in iOS and Safari.
- */
-
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-	-webkit-appearance: button;
-}
-
-/**
- * Remove the inner border and padding in Firefox.
- */
-
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-	border-style: none;
-	padding: 0;
-}
-
-/**
- * Restore the focus styles unset by the previous rule.
- */
-
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-	outline: 1px dotted ButtonText;
-}
-
-/**
- * Correct the padding in Firefox.
- */
-
-fieldset {
-	padding: 0.35em 0.75em 0.625em;
-}
-
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *		`fieldset` elements in all browsers.
- */
-
-legend {
-	box-sizing: border-box; /* 1 */
-	color: inherit; /* 2 */
-	display: table; /* 1 */
-	max-width: 100%; /* 1 */
-	padding: 0; /* 3 */
-	white-space: normal; /* 1 */
-}
-
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
-
-progress {
-	vertical-align: baseline;
-}
-
-/**
- * Remove the default vertical scrollbar in IE 10+.
- */
-
-textarea {
-	overflow: auto;
-}
-
-/**
- * 1. Add the correct box sizing in IE 10.
- * 2. Remove the padding in IE 10.
- */
-
-[type="checkbox"],
-[type="radio"] {
-	box-sizing: border-box; /* 1 */
-	padding: 0; /* 2 */
-}
-
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
-
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-	height: auto;
-}
-
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
-
-[type="search"] {
-	-webkit-appearance: textfield; /* 1 */
-	outline-offset: -2px; /* 2 */
-}
-
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
-
-[type="search"]::-webkit-search-decoration {
-	-webkit-appearance: none;
-}
-
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
-
-::-webkit-file-upload-button {
-	-webkit-appearance: button; /* 1 */
-	font: inherit; /* 2 */
-}
-
-/* Interactive
-	 ========================================================================== */
-
-/*
- * Add the correct display in Edge, IE 10+, and Firefox.
- */
-
-details {
-	display: block;
-}
-
-/*
- * Add the correct display in all browsers.
- */
-
-summary {
-	display: list-item;
-}
-
-/* Misc
-	 ========================================================================== */
-
-/**
- * Add the correct display in IE 10+.
- */
-
-template {
-	display: none;
-}
-
-/**
- * Add the correct display in IE 10.
- */
-
-[hidden] {
-	display: none;
-}
 
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-body,
-button,
-input,
-select,
-optgroup,
-textarea {
-	color: #404040;
-	font-family: sans-serif;
-	font-size: 16px;
-	font-size: 1rem;
-	line-height: 1.5;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	clear: both;
-}
-
-p {
-	margin-bottom: 1.5em;
-}
-
-dfn, cite, em, i {
-	font-style: italic;
-}
-
-blockquote {
-	margin: 0 1.5em;
-}
-
-address {
-	margin: 0 0 1.5em;
-}
-
-pre {
-	background: #eee;
-	font-family: "Courier 10 Pitch", Courier, monospace;
-	font-size: 15px;
-	font-size: 0.9375rem;
-	line-height: 1.6;
-	margin-bottom: 1.6em;
-	max-width: 100%;
-	overflow: auto;
-	padding: 1.6em;
-}
-
-code, kbd, tt, var {
-	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-	font-size: 15px;
-	font-size: 0.9375rem;
-}
-
-abbr, acronym {
-	border-bottom: 1px dotted #666;
-	cursor: help;
-}
-
-mark, ins {
-	background: #fff9c0;
-	text-decoration: none;
-}
-
-big {
-	font-size: 125%;
-}
 
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
-html {
-	box-sizing: border-box;
-}
 
-*,
-*:before,
-*:after {
-	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-	box-sizing: inherit;
-}
-
-body {
-	background: #fff;
-	/* Fallback for when there is no custom background color defined. */
-}
-
-hr {
-	background-color: #ccc;
-	border: 0;
-	height: 1px;
-	margin-bottom: 1.5em;
-}
-
-ul, ol {
-	margin: 0 0 1.5em 3em;
-}
-
-ul {
-	list-style: disc;
-}
-
-ol {
-	list-style: decimal;
-}
-
-li > ul,
-li > ol {
-	margin-bottom: 0;
-	margin-left: 1.5em;
-}
-
-dt {
-	font-weight: bold;
-}
-
-dd {
-	margin: 0 1.5em 1.5em;
-}
-
-img {
-	height: auto;
-	/* Make sure images are scaled correctly. */
-	max-width: 100%;
-	/* Adhere to container width. */
-}
-
-figure {
-	margin: 1em 0;
-	/* Extra wide images within figure tags don't overflow the content area. */
-}
-
-table {
-	margin: 0 0 1.5em;
-	width: 100%;
-}
 
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
-	border-radius: 3px;
-	background: #e6e6e6;
-	color: rgba(0, 0, 0, 0.8);
-	font-size: 12px;
-	font-size: 0.75rem;
-	line-height: 1;
-	padding: .6em 1em .4em;
-}
 
-button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa;
-}
-
-button:active, button:focus,
-input[type="button"]:active,
-input[type="button"]:focus,
-input[type="reset"]:active,
-input[type="reset"]:focus,
-input[type="submit"]:active,
-input[type="submit"]:focus {
-	border-color: #aaa #bbb #bbb;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-input[type="number"],
-input[type="tel"],
-input[type="range"],
-input[type="date"],
-input[type="month"],
-input[type="week"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="color"],
-textarea {
-	color: #666;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-	padding: 3px;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-input[type="number"]:focus,
-input[type="tel"]:focus,
-input[type="range"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="week"]:focus,
-input[type="time"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="color"]:focus,
-textarea:focus {
-	color: #111;
-}
-
-select {
-	border: 1px solid #ccc;
-}
-
-textarea {
-	width: 100%;
-}
 
 /*--------------------------------------------------------------
 # Navigation
@@ -613,80 +211,10 @@ textarea {
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-a {
-	color: royalblue;
-}
-
-a:visited {
-	color: purple;
-}
-
-a:hover, a:focus, a:active {
-	color: midnightblue;
-}
-
-a:focus {
-	outline: thin dotted;
-}
-
-a:hover, a:active {
-	outline: 0;
-}
 
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
-}
-
-.main-navigation ul {
-	display: none;
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
-}
-
-.main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
-	position: absolute;
-	top: 100%;
-	left: -999em;
-	z-index: 99999;
-}
-
-.main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
-}
-
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-	left: 100%;
-}
-
-.main-navigation ul ul a {
-	width: 200px;
-}
-
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-	left: auto;
-}
-
-.main-navigation li {
-	float: left;
-	position: relative;
-}
-
-.main-navigation a {
-	display: block;
-	text-decoration: none;
-}
 
 /* Small menu. */
 .menu-toggle,
@@ -994,11 +522,6 @@ object {
 
     Site Creator - Caleb Anderson
 */
-
-* {
-  margin: 0;
-  padding: 0;
-}
 
 html, body {
   height: 100%;
@@ -1991,47 +1514,47 @@ padding-bottom: 20px;
 }
 
 .hero-food {
-  background: url(../img/cheesesteak-2.jpg) center center no-repeat;
+  background: url(/wp-content/themes/greenpig/assets/img/cheesesteak-2.jpg) center center no-repeat;
   background-size: cover;
 } 
 
 .food-starters-banner {
-  background: url(../img/nachos_1.jpg) center center no-repeat;
+  background: url(/wp-content/themes/greenpig/assets/img/nachos_1.jpg) center center no-repeat;
   background-size: cover;
 }
 
 .food-specialties-banner {
-  background: url(../img/salmon_tacos_1.jpg) center center no-repeat;
+  background: url(/wp-content/themes/greenpig/assets/img/salmon_tacos_1.jpg) center center no-repeat;
   background-size: cover;
 }
 
 .food-sandwiches-banner {
-  background: url(../img/cuban.jpg) center center no-repeat;
+  background: url(/wp-content/themes/greenpig/assets/img/cuban.jpg) center center no-repeat;
   background-size: cover;
 }
 
 .food-burgers-banner {
-  background: url(../img/denver-2.jpg) center center no-repeat;
+  background: url(/wp-content/themes/greenpig/assets/img/denver-2.jpg) center center no-repeat;
   background-size: cover;
 }
 
 .food-greens-banner {
-  background: url(../img/salmon_salad_1.jpg) center center no-repeat;
+  background: url(/wp-content/themes/greenpig/assets/img/salmon_salad_1.jpg) center center no-repeat;
   background-size: cover;
 }
 
 .food-vegan-banner {
-  background: url(../img/angry_vegan_1.jpg) center center no-repeat;
+  background: url(/wp-content/themes/greenpig/assets/img/angry_vegan_1.jpg) center center no-repeat;
   background-size: cover;
 }
 
 .food-breakfast-banner {
-  background: url(../img/bacon_1.jpg) center center no-repeat;
+  background: url(/wp-content/themes/greenpig/assets/img/bacon_1.jpg) center center no-repeat;
   background-size: cover;
 }
 
 .food-late-banner {
-  background: url(../img/quesa.jpg) center center no-repeat;
+  background: url(/wp-content/themes/greenpig/assets/img/quesa.jpg) center center no-repeat;
   background-size: cover;
 }
 
@@ -2054,7 +1577,7 @@ padding-bottom: 20px;
 }
 
 .hero-events {
-  background: #333 url(../img/events_hero.jpg) center center no-repeat;
+  background: #333 url(/wp-content/themes/greenpig/assets/img/events_hero.jpg) center center no-repeat;
   background-size: cover;
 }
 
@@ -2125,7 +1648,7 @@ padding-bottom: 20px;
 /* ============= MONDAY EVENTS ================= */
 
 .events-mon-banner {
-  background: #333 url(../img/blues_1.jpg) center center no-repeat;
+  background: #333 url(/wp-content/themes/greenpig/assets/img/blues_1.jpg) center center no-repeat;
   background-size: cover;
 }
 
@@ -2133,7 +1656,7 @@ padding-bottom: 20px;
 /* ============= TUESDAY EVENTS ================= */
 
 .events-tue-banner {
-  background: #333 url(../img/paint_event.jpg) center center no-repeat;
+  background: #333 url(/wp-content/themes/greenpig/assets/img/paint_event.jpg) center center no-repeat;
   background-size: cover;
 }
 
@@ -2141,7 +1664,7 @@ padding-bottom: 20px;
 /* ============= WEDNESDAY EVENTS ================= */
 
 .events-wed-banner {
-  background: #333 url(../img/events_hero.jpg) center center no-repeat;
+  background: #333 url(/wp-content/themes/greenpig/assets/img/events_hero.jpg) center center no-repeat;
   background-size: cover;
 }
 
@@ -2149,7 +1672,7 @@ padding-bottom: 20px;
 /* ============= THURSDAY EVENTS ================= */
 
 .events-thur-banner {
-  background: #333 url(../img/karaoke_banner.jpg) center center no-repeat;
+  background: #333 url(/wp-content/themes/greenpig/assets/img/karaoke_banner.jpg) center center no-repeat;
   background-size: cover;
 }
 
@@ -2157,7 +1680,7 @@ padding-bottom: 20px;
 /* ============= FRIDAY EVENTS ================= */
 
 .events-fri-banner {
-  background: #333 url(../img/live_music_1.jpg) center center no-repeat;
+  background: #333 url(/wp-content/themes/greenpig/assets/img/live_music_1.jpg) center center no-repeat;
   background-size: cover;
 }
 
@@ -2165,7 +1688,7 @@ padding-bottom: 20px;
 /* ============= SATURDAY EVENTS ================= */
 
 .events-sat-banner {
-  background: #333 url(../img/dj_latu_banner-5.jpg) center center no-repeat;
+  background: #333 url(/wp-content/themes/greenpig/assets/img/dj_latu_banner-5.jpg) center center no-repeat;
   background-size: cover;
 }
 
@@ -2173,42 +1696,42 @@ padding-bottom: 20px;
 /* ============= SUNDAY EVENTS ================= */
 
 .events-sun-banner {
-  background: #333 url(../img/buffet_line_up.jpg) center center no-repeat;
+  background: #333 url(/wp-content/themes/greenpig/assets/img/buffet_line_up.jpg) center center no-repeat;
   background-size: cover;
 }
 
 .hero-drinks {
-  background: url(../img/drinks_banner.jpg) center center no-repeat;
+  background: url(/wp-content/themes/greenpig/assets/img/drinks_banner.jpg) center center no-repeat;
   background-size: cover;
 }
 
 .drinks-cocktails-banner {
-  background: url(../img/tray_of_drinks_banner.jpg) center center no-repeat;
+  background: url(/wp-content/themes/greenpig/assets/img/tray_of_drinks_banner.jpg) center center no-repeat;
   background-size: cover;
 }
 
 .drinks-patio-banner {
-  background: url(../img/patio_bar_in.JPG) center center no-repeat;
+  background: url(/wp-content/themes/greenpig/assets/img/patio_bar_in.JPG) center center no-repeat;
   background-size: cover;
 }
 
 .drinks-beer-banner {
-  background: url(../img/beer_line_up_1.jpg) center center no-repeat;
+  background: url(/wp-content/themes/greenpig/assets/img/beer_line_up_1.jpg) center center no-repeat;
   background-size: cover;
 }
 
 .drinks-white-wine-banner {
-  background: url(../img/wine-white_2.jpg) center center no-repeat;
+  background: url(/wp-content/themes/greenpig/assets/img/wine-white_2.jpg) center center no-repeat;
   background-size: cover;
 }
 
 .drinks-red-wine-banner {
-  background: url(../img/wine-red_2.jpg) center center no-repeat;
+  background: url(/wp-content/themes/greenpig/assets/img/wine-red_2.jpg) center center no-repeat;
   background-size: cover;
 }
 
 .drinks-daily-specials-banner {
-  background: url(../img/daily_specials_1.jpg) center center no-repeat;
+  background: url(/wp-content/themes/greenpig/assets/img/daily_specials_1.jpg) center center no-repeat;
   background-size: cover;
 }
 
@@ -2404,7 +1927,7 @@ padding-bottom: 20px;
 }
 
 .hero-about {
-  background: url(../img/about.jpg) center center no-repeat;
+  background: url(/wp-content/themes/greenpig/assets/img/about.jpg) center center no-repeat;
   background-size: cover;
 }
 
@@ -2432,13 +1955,13 @@ padding-bottom: 20px;
 }
 
 .about-pub-banner {
-  background: url(../img/pig_pub.JPG) center center no-repeat;
+  background: url(/wp-content/themes/greenpig/assets/img/pig_pub.JPG) center center no-repeat;
   background-size: cover;
   margin-top: -50px;
 }
 
 .about-patio-banner {
-  background: url(../img/patio.jpg) center center no-repeat;
+  background: url(/wp-content/themes/greenpig/assets/img/patio.jpg) center center no-repeat;
   background-size: cover;
 }
 
@@ -2446,7 +1969,7 @@ padding-bottom: 20px;
 
 .welcome-hero {
   height: 100vh;
-  background: #333 url(../img/welcome.jpg) center center no-repeat;
+  background: #333 url(/wp-content/themes/greenpig/assets/img/welcome.jpg) center center no-repeat;
   background-size: cover;
 }
 
@@ -2468,7 +1991,7 @@ a#more-story {
 /* ==== MENU BANNER ===== */
 
 .home-menu-banner {
-  background: #333 url(../img/table_view.jpg) center center no-repeat;
+  background: #333 url(/wp-content/themes/greenpig/assets/img/table_view.jpg) center center no-repeat;
   background-size: cover;
   margin-top: 60px;
 }
@@ -2481,7 +2004,7 @@ a#more-story {
 /* ==== EVENTS BANNER ===== */
 
 .home-events-banner {    
-  background: #333 url(../img/blues_1.jpg) center center no-repeat;
+  background: #333 url(/wp-content/themes/greenpig/assets/img/blues_1.jpg) center center no-repeat;
   background-size: cover;
   margin-top: -20px;
 }
@@ -2503,13 +2026,13 @@ a#contact-us {
 }
 
 .food {
-  background: url(../img/table_side_view_1.jpg) center center no-repeat;
+  background: url(/wp-content/themes/greenpig/assets/img/table_side_view_1.jpg) center center no-repeat;
   background-size: cover;
 }
 
 
 .drinks {
-  background: url(../img/drinks_1.jpg) center center no-repeat;
+  background: url(/wp-content/themes/greenpig/assets/img/drinks_1.jpg) center center no-repeat;
   background-size: cover;
 }
 
