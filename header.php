@@ -12,47 +12,83 @@
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
-<head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
 
-	<?php wp_head(); ?>
+<head>
+  <meta charset="<?php bloginfo( 'charset' ); ?>">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="profile" href="https://gmpg.org/xfn/11">
+  <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+
+  <!-- <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/styles.css">
+  <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/sub_nav.css">
+  <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/index.css">
+  <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/scrolling_nav.css">
+  <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/menu_options.css">
+  <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/menu_item.css"> -->
+  <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/fontawesome-free-5.0.4/web-fonts-with-css/css/fontawesome-all.min.css">
+
+  <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'the-green-pig-pub' ); ?></a>
+  <div id="page" class="site">
+    <a class="skip-link screen-reader-text"
+      href="#content"><?php esc_html_e( 'Skip to content', 'the-green-pig-pub' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$the_green_pig_pub_description = get_bloginfo( 'description', 'display' );
-			if ( $the_green_pig_pub_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $the_green_pig_pub_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+    <!-- =========== MAIN NAV ====================== -->
+    <header>
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'the-green-pig-pub' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+      <nav class="nav-bar">
 
-	<div id="content" class="site-content">
+        <div id="mobile-nav" class="overlay">
+          <div class="overlay-content">
+            <div class="container">
+
+              <a href="about.html">About</a>
+              <a href="menus.html">Menus</a>
+              <a class="sub-class" href="food.html">Food</a>
+              <a class="sub-class" href="drinks.html">Drinks</a>
+              <a href="events.html">Events</a>
+              <a href="contact.html">Contact</a>
+
+            </div>
+          </div>
+
+        </div> <!-- mobile-nav -->
+
+        <div class="mobile-icon" onclick="toggleNav()">
+          <div class="fade-up">
+            <div class="toggle-button">
+              <div class="menu-bar menu-bar-top"></div>
+              <div class="menu-bar menu-bar-middle"></div>
+              <div class="menu-bar menu-bar-bottom"></div>
+            </div>
+          </div>
+        </div>
+
+        <a href="index.html"><img class="logo logo-mobile" src="./assets/img/logo.png" alt="The Green Pig Pub Logo"></a>
+
+        <div class="main-nav fade-down">
+
+          <ul class="nav-items">
+            <li class="nav-item"><a href="about.html">About</a></li>
+            <li class="dropdown-btn nav-item">
+              <a href="menus.html">Menus <i class="fas fa-caret-down"></i></a>
+              <ul class="dropdown">
+                <li><a href="food.html">Food</a></li>
+                <li><a href="drinks.html">Drinks</a></li>
+              </ul>
+            </li>
+            <a href="index.html"><img class="logo logo-main" src="./assets/img/logo.png"
+                alt="The Green Pig Pub Logo"></a>
+            <li class="nav-item hide-home"><a href="index.html">Home</a></li>
+            <li class="nav-item"><a href="events.html">Events</a></li>
+            <li class="nav-item"><a href="contact.html">Contact</a></li>
+          </ul>
+
+        </div> <!-- main-nav -->
+
+      </nav>
+
+    </header>
