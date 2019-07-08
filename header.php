@@ -67,7 +67,7 @@
           </div>
         </div>
 
-        <a href="index.html"><img class="logo logo-mobile" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo.png" alt="The Green Pig Pub Logo"></a>
+        <a href="home"><img class="logo logo-mobile" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo.png" alt="The Green Pig Pub Logo"></a>
 
         <div class="main-nav fade-down">
 
@@ -80,9 +80,9 @@
                 <li><a href="drinks.html">Drinks</a></li>
               </ul>
             </li>
-            <a href="index.html"><img class="logo logo-main" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo.png"
+            <a href="home"><img class="logo logo-main" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo.png"
                 alt="The Green Pig Pub Logo"></a>
-            <li class="nav-item hide-home"><a href="index.html">Home</a></li>
+            <li class="nav-item hide-home"><a href="home">Home</a></li>
             <li class="nav-item"><a href="events.html">Events</a></li>
             <li class="nav-item"><a href="contact.html">Contact</a></li>
           </ul>
