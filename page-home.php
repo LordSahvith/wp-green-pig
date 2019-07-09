@@ -17,6 +17,14 @@
  $menu_food_copy    = get_field('menu_food_copy');
  $menu_drink_image  = get_field('menu_drink_image');
  $menu_drink_copy   = get_field('menu_drink_copy');
+ // events
+ $banner_events_image = get_field('banner_events_image');
+ $banner_events_title = get_field('banner_events_title');
+ $events_title        = get_field('events_title');
+ $events_body         = get_field('events_body');
+ // outro
+ $outro_body   = get_field('outro_body');
+ $outro_button = get_field('outro_button');
 
 get_header(); ?>
 
@@ -97,23 +105,24 @@ get_header(); ?>
 
 <div class="fade-up">
   <!-- if user uploads image -->
-<?php 
+  <?php 
   if(!empty($banner_menu_image) ) { 
 ?>
-  <section class="banner banner-shrink home-menu-banner" style="background: #333 url(<?php echo $banner_menu_image['url']; ?>) center center no-repeat;">
+  <section class="banner banner-shrink home-menu-banner"
+    style="background: #333 url(<?php echo $banner_menu_image['url']; ?>) center center no-repeat;">
     <?php } else {?>
-      <section class="banner banner-shrink home-menu-banner">
-    <?php }  ?>
+    <section class="banner banner-shrink home-menu-banner">
+      <?php }  ?>
 
-    <div class="banner-container">
+      <div class="banner-container">
 
-      <a href="menus.html">
-        <h3><?php echo $banner_menu_title; ?></h3>
-      </a>
+        <a href="menus.html">
+          <h3><?php echo $banner_menu_title; ?></h3>
+        </a>
 
-    </div>
+      </div>
 
-  </section>
+    </section>
 
 </div>
 
@@ -140,34 +149,52 @@ get_header(); ?>
     <div class="row fade-up-2">
 
       <div class="col col-sm-6">
+        <!-- if user uploads image -->
+        <?php 
+          if(!empty($menu_food_image) ) { 
+        ?>
 
-        <div class="menu-opt food">
+        <div class="menu-opt food"
+          style="background: #333 url(<?php echo $menu_food_image['url']; ?>) center center no-repeat;">
+          <?php } else {?>
 
-          <a href="food.html">
-            <h4><?php echo $menu_food_title; ?></h4>
-          </a>
+          <div class="menu-opt food">
+            <?php }  ?>
 
-        </div>
+            <a href="food.html">
+              <h4><?php echo $menu_food_copy; ?></h4>
+            </a>
 
-      </div>
-
-
-      <div class="col col-sm-6">
-
-        <div class="menu-opt drinks">
-
-          <a href="drinks.html">
-            <h4><?php echo $menu_drink_title; ?></h4>
-          </a>
+          </div>
 
         </div>
 
 
+        <div class="col col-sm-6">
+          <!-- if user uploads image -->
+          <?php 
+            if(!empty($menu_drink_image) ) { 
+          ?>
+
+          <div class="menu-opt drinks"
+            style="background: #333 url(<?php echo $menu_drink_image['url']; ?>) center center no-repeat;">
+            <?php } else {?>
+
+            <div class="menu-opt drinks">
+              <?php }  ?>
+
+              <a href="drinks.html">
+                <h4><?php echo $menu_drink_copy; ?></h4>
+              </a>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
       </div>
-
-    </div>
-
-  </div>
 
 </section>
 
@@ -175,18 +202,25 @@ get_header(); ?>
 <!-- ======= EVENTS BANNER ========================== -->
 
 <div class="fade-up">
+  <!-- if user uploads image -->
+  <?php 
+  if(!empty($banner_events_image) ) { 
+?>
+  <section class="banner banner-shrink home-events-banner"
+    style="background: #333 url(<?php echo $banner_events_image['url']; ?>) center center no-repeat;">
+    <?php } else {?>
+    <section class="banner banner-shrink home-events-banner">
+      <?php }  ?>
 
-  <section class="banner banner-shrink home-events-banner">
+      <div class="banner-container">
 
-    <div class="banner-container">
+        <a href="events.html">
+          <h3><?php echo $banner_events_title; ?></h3>
+        </a>
 
-      <a href="events.html">
-        <h3>Events</h3>
-      </a>
+      </div>
 
-    </div>
-
-  </section>
+    </section>
 
 </div>
 
@@ -199,16 +233,13 @@ get_header(); ?>
 
     <div class="fade-right">
 
-      <h3>Come Play!</h3>
+      <h3><?php echo $events_title; ?></h3>
 
     </div>
 
     <div class="fade-left">
 
-      <p>Come sit down and enjoy the game with some wings or any other fine food. Jam out with us every Monday with
-        our Open Blues Jam @ 10. Test your wit Wednesdays with Trivia Factory's General Trivia or Sunday for Adult
-        Trivia both start @ 7 hurry and claim your spot. Every Saturday @ 10 we got DJ Latu blasting away, so come
-        dance your heart out!</p>
+      <p><?php echo $events_body; ?></p>
 
     </div>
 
@@ -287,11 +318,11 @@ get_header(); ?>
 
     <div class="fade-up">
 
-      <p class="bottom-gap">Feel free to contact us with any questions.</p>
+      <p class="bottom-gap"><?php echo $outro_body; ?></p>
 
       <div>
 
-        <a href="contact.html" id="contact-us" class="button">Contact Us</a>
+        <a href="contact.html" id="contact-us" class="button"><?php echo $outro_button; ?></a>
 
       </div>
 
