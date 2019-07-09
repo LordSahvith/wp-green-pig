@@ -3,9 +3,39 @@
   Template Name: Home Page
  */
 
+ // ADVANCED CUSTOM FIELDS
+ // intro
+ $hero_image   = get_field('home_hero');
+ $intro_title  = get_field('intro_title');
+ $intro_body   = get_field('intro_body');
+ $intro_button = get_field('intro_button');
+ // menus
+ $banner_menu_image = get_field('banner_menu_image');
+ $banner_menu_title = get_field('banner_menu_title');
+ $menu_title        = get_field('menu_title');
+ $menu_food_image   = get_field('menu_food_image');
+ $menu_food_copy    = get_field('menu_food_copy');
+ $menu_drink_image  = get_field('menu_drink_image');
+ $menu_drink_copy   = get_field('menu_drink_copy');
+
 get_header(); ?>
 
 <!-- ======= WELCOME ========================== -->
+<!-- if user uploaded image -->
+<?php 
+  if(!empty($hero_image) ) { 
+?>
+
+<div class="fade-down">
+
+  <section class="welcome-hero"
+    style="background: #333 url(<?php echo $hero_image['url']; ?>) center center no-repeat;">
+
+  </section>
+
+</div>
+
+<?php } else {?>
 
 <div class="fade-down">
 
@@ -14,6 +44,8 @@ get_header(); ?>
   </section>
 
 </div>
+
+<?php } ?>
 
 
 <!-- ======= THE PIG STORY ========================== -->
@@ -26,7 +58,7 @@ get_header(); ?>
 
       <div class="fade-in">
 
-        <h2>The Pig</h2>
+        <h2><?php echo $intro_title; ?></h2>
 
       </div> <!-- fade-in -->
 
@@ -39,11 +71,7 @@ get_header(); ?>
 
       <div class="fade-left">
 
-        <p>The Green Pig Pub in downtown Salt Lake City, home to everything pub; drinks, food, sports and music. We
-          show all the games on our 14 flat screen TVs. There's an event going on every day. Monday night we've got
-          the original, longest running Open Blues Jam, Wednesdays and Sundays nights, Trivia, where you can test your
-          wit against other groups, Thursdays, the best karaoke night in Salt Lake City, Friday for live bands and
-          Saturday for DJ Latu.</p>
+        <p><?php echo $intro_body; ?></p>
 
       </div> <!-- fade-left -->
 
@@ -53,7 +81,7 @@ get_header(); ?>
 
       <div>
 
-        <a href="about.html" id="more-story" class="fade-up button">Learn More</a>
+        <a href="about.html" id="more-story" class="fade-up button"><?php echo $intro_button; ?></a>
 
       </div>
 
@@ -68,8 +96,15 @@ get_header(); ?>
 <!-- ======= MENU BANNER ========================== -->
 
 <div class="fade-up">
-
+  <!-- if user uploads image -->
+<?php 
+  if(!empty($banner_menu_image) ) { 
+?>
+  <section class="banner banner-shrink home-menu-banner" style="background: #333 url(<?php echo $banner_menu_image['url']; ?>) center center no-repeat;">
+    <?php } else {?>
+    <?php } 
   <section class="banner banner-shrink home-menu-banner">
+  ?>
 
     <div class="banner-container">
 
@@ -191,7 +226,8 @@ get_header(); ?>
         <div class="col col-sm-6 col-lg-4">
 
           <div class="gallery-item gallery-item-sm">
-            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/blues_draggers_300w.jpg" alt="West Temple Tail Draggers. Drummer close up.">
+            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/blues_draggers_300w.jpg"
+              alt="West Temple Tail Draggers. Drummer close up.">
             <p class="img-description">Monday - Open Blues Jam</p>
           </div>
 
@@ -200,7 +236,8 @@ get_header(); ?>
         <div class="col col-sm-6 col-lg-4">
 
           <div class="gallery-item gallery-item-sm">
-            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/paint_nite-1_300w.jpg" alt="Paint Nite group.">
+            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/paint_nite-1_300w.jpg"
+              alt="Paint Nite group.">
             <p class="img-description">Tuesday - $2 Tuesday</p>
           </div>
 
@@ -209,7 +246,8 @@ get_header(); ?>
         <div class="col col-sm-6 col-lg-4">
 
           <div class="gallery-item gallery-item-sm">
-            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/trivia_group_300w.jpg" alt="Every trivia team.">
+            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/trivia_group_300w.jpg"
+              alt="Every trivia team.">
             <p class="img-description">Wednesday - General Trivia</p>
           </div>
 
@@ -218,7 +256,8 @@ get_header(); ?>
         <div class="col col-sm-6 col-lg-4">
 
           <div class="gallery-item gallery-item-sm">
-            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/karaoke_group_sing_300w.jpg" alt="West Temple Tail Draggers. Vocalist close up.">
+            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/karaoke_group_sing_300w.jpg"
+              alt="West Temple Tail Draggers. Vocalist close up.">
             <p class="img-description">Thursday - Karaoke</p>
           </div>
 
@@ -236,7 +275,8 @@ get_header(); ?>
         <div class="col col-sm-6 col-lg-4">
 
           <div class="gallery-item gallery-item-sm">
-            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/dj-latu_300w.jpg" alt="DJ Latu at the green pig.">
+            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/dj-latu_300w.jpg"
+              alt="DJ Latu at the green pig.">
             <p class="img-description">Saturday - DJ Latu</p>
           </div>
 
