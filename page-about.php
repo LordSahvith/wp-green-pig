@@ -6,9 +6,17 @@
  // ADVANCED CUSTOM FIELDS
  // intro
  $hero_image   = get_field('about_hero');
- $hero_title  = get_field('about_hero_title');
+ $hero_title   = get_field('about_hero_title');
  $intro_title  = get_field('about_intro_title');
  $intro_body   = get_field('about_intro_body');
+ // pub
+ $banner_pub_image = get_field('banner_pub_image');
+ $banner_pub_title = get_field('banner_pub_title');
+ $pub_body         = get_field('pub_body');
+ // patio
+ $banner_patio_image = get_field('banner_patio_image');
+ $banner_patio_title = get_field('banner_patio_title');
+ $patio_body         = get_field('patio_body');
 
 get_header(); ?>
 
@@ -49,9 +57,16 @@ get_header(); ?>
 
   <!-- ======= THE PUB BANNER ========================== -->
   <div class="fade-up">
+    <!-- if user uploaded image -->
+    <?php 
+      if(!empty($banner_pub_image) ) { 
+    ?>
+    <section class="banner about-pub-banner" style="background: url(<?php echo $banner_pub_image['url']; ?>) center center no-repeat;">
+      <?php } else {?>
     <section class="banner about-pub-banner">
+      <?php } ?>
       <div class="banner-container">
-        <h3>Pig Pub</h3>
+        <h3><?php echo $banner_pub_title; ?></h3>
       </div>
     </section>
   </div>
@@ -64,10 +79,7 @@ get_header(); ?>
 
       <div class="fade-in">
 
-        <p>Looking to sit down and enjoy the setting of a nice pub with some great food and drink? Searching for that
-          place you and your friends can come enjoy some unique bar fun found no place else? You have found your place!
-          The Green Pig offers an extensive food menu that can't be beat all the while bringing entertainment that gets
-          the entire pub engaged making it an experience long to remember.</p>
+        <p><?php echo $pub_body; ?></p>
 
       </div>
 
@@ -126,14 +138,20 @@ get_header(); ?>
   <!-- ======= THE PATIO BANNER ========================== -->
 
   <div class="fade-in">
+    <!-- if user uploaded image -->
+    <?php 
+      if(!empty($banner_patio_image) ) { 
+    ?>
 
-    <section class="banner about-patio-banner">
+    <section class="banner about-patio-banner" style="background: url(<?php echo $banner_patio_image['url']; ?>) center center no-repeat;">
+      <?php } else {?>
 
-      <!-- <img class="banner" src="./app/assets/img/patio.jpg" alt="">-->
+<section class="banner about-patio-banner">
+      <?php } ?>
 
       <div class="banner-container">
 
-        <h3>Pig Patio</h3>
+        <h3><?php echo $banner_patio_title; ?></h3>
 
       </div>
 
@@ -152,9 +170,7 @@ get_header(); ?>
 
       <div class="fade-in">
 
-        <p>Wants some fresh air to go with that cocktail and nachos? The patio offers just that and more! With a sea of
-          downtown's unique architecture can't be beat and to top it off the Rocky Mountains add a spectacular
-          background you won't forget. There's a reason it's voted City weekly’s Best Patio.</p>
+        <p><?php echo $patio_body; ?></p>
 
       </div>
 
