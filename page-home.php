@@ -102,14 +102,13 @@ get_header(); ?>
 ?>
   <section class="banner banner-shrink home-menu-banner" style="background: #333 url(<?php echo $banner_menu_image['url']; ?>) center center no-repeat;">
     <?php } else {?>
-    <?php } 
-  <section class="banner banner-shrink home-menu-banner">
-  ?>
+      <section class="banner banner-shrink home-menu-banner">
+    <?php }  ?>
 
     <div class="banner-container">
 
       <a href="menus.html">
-        <h3>Menus</h3>
+        <h3><?php echo $banner_menu_title; ?></h3>
       </a>
 
     </div>
@@ -127,7 +126,7 @@ get_header(); ?>
 
     <div class="fade-right">
 
-      <h3>Hungry...Parched?</h3>
+      <h3><?php echo $menu_title; ?></h3>
 
     </div>
 
@@ -145,7 +144,7 @@ get_header(); ?>
         <div class="menu-opt food">
 
           <a href="food.html">
-            <h4>Food</h4>
+            <h4><?php echo $menu_food_title; ?></h4>
           </a>
 
         </div>
@@ -158,7 +157,7 @@ get_header(); ?>
         <div class="menu-opt drinks">
 
           <a href="drinks.html">
-            <h4>Drinks</h4>
+            <h4><?php echo $menu_drink_title; ?></h4>
           </a>
 
         </div>
