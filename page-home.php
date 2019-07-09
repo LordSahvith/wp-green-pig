@@ -6,9 +6,9 @@
  // ADVANCED CUSTOM FIELDS
  // intro
  $hero_image   = get_field('home_hero');
- $home_intro_title  = get_field('home_intro_title');
- $home_intro_body   = get_field('home_intro_body');
- $home_intro_button = get_field('home_intro_button');
+ $intro_title  = get_field('home_intro_title');
+ $intro_body   = get_field('home_intro_body');
+ $intro_button = get_field('home_intro_button');
  // menus
  $banner_menu_image = get_field('banner_menu_image');
  $banner_menu_title = get_field('banner_menu_title');
@@ -66,7 +66,7 @@ get_header(); ?>
 
       <div class="fade-in">
 
-        <h2><?php echo $home_intro_title; ?></h2>
+        <h2><?php echo $intro_title; ?></h2>
 
       </div> <!-- fade-in -->
 
@@ -79,7 +79,7 @@ get_header(); ?>
 
       <div class="fade-left">
 
-        <p><?php echo $home_intro_body; ?></p>
+        <p><?php echo $intro_body; ?></p>
 
       </div> <!-- fade-left -->
 
@@ -89,7 +89,7 @@ get_header(); ?>
 
       <div>
 
-        <a href="about.html" id="more-story" class="fade-up button"><?php echo $home_intro_button; ?></a>
+        <a href="about.html" id="more-story" class="fade-up button"><?php echo $intro_button; ?></a>
 
       </div>
 

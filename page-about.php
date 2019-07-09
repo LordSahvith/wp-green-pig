@@ -3,13 +3,27 @@
   Template Name: About Page
  */
 
+ // ADVANCED CUSTOM FIELDS
+ // intro
+ $hero_image   = get_field('about_hero');
+ $hero_title  = get_field('about_hero_title');
+ $intro_title  = get_field('about_intro_title');
+ $intro_body   = get_field('about_intro_body');
+
 get_header(); ?>
 
   <!-- ======= HERO ========================== -->
   <div class="fade-down">
+    <!-- if user uploaded image -->
+    <?php 
+      if(!empty($hero_image) ) { 
+    ?>
+    <section class="hero hero-about" style="background: url(<?php echo $hero_image['url']; ?>) center center no-repeat;">
+      <?php } else {?>
     <section class="hero hero-about">
+        <?php } ?>
       <div class="hero-container">
-        <h2>About</h2>
+        <h2><?php echo $hero_title; ?></h2>
       </div>
     </section>
   </div>
@@ -18,7 +32,7 @@ get_header(); ?>
   <section>
     <div class="container">
       <div class="fade-right">
-        <h3 class="intro-title">The Green Pig Pub</h3>
+        <h3 class="intro-title"><?php echo $intro_title; ?></h3>
       </div>
 
       <div class="fade-in">
@@ -26,13 +40,7 @@ get_header(); ?>
       </div>
 
       <div class="fade-left intro-content">
-        <p>The Green Pig Pub strives to be an eco-friendly pub that is truly <span class="pig-favorite">green</span> and
-          has more to offer than any other. We've got a delicious food menu, which accommodates all, including vegan and
-          gluten free diets. But that's not all we have to offer, we have live music 2 nights a week, karaoke and group
-          trivia events that get everyone using their noggins. You can't find any better pub, especially with the
-          amazing staff that really makes you feel like a V.I.P. every night you come to hang out. It's a great place to
-          meet up with friends or make new ones. Centrally located downtown within walking distance of the Salt Palace,
-          Grand America & all other downtown destinations.</p>
+        <p><?php echo $intro_body; ?></p>
       </div>
     </div>
   </section>
