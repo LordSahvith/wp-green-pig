@@ -3,13 +3,46 @@
   Template Name: Food Page
  */
 
+ // ADVANCED CUSTOM FIELDS
+ // intro
+ $hero_image   = get_field('food_hero');
+ $hero_title  = get_field('food_hero_title');
+ $intro_body   = get_field('food_intro_body');
+ // menus
+ $menu_title = get_field('food_menu_title');
+ $classic_button = get_field('classic_button');
+ $vegan_button = get_field('vegan_button');
+ $late_night_button = get_field('late_night_button');
+ $breakfast_button = get_field('breakfast_button');
+ // banners
+ $starters_title = get_field('banner_starters_title');
+ $starters_banner = get_field('banner_starters_image');
+ $specialties_title = get_field('banner_specialties_title');
+ $specialties_banner = get_field('banner_specialties_image');
+ $sandwiches_title = get_field('banner_sandwiches_title');
+ $sandwiches_banner = get_field('banner_sandwiches_image');
+ $burgers_title = get_field('banner_burgers_title');
+ $burgers_banner = get_field('banner_burgers_image');
+ $bowls_title = get_field('banner_bowls_title');
+ $bowls_banner = get_field('banner_bowls_image');
+ $daily_title = get_field('banner_daily_title');
+ $daily_banner = get_field('banner_daily_image');
+
 get_header(); ?>
 
   <!-- ======= HERO ========================== -->
   <div class="fade-down">
+
+<!-- if user uploaded image -->
+<?php 
+  if(!empty($hero_image) ) { 
+?>
+<section class="hero hero-food" style="background: url(<?php echo $hero_image['url']; ?>) center center no-repeat;">
+  <?php } else {?>
     <section class="hero hero-food">
+    <?php } ?>
       <div class="hero-container">
-        <h2>Food</h2>
+        <h2><?php echo $hero_title; ?></h2>
       </div>
     </section>
   </div>
@@ -19,13 +52,11 @@ get_header(); ?>
   <section class="welcome food-welcome">
     <div class="container">
       <div class="fade-left">
-        <p>Our food is handcrafted and prepared from scratch daily. Items highlighted in <span
-            class="pig-favorite">green</span> are pig favorites and items with * next to them have gluten free options.
-        </p>
+        <p><?php echo $intro_body; ?></p>
       </div>
 
       <div class="fade-right">
-        <h4 class="header-gap-top">Menus</h4>
+        <h4 class="header-gap-top"><?php echo $menu_title; ?></h4>
       </div>
     </div>
   </section>
@@ -39,14 +70,13 @@ get_header(); ?>
       <div class="overlay-content">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="container">
-          <li><button id="menu-classic-btn" class="sub-menu-btn sub-menu-food-btn" onclick="closeNav()">Classic</button>
+          <li><button id="menu-classic-btn" class="sub-menu-btn sub-menu-food-btn" onclick="closeNav()"><?php echo $classic_button;?></button>
           </li>
-          <li><button id="menu-vegan-btn" class="sub-menu-btn sub-menu-food-btn" onclick="closeNav()">Vegan</button>
+          <li><button id="menu-vegan-btn" class="sub-menu-btn sub-menu-food-btn" onclick="closeNav()"><?php echo $vegan_button;?></button>
           </li>
-          <li><button id="menu-late-night-btn" class="sub-menu-btn sub-menu-food-btn" onclick="closeNav()">Late
-              Night</button></li>
+          <li><button id="menu-late-night-btn" class="sub-menu-btn sub-menu-food-btn" onclick="closeNav()"><?php echo $late_night_button;?></button></li>
           <li><button id="menu-breakfast-btn" class="sub-menu-btn sub-menu-food-btn"
-              onclick="closeNav()">Breakfast</button></li>
+              onclick="closeNav()"><?php echo $breakfast_button;?></button></li>
         </div>
       </div>
     </div> <!-- mobile-nav -->
@@ -59,10 +89,10 @@ get_header(); ?>
 
     <ul class="main-nav main-menu">
       <div class="fade-up">
-        <li><button id="menu-classic-btn" class="sub-menu-btn sub-menu-food-btn">Classic</button></li>
-        <li><button id="menu-vegan-btn" class="sub-menu-btn sub-menu-food-btn">Vegan</button></li>
-        <li><button id="menu-late-night-btn" class="sub-menu-btn sub-menu-food-btn">Late Night</button></li>
-        <li><button id="menu-breakfast-btn" class="sub-menu-btn sub-menu-food-btn">Breakfast</button></li>
+        <li><button id="menu-classic-btn" class="sub-menu-btn sub-menu-food-btn"><?php echo $classic_button;?></button></li>
+        <li><button id="menu-vegan-btn" class="sub-menu-btn sub-menu-food-btn"><?php echo $vegan_button;?></button></li>
+        <li><button id="menu-late-night-btn" class="sub-menu-btn sub-menu-food-btn"><?php echo $late_night_button;?></button></li>
+        <li><button id="menu-breakfast-btn" class="sub-menu-btn sub-menu-food-btn"><?php echo $breakfast_button;?></button></li>
       </div>
     </ul>
   </nav>
