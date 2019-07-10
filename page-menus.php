@@ -140,7 +140,7 @@ get_header(); ?>
 
           </div>
 
-          <div class="col col-sm-6 col-lg-4"> 
+          <div class="col col-sm-6 col-lg-4">  
 
             <div class="gallery-item gallery-item-sm">
               <img src="<?php bloginfo('stylesheet_directory') ?>/assets/img/angus_300w.jpg" alt="Angus Burger.">
