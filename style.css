@@ -2124,6 +2124,26 @@ a#contact-us {
           transform: rotate(-180deg);
 }
 
+.hero-menu {
+  background: url(/green-pig-05282019/wp-content/themes/greenpig/assets/img/table_view.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+.menu-welcome-section div div > h3 {
+  padding-bottom: 40px;
+}
+
+.food {
+  background: url(/green-pig-05282019/wp-content/themes/greenpig/assets/img/table_side_view_1.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+
+.drinks {
+  background: url(/green-pig-05282019/wp-content/themes/greenpig/assets/img/drinks_1.jpg) center center no-repeat;
+  background-size: cover;
+}
+
 
 
 

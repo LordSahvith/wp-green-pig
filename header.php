@@ -45,12 +45,12 @@
           <div class="overlay-content">
             <div class="container">
 
-              <a href="about.html">About</a>
-              <a href="menus.html">Menus</a>
-              <a class="sub-class" href="food.html">Food</a>
-              <a class="sub-class" href="drinks.html">Drinks</a>
-              <a href="events.html">Events</a>
-              <a href="contact.html">Contact</a>
+              <a href="about">About</a>
+              <a href="menus">Menus</a>
+              <a class="sub-class" href="food">Food</a>
+              <a class="sub-class" href="drinks">Drinks</a>
+              <a href="events">Events</a>
+              <a href="contact">Contact</a>
 
             </div>
           </div>
@@ -72,19 +72,19 @@
         <div class="main-nav fade-down">
 
           <ul class="nav-items">
-            <li class="nav-item"><a href="about.html">About</a></li>
+            <li class="nav-item"><a href="about">About</a></li>
             <li class="dropdown-btn nav-item">
-              <a href="menus.html">Menus <i class="fas fa-caret-down"></i></a>
+              <a href="menus">Menus <i class="fas fa-caret-down"></i></a>
               <ul class="dropdown">
-                <li><a href="food.html">Food</a></li>
-                <li><a href="drinks.html">Drinks</a></li>
+                <li><a href="food">Food</a></li>
+                <li><a href="drinks">Drinks</a></li>
               </ul>
             </li>
             <a href="home"><img class="logo logo-main" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo.png"
                 alt="The Green Pig Pub Logo"></a>
             <li class="nav-item hide-home"><a href="home">Home</a></li>
-            <li class="nav-item"><a href="events.html">Events</a></li>
-            <li class="nav-item"><a href="contact.html">Contact</a></li>
+            <li class="nav-item"><a href="events">Events</a></li>
+            <li class="nav-item"><a href="contact">Contact</a></li>
           </ul>
 
         </div> <!-- main-nav -->

@@ -6,9 +6,9 @@
  // ADVANCED CUSTOM FIELDS
  // intro
  $hero_image   = get_field('home_hero');
- $intro_title  = get_field('intro_title');
- $intro_body   = get_field('intro_body');
- $intro_button = get_field('intro_button');
+ $intro_title  = get_field('home_intro_title');
+ $intro_body   = get_field('home_intro_body');
+ $intro_button = get_field('home_intro_button');
  // menus
  $banner_menu_image = get_field('banner_menu_image');
  $banner_menu_title = get_field('banner_menu_title');
@@ -23,8 +23,8 @@
  $events_title        = get_field('events_title');
  $events_body         = get_field('events_body');
  // outro
- $outro_body   = get_field('outro_body');
- $outro_button = get_field('outro_button');
+ $home_outro_body   = get_field('home_outro_body');
+ $home_outro_button = get_field('home_outro_button');
 
 get_header(); ?>
 
@@ -58,7 +58,7 @@ get_header(); ?>
 
 <!-- ======= THE PIG STORY ========================== -->
 
-<section class="home-pig-story">
+<section class="home-pig-story"> 
 
   <div class="container">
 
@@ -318,11 +318,11 @@ get_header(); ?>
 
     <div class="fade-up">
 
-      <p class="bottom-gap"><?php echo $outro_body; ?></p>
+      <p class="bottom-gap"><?php echo $home_outro_body; ?></p>
 
       <div>
 
-        <a href="contact.html" id="contact-us" class="button"><?php echo $outro_button; ?></a>
+        <a href="contact.html" id="contact-us" class="button"><?php echo $home_outro_button; ?></a>
 
       </div>
 
