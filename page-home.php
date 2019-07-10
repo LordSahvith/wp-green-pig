@@ -58,7 +58,7 @@ get_header(); ?>
 
 <!-- ======= THE PIG STORY ========================== -->
 
-<section class="home-pig-story">
+<section class="home-pig-story"> 
 
   <div class="container">
 
