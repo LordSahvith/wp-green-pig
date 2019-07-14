@@ -22,6 +22,19 @@
  $banner_events_title = get_field('banner_events_title');
  $events_title        = get_field('events_title');
  $events_body         = get_field('events_body');
+ // gallery
+ $gallery_image_1   = get_field('home_gallery_1');
+ $gallery_image_2   = get_field('home_gallery_2');
+ $gallery_image_3   = get_field('home_gallery_3');
+ $gallery_image_4   = get_field('home_gallery_4');
+ $gallery_image_5   = get_field('home_gallery_5');
+ $gallery_image_6   = get_field('home_gallery_6');
+ $gallery_content_1 = get_field('home_gallery_1_content');
+ $gallery_content_2 = get_field('home_gallery_2_content');
+ $gallery_content_3 = get_field('home_gallery_3_content');
+ $gallery_content_4 = get_field('home_gallery_4_content');
+ $gallery_content_5 = get_field('home_gallery_5_content');
+ $gallery_content_6 = get_field('home_gallery_6_content');
  // outro
  $home_outro_body   = get_field('home_outro_body');
  $home_outro_button = get_field('home_outro_button');
@@ -256,9 +269,15 @@ get_header(); ?>
         <div class="col col-sm-6 col-lg-4">
 
           <div class="gallery-item gallery-item-sm">
+            <!-- if user uploaded image -->
+            <?php if(!empty($gallery_image_1) ) { ?>
+              <img src="<?php echo $gallery_image_1['url'] ?>" alt="<?php echo $gallery_image_1['alt'] ?>">
+            <p class="img-description"><?php echo $gallery_content_1; ?></p>
+            <?php } else {?>
             <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/blues_draggers_300w.jpg"
               alt="West Temple Tail Draggers. Drummer close up.">
             <p class="img-description">Monday - Open Blues Jam</p>
+            <?php } ?>
           </div>
 
         </div>
@@ -266,9 +285,15 @@ get_header(); ?>
         <div class="col col-sm-6 col-lg-4">
 
           <div class="gallery-item gallery-item-sm">
+            <!-- if user uploaded image -->
+            <?php if(!empty($gallery_image_2) ) { ?>
+              <img src="<?php echo $gallery_image_2['url'] ?>" alt="<?php echo $gallery_image_2['alt'] ?>">
+            <p class="img-description"><?php echo $gallery_content_2; ?></p>
+            <?php } else {?>
             <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/paint_nite-1_300w.jpg"
               alt="Paint Nite group.">
             <p class="img-description">Tuesday - $2 Tuesday</p>
+            <?php } ?>
           </div>
 
         </div>
@@ -276,9 +301,15 @@ get_header(); ?>
         <div class="col col-sm-6 col-lg-4">
 
           <div class="gallery-item gallery-item-sm">
+            <!-- if user uploaded image -->
+            <?php if(!empty($gallery_image_3) ) { ?>
+              <img src="<?php echo $gallery_image_3['url'] ?>" alt="<?php echo $gallery_image_3['alt'] ?>">
+            <p class="img-description"><?php echo $gallery_content_3; ?></p>
+            <?php } else {?>
             <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/trivia_group_300w.jpg"
               alt="Every trivia team.">
             <p class="img-description">Wednesday - General Trivia</p>
+            <?php } ?>
           </div>
 
         </div>
@@ -286,9 +317,15 @@ get_header(); ?>
         <div class="col col-sm-6 col-lg-4">
 
           <div class="gallery-item gallery-item-sm">
+            <!-- if user uploaded image -->
+            <?php if(!empty($gallery_image_4) ) { ?>
+              <img src="<?php echo $gallery_image_4['url'] ?>" alt="<?php echo $gallery_image_4['alt'] ?>">
+            <p class="img-description"><?php echo $gallery_content_4; ?></p>
+            <?php } else {?>
             <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/karaoke_group_sing_300w.jpg"
               alt="West Temple Tail Draggers. Vocalist close up.">
             <p class="img-description">Thursday - Karaoke</p>
+            <?php } ?>
           </div>
 
         </div>
@@ -296,8 +333,14 @@ get_header(); ?>
         <div class="col col-sm-6 col-lg-4">
 
           <div class="gallery-item gallery-item-sm">
+            <!-- if user uploaded image -->
+            <?php if(!empty($gallery_image_5) ) { ?>
+              <img src="<?php echo $gallery_image_5['url'] ?>" alt="<?php echo $gallery_image_5['alt'] ?>">
+            <p class="img-description"><?php echo $gallery_content_5; ?></p>
+            <?php } else {?>
             <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/live_music-2_300w.jpg" alt="Royal Bliss.">
             <p class="img-description">Friday - Live Music</p>
+            <?php } ?>
           </div>
 
         </div>
@@ -305,9 +348,15 @@ get_header(); ?>
         <div class="col col-sm-6 col-lg-4">
 
           <div class="gallery-item gallery-item-sm">
+            <!-- if user uploaded image -->
+            <?php if(!empty($gallery_image_6) ) { ?>
+              <img src="<?php echo $gallery_image_6['url'] ?>" alt="<?php echo $gallery_image_6['alt'] ?>">
+            <p class="img-description"><?php echo $gallery_content_6; ?></p>
+            <?php } else {?>
             <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/dj-latu_300w.jpg"
               alt="DJ Latu at the green pig.">
             <p class="img-description">Saturday - DJ Latu</p>
+            <?php } ?>
           </div>
 
         </div>
