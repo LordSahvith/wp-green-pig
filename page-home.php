@@ -37,7 +37,7 @@ get_header(); ?>
 <div class="fade-down">
 
   <section class="welcome-hero"
-    style="background: #333 url(<?php echo $hero_image['url']; ?>) center center no-repeat;">
+    style="background: #333 url(<?php echo $hero_image['url']; ?>) center center no-repeat; background-size: cover;">
 
   </section>
 
@@ -109,7 +109,7 @@ get_header(); ?>
   if(!empty($banner_menu_image) ) { 
 ?>
   <section class="banner banner-shrink home-menu-banner"
-    style="background: #333 url(<?php echo $banner_menu_image['url']; ?>) center center no-repeat;">
+    style="background: #333 url(<?php echo $banner_menu_image['url']; ?>) center center no-repeat; background-size: cover;">
     <?php } else {?>
     <section class="banner banner-shrink home-menu-banner">
       <?php }  ?>
@@ -155,7 +155,7 @@ get_header(); ?>
         ?>
 
         <div class="menu-opt food"
-          style="background: #333 url(<?php echo $menu_food_image['url']; ?>) center center no-repeat;">
+          style="background: #333 url(<?php echo $menu_food_image['url']; ?>) center center no-repeat; background-size: cover;">
           <?php } else {?>
 
           <div class="menu-opt food">
@@ -177,7 +177,7 @@ get_header(); ?>
           ?>
 
           <div class="menu-opt drinks"
-            style="background: #333 url(<?php echo $menu_drink_image['url']; ?>) center center no-repeat;">
+            style="background: #333 url(<?php echo $menu_drink_image['url']; ?>) center center no-repeat; background-size: cover;">
             <?php } else {?>
 
             <div class="menu-opt drinks">
@@ -207,7 +207,7 @@ get_header(); ?>
   if(!empty($banner_events_image) ) { 
 ?>
   <section class="banner banner-shrink home-events-banner"
-    style="background: #333 url(<?php echo $banner_events_image['url']; ?>) center center no-repeat;">
+    style="background: #333 url(<?php echo $banner_events_image['url']; ?>) center center no-repeat; background-size: cover;">
     <?php } else {?>
     <section class="banner banner-shrink home-events-banner">
       <?php }  ?>

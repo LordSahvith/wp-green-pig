@@ -43,7 +43,7 @@ get_header(); ?>
   <?php 
   if(!empty($hero_image) ) { 
 ?>
-  <section class="hero hero-food" style="background: url(<?php echo $hero_image['url']; ?>) center center no-repeat;">
+  <section class="hero hero-food" style="background: url(<?php echo $hero_image['url']; ?>) center center no-repeat; background-size: cover;">
     <?php } else {?>
     <section class="hero hero-food">
       <?php } ?>
@@ -141,7 +141,7 @@ get_header(); ?>
       if(!empty($starters_banner) ) { 
     ?>
     <section id="starters" class="banner food-starters-banner sub-menu-banner-gap"
-      style="background: url(<?php echo $starters_banner['url']; ?>) center center no-repeat;">
+      style="background: url(<?php echo $starters_banner['url']; ?>) center center no-repeat; background-size: cover;">
       <? } else {?>
       <section id="starters" class="banner food-starters-banner sub-menu-banner-gap">
         <?php } ?>
@@ -328,7 +328,7 @@ get_header(); ?>
       if(!empty($specialties_banner) ) { 
     ?>
       <section id="specialties" class="banner food-specialties-banner"
-      style="background: url(<?php echo $specialties_banner['url']; ?>) center center no-repeat;">
+      style="background: url(<?php echo $specialties_banner['url']; ?>) center center no-repeat; background-size: cover;">
       <? } else {?>
         <section id="specialties" class="banner food-specialties-banner">
         <?php } ?>
@@ -458,12 +458,19 @@ get_header(); ?>
   <!-- =========== SANDWICHES BANNER ====================== -->
 
   <div class="fade-up">
-
-    <section id="sandwiches" class="banner food-sandwiches-banner">
+    <!-- if user uploaded image -->
+    <?php 
+      if(!empty($sandwiches_banner) ) { 
+    ?>
+      <section id="sandwiches" class="banner food-sandwiches-banner"
+      style="background: url(<?php echo $sandwiches_banner['url']; ?>) center center no-repeat; background-size: cover;">
+      <? } else {?>
+      <section id="sandwiches" class="banner food-sandwiches-banner">
+        <?php } ?>
 
       <div class="banner-container">
 
-        <h3>Sandwiches</h3>
+      <h3><?php echo $sandwiches_title; ?></h3>
 
       </div>
 
@@ -607,12 +614,20 @@ get_header(); ?>
   <!-- =========== BURGERS BANNER ====================== -->
 
   <div class="fade-up">
+    <!-- if user uploaded image -->
+    <?php 
+      if(!empty($burgers_banner) ) { 
+    ?>
+        <section id="burgers" class="banner food-burgers-banner"
+      style="background: url(<?php echo $burgers_banner['url']; ?>) center center no-repeat; background-size: cover;">
+      <? } else {?>
+        <section id="burgers" class="banner food-burgers-banner">
+        <?php } ?>
 
-    <section id="burgers" class="banner food-burgers-banner">
 
       <div class="banner-container">
 
-        <h3>Burgers</h3>
+        <h3><?php echo $burgers_title; ?></h3>
 
       </div>
 
@@ -760,12 +775,19 @@ get_header(); ?>
   <!-- =========== GREENS BANNER ====================== -->
 
   <div class="fade-up">
-
-    <section id="greens" class="banner food-greens-banner">
+    <!-- if user uploaded image -->
+    <?php 
+      if(!empty($bowls_banner) ) { 
+    ?>
+      <section id="greens" class="banner food-greens-banner"
+      style="background: url(<?php echo $bowls_banner['url']; ?>) center center no-repeat; background-size: cover;">
+      <? } else {?>
+      <section id="greens" class="banner food-greens-banner">
+        <?php } ?>
 
       <div class="banner-container">
 
-        <h3>Bowls and Greens</h3>
+        <h3><?php echo $bowls_title; ?></h3>
 
       </div>
 
@@ -963,12 +985,19 @@ get_header(); ?>
   <!-- =========== GREENS BANNER ====================== -->
 
   <div class="fade-up">
-
-    <section id="specials" class="banner food-greens-banner">
+    <!-- if user uploaded image -->
+    <?php 
+      if(!empty($daily_banner) ) { 
+    ?>
+      <section id="specials" class="banner food-greens-banner"
+      style="background: url(<?php echo $daily_banner['url']; ?>) center center no-repeat; background-size: cover;">
+      <? } else {?>
+      <section id="specials" class="banner food-greens-banner">
+        <?php } ?>
 
       <div class="banner-container">
 
-        <h3>Daily Specials</h3>
+        <h3><?php echo $daily_title; ?></h3>
 
       </div>
 

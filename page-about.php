@@ -26,7 +26,7 @@ get_header(); ?>
     <?php 
       if(!empty($hero_image) ) { 
     ?>
-    <section class="hero hero-about" style="background: url(<?php echo $hero_image['url']; ?>) center center no-repeat;">
+    <section class="hero hero-about" style="background: url(<?php echo $hero_image['url']; ?>) center center no-repeat; background-size: cover;">
       <?php } else {?>
     <section class="hero hero-about">
         <?php } ?>
@@ -61,7 +61,7 @@ get_header(); ?>
     <?php 
       if(!empty($banner_pub_image) ) { 
     ?>
-    <section class="banner about-pub-banner" style="background: url(<?php echo $banner_pub_image['url']; ?>) center center no-repeat;">
+    <section class="banner about-pub-banner" style="background: url(<?php echo $banner_pub_image['url']; ?>) center center no-repeat; background-size: cover;">
       <?php } else {?>
     <section class="banner about-pub-banner">
       <?php } ?>
@@ -143,7 +143,7 @@ get_header(); ?>
       if(!empty($banner_patio_image) ) { 
     ?>
 
-    <section class="banner about-patio-banner" style="background: url(<?php echo $banner_patio_image['url']; ?>) center center no-repeat;">
+    <section class="banner about-patio-banner" style="background: url(<?php echo $banner_patio_image['url']; ?>) center center no-repeat; background-size: cover;">
       <?php } else {?>
 
 <section class="banner about-patio-banner">
