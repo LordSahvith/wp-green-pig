@@ -28,7 +28,7 @@ get_header(); ?>
   <?php 
     if(!empty($hero_image) ) { 
   ?>
-  <section class="hero hero-menu" style="background: url(<?php echo $hero_image['url']; ?>) center center no-repeat;">
+  <section class="hero hero-menu" style="background: url(<?php echo $hero_image['url']; ?>) center center no-repeat; background-size: cover;">
 
     <?php } else {?>
 
@@ -84,7 +84,7 @@ get_header(); ?>
             ?>
 
           <div class="menu-opt food"
-            style="background: url(<?php echo $food_image['url']; ?>) center center no-repeat;">
+            style="background: url(<?php echo $food_image['url']; ?>) center center no-repeat; background-size: cover;">
 
             <?php } else {?>
 
@@ -108,7 +108,7 @@ get_header(); ?>
             ?>
 
             <div class="menu-opt drinks"
-              style="background: url(<?php echo $drinks_image['url']; ?>) center center no-repeat;">
+              style="background: url(<?php echo $drinks_image['url']; ?>) center center no-repeat; background-size: cover;">
 
               <?php } else {?>
 
