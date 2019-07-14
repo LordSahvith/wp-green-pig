@@ -33,6 +33,15 @@
  $daily_button        = get_field('banner_daily_button');
  $daily_title         = get_field('banner_daily_title');
  $daily_banner        = get_field('banner_daily_image');
+ // vegan banners
+ $vegan_title      = get_field('banner_vegan_title');
+ $vegan_banner     = get_field('banner_vegan_image');
+ // late night banners
+ $late_night_title      = get_field('banner_late_night_title');
+ $late_night_banner     = get_field('banner_late_night_image');
+ // breakfast banners
+ $breakfast_title      = get_field('banner_breakfast_title');
+ $breakfast_banner     = get_field('banner_breakfast_image');
 
 get_header(); ?>
 
@@ -982,7 +991,7 @@ get_header(); ?>
   </section> <!-- bowls n greens -->
 
 
-  <!-- =========== GREENS BANNER ====================== -->
+  <!-- =========== DAILY SPECIALS BANNER ====================== -->
 
   <div class="fade-up">
     <!-- if user uploaded image -->
@@ -1005,7 +1014,7 @@ get_header(); ?>
 
   </div>
 
-  <!-- =========== GREENS SECT ====================== -->
+  <!-- =========== DAILY SPECIALS SECT ====================== -->
 
   <section class="daily-specials-section" style="margin-bottom: 60px;">
     <div class="container">
@@ -1058,9 +1067,17 @@ get_header(); ?>
 <div id="menu-vegan">
 
   <!-- =========== VEGAN BANNER ====================== -->
-  <section class="banner food-vegan-banner sub-menu-banner-gap">
+    <!-- if user uploaded image -->
+    <?php 
+      if(!empty($vegan_banner) ) { 
+    ?>
+      <section class="banner food-vegan-banner sub-menu-banner-gap"
+      style="background: url(<?php echo $vegan_banner['url']; ?>) center center no-repeat; background-size: cover;">
+      <? } else {?>
+      <section class="banner food-vegan-banner sub-menu-banner-gap">
+        <?php } ?>
     <div class="banner-container">
-      <h3>Vegan</h3>
+      <h3><?php echo $vegan_title; ?></h3>
     </div>
   </section>
 
@@ -1182,12 +1199,19 @@ get_header(); ?>
 
 
   <!-- =========== LATE NIGHT BANNER ====================== -->
-
-  <section class="banner food-late-banner sub-menu-banner-gap">
+    <!-- if user uploaded image -->
+    <?php 
+      if(!empty($late_night_banner) ) { 
+    ?>
+      <section class="banner food-late-banner sub-menu-banner-gap"
+      style="background: url(<?php echo $late_night_banner['url']; ?>) center center no-repeat; background-size: cover;">
+      <? } else {?>
+      <section class="banner food-late-banner sub-menu-banner-gap">
+        <?php } ?>
 
     <div class="banner-container">
 
-      <h3>Late Night</h3>
+      <h3><?php echo $late_night_title; ?></h3>
 
     </div>
 
@@ -1412,9 +1436,17 @@ get_header(); ?>
 <div id="menu-breakfast">
 
   <!-- =========== BREAKFAST BANNER ====================== -->
-  <section class="banner food-breakfast-banner sub-menu-banner-gap">
+    <!-- if user uploaded image -->
+    <?php 
+      if(!empty($breakfast_banner) ) { 
+    ?>
+        <section class="banner food-breakfast-banner sub-menu-banner-gap"
+      style="background: url(<?php echo $breakfast_banner['url']; ?>) center center no-repeat; background-size: cover;">
+      <? } else {?>
+        <section class="banner food-breakfast-banner sub-menu-banner-gap">
+        <?php } ?>
     <div class="banner-container">
-      <h3>Saturday Breakfast</h3>
+      <h3><?php echo $breakfast_title; ?></h3>
     </div>
   </section>
 
