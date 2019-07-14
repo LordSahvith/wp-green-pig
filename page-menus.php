@@ -14,9 +14,23 @@
  $food_image = get_field('menus_food_image');
  $drinks_title = get_field('menus_drinks_title');
  $drinks_image = get_field('menus_drinks_image');
- // gallery
+ // gallery copy
  $gallery_title  = get_field('menus_gallery_title');
  $gallery_body   = get_field('menus_gallery_body');
+ // gallery images
+ $gallery_image_1   = get_field('menus_gallery_1');
+ $gallery_image_2   = get_field('menus_gallery_2');
+ $gallery_image_3   = get_field('menus_gallery_3');
+ $gallery_image_4   = get_field('menus_gallery_4');
+ $gallery_image_5   = get_field('menus_gallery_5');
+ $gallery_image_6   = get_field('menus_gallery_6');
+ // gallery content
+ $gallery_content_1 = get_field('menus_gallery_1_content');
+ $gallery_content_2 = get_field('menus_gallery_2_content');
+ $gallery_content_3 = get_field('menus_gallery_3_content');
+ $gallery_content_4 = get_field('menus_gallery_4_content');
+ $gallery_content_5 = get_field('menus_gallery_5_content');
+ $gallery_content_6 = get_field('menus_gallery_6_content');
 
 get_header(); ?>
 
@@ -147,9 +161,15 @@ get_header(); ?>
             <div class="col col-sm-6 col-lg-4">
 
               <div class="gallery-item gallery-item-sm">
+              <!-- if user uploaded image -->
+              <?php if(!empty($gallery_image_1) ) { ?>
+                <img src="<?php echo $gallery_image_1['url'] ?>" alt="<?php echo $gallery_image_1['alt'] ?>">
+              <p class="img-description"><?php echo $gallery_content_1; ?></p>
+              <?php } else {?>
                 <img src="<?php bloginfo('stylesheet_directory') ?>/assets/img/angry_vegan_300w.jpg"
                   alt="Angry Vegan Chick'n Sandwich.">
                 <p class="img-description">Angry Vegain Chick'n</p>
+              <?php } ?>
               </div>
 
             </div>
@@ -157,9 +177,15 @@ get_header(); ?>
             <div class="col col-sm-6 col-lg-4">
 
               <div class="gallery-item gallery-item-sm">
+              <!-- if user uploaded image -->
+              <?php if(!empty($gallery_image_2) ) { ?>
+                <img src="<?php echo $gallery_image_2['url'] ?>" alt="<?php echo $gallery_image_2['alt'] ?>">
+              <p class="img-description"><?php echo $gallery_content_2; ?></p>
+              <?php } else {?>
                 <img src="<?php bloginfo('stylesheet_directory') ?>/assets/img/cheesesteak_300w.jpg"
                   alt="Pig-a-delphia Cheesesteak Sandwich.">
                 <p class="img-description">Pig-a-delphia Cheesesteak</p>
+              <?php } ?>
               </div>
 
             </div>
@@ -167,9 +193,15 @@ get_header(); ?>
             <div class="col col-sm-6 col-lg-4">
 
               <div class="gallery-item gallery-item-sm">
+              <!-- if user uploaded image -->
+              <?php if(!empty($gallery_image_3) ) { ?>
+                <img src="<?php echo $gallery_image_3['url'] ?>" alt="<?php echo $gallery_image_3['alt'] ?>">
+              <p class="img-description"><?php echo $gallery_content_3; ?></p>
+              <?php } else {?>
                 <img src="<?php bloginfo('stylesheet_directory') ?>/assets/img/salmon_salad_300w.jpg"
                   alt="Salmon Salad.">
                 <p class="img-description">Salmon Salad</p>
+              <?php } ?>
               </div>
 
             </div>
@@ -177,8 +209,14 @@ get_header(); ?>
             <div class="col col-sm-6 col-lg-4">
 
               <div class="gallery-item gallery-item-sm">
+              <!-- if user uploaded image -->
+              <?php if(!empty($gallery_image_4) ) { ?>
+                <img src="<?php echo $gallery_image_4['url'] ?>" alt="<?php echo $gallery_image_4['alt'] ?>">
+              <p class="img-description"><?php echo $gallery_content_4; ?></p>
+              <?php } else {?>
                 <img src="<?php bloginfo('stylesheet_directory') ?>/assets/img/cubano_300w.jpg" alt="Cubano Sandwich.">
                 <p class="img-description">Cubano</p>
+              <?php } ?>
               </div>
 
             </div>
@@ -186,9 +224,15 @@ get_header(); ?>
             <div class="col col-sm-6 col-lg-4">
 
               <div class="gallery-item gallery-item-sm">
+              <!-- if user uploaded image -->
+              <?php if(!empty($gallery_image_5) ) { ?>
+                <img src="<?php echo $gallery_image_5['url'] ?>" alt="<?php echo $gallery_image_5['alt'] ?>">
+              <p class="img-description"><?php echo $gallery_content_5; ?></p>
+              <?php } else {?>
                 <img src="<?php bloginfo('stylesheet_directory') ?>/assets/img/nachos_300w.jpg"
                   alt="Chili Verde Nachos.">
                 <p class="img-description">Chili Verde Nachos</p>
+              <?php } ?>
               </div>
 
             </div>
@@ -196,8 +240,14 @@ get_header(); ?>
             <div class="col col-sm-6 col-lg-4">
 
               <div class="gallery-item gallery-item-sm">
+              <!-- if user uploaded image -->
+              <?php if(!empty($gallery_image_6) ) { ?>
+                <img src="<?php echo $gallery_image_6['url'] ?>" alt="<?php echo $gallery_image_6['alt'] ?>">
+              <p class="img-description"><?php echo $gallery_content_6; ?></p>
+              <?php } else {?>
                 <img src="<?php bloginfo('stylesheet_directory') ?>/assets/img/angus_300w.jpg" alt="Angus Burger.">
                 <p class="img-description">Angus Burger</p>
+              <?php } ?>
               </div>
 
             </div>
