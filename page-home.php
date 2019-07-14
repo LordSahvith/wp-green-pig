@@ -22,13 +22,14 @@
  $banner_events_title = get_field('banner_events_title');
  $events_title        = get_field('events_title');
  $events_body         = get_field('events_body');
- // gallery
+ // gallery images
  $gallery_image_1   = get_field('home_gallery_1');
  $gallery_image_2   = get_field('home_gallery_2');
  $gallery_image_3   = get_field('home_gallery_3');
  $gallery_image_4   = get_field('home_gallery_4');
  $gallery_image_5   = get_field('home_gallery_5');
  $gallery_image_6   = get_field('home_gallery_6');
+ // gallery content
  $gallery_content_1 = get_field('home_gallery_1_content');
  $gallery_content_2 = get_field('home_gallery_2_content');
  $gallery_content_3 = get_field('home_gallery_3_content');
