@@ -536,6 +536,9 @@ a {
   color: #FFF;
 }
 
+ul {
+  padding: 0;
+}
 
 li { list-style: none; }
 
@@ -1249,6 +1252,11 @@ button:focus { outline: none; }
 .main-menu {
   position: relative;
   margin-top: -15px;
+}
+
+.form-menu {
+  margin-top: -35px;
+  margin-left: -40px;
 }
 
 .form-btn {
