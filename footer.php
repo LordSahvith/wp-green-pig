@@ -72,6 +72,10 @@
 <script src="<?php bloginfo('template_directory'); ?>/assets/js/scrolling_nav.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/assets/js/map-footer.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/assets/js/fade_on_scroll.js"></script>
+<script src="<?php bloginfo('template_directory'); ?>/assets/js/dates.js"></script>
+<script src="<?php bloginfo('template_directory'); ?>/assets/js/events-nav.js"></script>
+<script src="<?php bloginfo('template_directory'); ?>/assets/js/instafeed.js"></script>
+<script src="<?php bloginfo('template_directory'); ?>/assets/js/map-contact.js"></script>
 
 </body>
 
