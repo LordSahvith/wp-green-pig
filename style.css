@@ -536,6 +536,9 @@ a {
   color: #FFF;
 }
 
+ul {
+  padding: 0;
+}
 
 li { list-style: none; }
 
@@ -628,7 +631,7 @@ nav a {
 
 .logo {
   position: relative;
-  margin-top: 5px;
+  margin-top: -15px;
   padding-left: 10px;
   height: 100px;
   z-index: 12;
@@ -1251,6 +1254,11 @@ button:focus { outline: none; }
   margin-top: -15px;
 }
 
+.form-menu {
+  margin-top: -35px;
+  margin-left: -40px;
+}
+
 .form-btn {
 padding: 40px 20px;
 }
@@ -1659,8 +1667,8 @@ padding-bottom: 20px;
 @media screen and (min-width: 980px) {
   
   #menu-vegan-btn {
-      margin-right: 20px;
-      padding-left: 20px;
+      margin-right: 22px;
+      padding-left: 15px;
   }
 
   #menu-late-night-btn {
