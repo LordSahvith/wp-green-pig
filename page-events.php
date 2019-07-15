@@ -853,57 +853,99 @@ get_header(); ?>
   <div id="event-sun">
 
     <!-- =========== SUNDAY - BREAKFAST BUFFET BANNER ====================== -->
-    <section class="banner events-sun-banner sub-menu-banner-gap">
-      <div class="banner-container">
+    <!-- if user uploaded image -->
+    <?php if(!empty($sun_banner) ) { ?>
+      <section class="banner events-sun-banner sub-menu-banner-gap" style="background: #333 url(<?php echo $sun_banner['url']; ?>) center center no-repeat; background-size: cover;">
+    <?php } else {?>
+      <section class="banner events-sun-banner sub-menu-banner-gap">
+    <?php } ?>
+        <div class="banner-container">
+      <!-- if user uploaded copy -->
+      <?php if(!empty($sun_title) ) { ?>
+        <h3><?php echo $sun_title; ?></h3>
+      <?php } else {?>
         <h3>Breakfast Buffet / Adult Trivia</h3>
-      </div>
-    </section>
+      <?php } ?>
+        </div>
+      </section>
 
 
     <!-- =========== SUNDAY - BREAKFAST BUFFET SECT ====================== -->
     <section class="events-sun-section">
       <div class="container">
-
-        <p>Our Breakfast Buffet starts at 10am and goes to 2pm so come grab some grub with a delicious Mimosa or Bloody Mary. We have omelets cooked to order and a variety of breakfast items including Vegan.</p>
+        <!-- if user uploaded copy -->
+        <?php if(!empty($sun_body) ) { ?>
+          <p><?php echo $sun_body; ?></p>
+        <?php } else {?>
+          <p>Our Breakfast Buffet starts at 10am and goes to 2pm so come grab some grub with a delicious Mimosa or Bloody Mary. We have omelets cooked to order and a variety of breakfast items including Vegan.</p>
+        <?php } ?>
 
         <script>instafeed('greenpigbrunch');</script>
 
         <div class="row">
           <div class="col col-sm-6 col-lg-4">
             <div class="gallery-item gallery-item-sm">
+              <!-- if user uploaded image -->
+              <?php if(!empty($sun_gallery_image_1) ) { ?>
+                <img id="greenpigbrunch0" src="<?php echo $sun_gallery_image_1['url'] ?>" alt="<?php echo $sun_gallery_image_1['alt'] ?>">
+              <?php } else {?>
               <img id="greenpigbrunch0" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/bacon_300w.jpg" alt="Breakfast buffet - bacon.">
+              <?php } ?>
             </div>
           </div>
 
           <div class="col col-sm-6 col-lg-4">
             <div class="gallery-item gallery-item-sm">
+              <!-- if user uploaded image -->
+              <?php if(!empty($sun_gallery_image_2) ) { ?>
+                <img id="greenpigbrunch1" src="<?php echo $sun_gallery_image_2['url'] ?>" alt="<?php echo $sun_gallery_image_2['alt'] ?>">
+              <?php } else {?>
               <img id="greenpigbrunch1" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/french_toast_300w.jpg" alt="Breakfast buffet - french toast.">
+              <?php } ?>
             </div>
           </div>
 
           <div class="col col-sm-6 col-lg-4">
             <div class="gallery-item gallery-item-sm">
-              <img id="greenpigbrunch2" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/hashbrowns_300w.jpg"
-                alt="Breakfast buffet - biscuits and hashbrowns.">
+              <!-- if user uploaded image -->
+              <?php if(!empty($sun_gallery_image_3) ) { ?>
+                <img id="greenpigbrunch2" src="<?php echo $sun_gallery_image_3['url'] ?>" alt="<?php echo $sun_gallery_image_3['alt'] ?>">
+              <?php } else {?>
+              <img id="greenpigbrunch2" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/hashbrowns_300w.jpg" alt="Breakfast buffet - biscuits and hashbrowns.">
+              <?php } ?>
             </div>
           </div>
 
           <div class="col col-sm-6 col-lg-4">
             <div class="gallery-item gallery-item-sm">
+              <!-- if user uploaded image -->
+              <?php if(!empty($sun_gallery_image_4) ) { ?>
+                <img id="greenpigbrunch3" src="<?php echo $sun_gallery_image_4['url'] ?>" alt="<?php echo $sun_gallery_image_4['alt'] ?>">
+              <?php } else {?>
               <img id="greenpigbrunch3" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/sweets_300w.jpg" alt="Breakfast buffet - fruits and muffins.">
+              <?php } ?>
             </div>
           </div>
 
           <div class="col col-sm-6 col-lg-4">
             <div class="gallery-item gallery-item-sm">
+              <!-- if user uploaded image -->
+              <?php if(!empty($sun_gallery_image_5) ) { ?>
+                <img id="greenpigbrunch4" src="<?php echo $sun_gallery_image_5['url'] ?>" alt="<?php echo $sun_gallery_image_5['alt'] ?>">
+              <?php } else {?>
               <img id="greenpigbrunch4" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/omlets_300w.jpg" alt="Breakfast buffet - omlets.">
+              <?php } ?>
             </div>
           </div>
 
           <div class="col col-sm-6 col-lg-4">
             <div class="gallery-item gallery-item-sm">
-              <img id="greenpigbrunch5" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/street_tacos_300w.jpg"
-                alt="Breakfast buffet - carnitas street tacos.">
+              <!-- if user uploaded image -->
+              <?php if(!empty($sun_gallery_image_6) ) { ?>
+                <img id="greenpigbrunch5" src="<?php echo $sun_gallery_image_6['url'] ?>" alt="<?php echo $sun_gallery_image_6['alt'] ?>">
+              <?php } else {?>
+              <img id="greenpigbrunch5" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/street_tacos_300w.jpg" alt="Breakfast buffet - carnitas street tacos.">
+              <?php } ?>
             </div>
           </div>
         </div> <!-- row -->
