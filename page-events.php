@@ -14,7 +14,49 @@
  // monday
  $mon_banner = get_field('banner_mon_image');
  $mon_title  = get_field('banner_mon_title');
- $mon_body   = get_field('banner_mon_body');
+ $mon_body   = get_field('mon_body');
+ // monday gallery
+ $mon_gallery_image_1 = get_field('mon_gallery_1');
+ $mon_gallery_image_2 = get_field('mon_gallery_2');
+ $mon_gallery_image_3 = get_field('mon_gallery_3');
+ $mon_gallery_image_4 = get_field('mon_gallery_4');
+ $mon_gallery_image_5 = get_field('mon_gallery_5');
+ $mon_gallery_image_6 = get_field('mon_gallery_6');
+ // tuesday
+ $tue_banner = get_field('banner_tue_image');
+ $tue_title  = get_field('banner_tue_title');
+ $tue_body   = get_field('tue_body');
+ // tuesday gallery
+ $tue_gallery_image_1 = get_field('tue_gallery_1');
+ $tue_gallery_image_2 = get_field('tue_gallery_2');
+ $tue_gallery_image_3 = get_field('tue_gallery_3');
+ $tue_gallery_image_4 = get_field('tue_gallery_4');
+ $tue_gallery_image_5 = get_field('tue_gallery_5');
+ $tue_gallery_image_6 = get_field('tue_gallery_6');
+ // wednesday
+ $wed_banner          = get_field('banner_wed_image');
+ $wed_title           = get_field('banner_wed_title');
+ $wed_body            = get_field('wed_body');
+ $first_question_url  = get_field('first_question_url');
+ $first_question_name = get_field('first_question_name');
+ // wednesday gallery
+ $wed_gallery_image_1 = get_field('wed_gallery_1');
+ $wed_gallery_image_2 = get_field('wed_gallery_2');
+ $wed_gallery_image_3 = get_field('wed_gallery_3');
+ $wed_gallery_image_4 = get_field('wed_gallery_4');
+ $wed_gallery_image_5 = get_field('wed_gallery_5');
+ $wed_gallery_image_6 = get_field('wed_gallery_6');
+ // thursday
+ $thur_banner = get_field('banner_thur_image');
+ $thur_title  = get_field('banner_thur_title');
+ $thur_body   = get_field('thur_body');
+ // thursday gallery
+ $thur_gallery_image_1 = get_field('thur_gallery_1');
+ $thur_gallery_image_2 = get_field('thur_gallery_2');
+ $thur_gallery_image_3 = get_field('thur_gallery_3');
+ $thur_gallery_image_4 = get_field('thur_gallery_4');
+ $thur_gallery_image_5 = get_field('thur_gallery_5');
+ $thur_gallery_image_6 = get_field('thur_gallery_6');
 
 get_header(); ?>
 
@@ -163,7 +205,7 @@ get_header(); ?>
         <?php if(!empty($mon_body) ) { ?>
           <p><?php echo $mon_body; ?></p>
         <?php } else {?>
-          <p>If you love playing, listening and dancing to blues then Monday nights at The Green Pig is the place for you. We have a live local blues band "West Temple Tail Draggers" that open up the night with a signup sheet for others to join so bring your instrument and sign up to show off your passion for blues.</p>
+          <p>If you love playing, listening and dancing to blues then Monday nights at The Green Pig is the place for you. We have a live local blues band "West Temple Tail Draggers" that open up the night with a signup sheet for others to join so bring your instrument and sign up to show off your passion for&nbsp;blues.</p>
         <?php } ?>
         </div>
 
@@ -173,41 +215,67 @@ get_header(); ?>
           <div class="fade-up-3">
             <div class="col col-sm-6 col-lg-4">
               <div class="gallery-item gallery-item-sm">
+              <!-- if user uploaded image -->
+              <?php if(!empty($mon_gallery_image_1) ) { ?>
+                <img id="greenpigbluesjam0" src="<?php echo $mon_gallery_image_1['url'] ?>" alt="<?php echo $mon_gallery_image_1['alt'] ?>">
+              <?php } else {?>
                 <img id="greenpigbluesjam0" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/blues_draggers_300w.jpg" alt="West Temple Tail Draggers.">
+              <?php } ?>
               </div>
             </div>
 
             <div class="col col-sm-6 col-lg-4">
               <div class="gallery-item gallery-item-sm">
-                <img id="greenpigbluesjam1" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/blues_jam_300w.jpg"
-                  alt="Open Blues Jam. Drummer close up.">
+              <!-- if user uploaded image -->
+              <?php if(!empty($mon_gallery_image_2) ) { ?>
+                <img id="greenpigbluesjam1" src="<?php echo $mon_gallery_image_2['url'] ?>" alt="<?php echo $mon_gallery_image_2['alt'] ?>">
+              <?php } else {?>
+                <img id="greenpigbluesjam1" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/blues_jam_300w.jpg" alt="Open Blues Jam. Drummer close up.">
+              <?php } ?>
               </div>
             </div>
 
             <div class="col col-sm-6 col-lg-4">
               <div class="gallery-item gallery-item-sm">
-                <img id="greenpigbluesjam2" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/blues_draggers-1_300w.jpg"
-                  alt="West Temple Tail Draggers. Vocalist close up.">
+              <!-- if user uploaded image -->
+              <?php if(!empty($mon_gallery_image_3) ) { ?>
+                <img id="greenpigbluesjam2" src="<?php echo $mon_gallery_image_3['url'] ?>" alt="<?php echo $mon_gallery_image_3['alt'] ?>">
+              <?php } else {?>
+                <img id="greenpigbluesjam2" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/blues_draggers-1_300w.jpg" alt="West Temple Tail Draggers. Vocalist close up.">
+              <?php } ?>
               </div>
             </div>
 
             <div class="col col-sm-6 col-lg-4">
               <div class="gallery-item gallery-item-sm">
-                <img id="greenpigbluesjam3" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/blues_draggers_300w.jpg"
-                  alt="West Temple Tail Draggers. Drummer close up.">
+              <!-- if user uploaded image -->
+              <?php if(!empty($mon_gallery_image_4) ) { ?>
+                <img id="greenpigbluesjam3" src="<?php echo $mon_gallery_image_4['url'] ?>" alt="<?php echo $mon_gallery_image_4['alt'] ?>">
+              <?php } else {?>
+                <img id="greenpigbluesjam3" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/blues_draggers_300w.jpg" alt="West Temple Tail Draggers. Drummer close up.">
+              <?php } ?>
               </div>
             </div>
 
             <div class="col col-sm-6 col-lg-4">
               <div class="gallery-item gallery-item-sm">
+              <!-- if user uploaded image -->
+              <?php if(!empty($mon_gallery_image_5) ) { ?>
+                <img id="greenpigbluesjam4" src="<?php echo $mon_gallery_image_5['url'] ?>" alt="<?php echo $mon_gallery_image_5['alt'] ?>">
+              <?php } else {?>
                 <img id="greenpigbluesjam4" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/blues_jam_300w.jpg" alt="Open Blues Jam.">
+              <?php } ?>
               </div>
             </div>
 
             <div class="col col-sm-6 col-lg-4">
               <div class="gallery-item gallery-item-sm">
-                <img id="greenpigbluesjam5" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/blues_draggers-1_300w.jpg"
-                  alt="West Temple Tail Draggers. Vocalist close up.">
+              <!-- if user uploaded image -->
+              <?php if(!empty($mon_gallery_image_6) ) { ?>
+                <img id="greenpigbluesjam5" src="<?php echo $mon_gallery_image_6['url'] ?>" alt="<?php echo $mon_gallery_image_6['alt'] ?>">
+              <?php } else {?>
+                <img id="greenpigbluesjam5" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/blues_draggers-1_300w.jpg" alt="West Temple Tail Draggers. Vocalist close up.">
+              <?php } ?>
               </div>
             </div>
           </div> <!-- fade-up-3 -->
@@ -221,17 +289,32 @@ get_header(); ?>
   <div id="event-tue">
 
     <!-- =========== TUESDAY - $2 TUESDAYS BANNER ====================== -->
-    <section class="banner events-tue-banner sub-menu-banner-gap">
-      <div class="banner-container">
-        <h3>$2 Tuesday's</h3>
-      </div>
-    </section>
+    <!-- if user uploaded image -->
+    <?php if(!empty($tue_banner) ) { ?>
+      <section class="banner events-tue-banner sub-menu-banner-gap" style="background: #333 url(<?php echo $tue_banner['url']; ?>) center center no-repeat; background-size: cover;">
+    <?php } else {?>
+      <section class="banner events-tue-banner sub-menu-banner-gap">
+    <?php } ?>
+        <div class="banner-container">
+      <!-- if user uploaded copy -->
+      <?php if(!empty($tue_title) ) { ?>
+        <h3><?php echo $tue_title; ?></h3>
+      <?php } else {?>
+          <h3>$2 Tuesday's</h3>
+      <?php } ?>
+        </div>
+      </section>
 
     <!-- =========== TUESDAY - $2 TUESDAYS SECT ====================== -->
     <section class="events-tue-section">
       <div class="container">
         <div class="intro">
+        <!-- if user uploaded copy -->
+        <?php if(!empty($tue_body) ) { ?>
+          <p><?php echo $tue_body; ?></p>
+        <?php } else {?>
           <p class="bottom-gap">It's $2 Tuesday! Grab some friends and come enjoy our $2 tacos with a $2 rotator draft beer. Or if you'd prefer just a plain 'ol tall boy or spirit, we've got $2 Tecate's &amp; Tequilla. Don't miss out on spicin' up your Tuesday night!</p>
+        <?php } ?>
         </div>
 
         <script>instafeed('greenpiglocalsnight');</script>
@@ -240,37 +323,67 @@ get_header(); ?>
           <div class="fade-up-3">
             <div class="col col-sm-6 col-lg-4">
               <div class="gallery-item gallery-item-sm">
+              <!-- if user uploaded image -->
+              <?php if(!empty($tue_gallery_image_1) ) { ?>
+                <img id="greenpiglocalsnight0" src="<?php echo $tue_gallery_image_1['url'] ?>" alt="<?php echo $tue_gallery_image_1['alt'] ?>">
+              <?php } else {?>
                 <img id="greenpiglocalsnight0" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/paint_nite-1_300w.jpg" alt="Paint Nite painters.">
+              <?php } ?>
               </div>
             </div>
 
             <div class="col col-sm-6 col-lg-4">
               <div class="gallery-item gallery-item-sm">
+              <!-- if user uploaded image -->
+              <?php if(!empty($tue_gallery_image_2) ) { ?>
+                <img id="greenpiglocalsnight1" src="<?php echo $tue_gallery_image_2['url'] ?>" alt="<?php echo $tue_gallery_image_2['alt'] ?>">
+              <?php } else {?>
                 <img id="greenpiglocalsnight1" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/paint_nite-2_300w.jpg" alt="Paint Nite painters.">
+              <?php } ?>
               </div>
             </div>
 
             <div class="col col-sm-6 col-lg-4">
               <div class="gallery-item gallery-item-sm">
+              <!-- if user uploaded image -->
+              <?php if(!empty($tue_gallery_image_3) ) { ?>
+                <img id="greenpiglocalsnight2" src="<?php echo $tue_gallery_image_3['url'] ?>" alt="<?php echo $tue_gallery_image_3['alt'] ?>">
+              <?php } else {?>
                 <img id="greenpiglocalsnight2" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/paint_nite-3_300w.jpg" alt="Paint Nite painters.">
+              <?php } ?>
               </div>
             </div>
 
             <div class="col col-sm-6 col-lg-4">
               <div class="gallery-item gallery-item-sm">
+              <!-- if user uploaded image -->
+              <?php if(!empty($tue_gallery_image_4) ) { ?>
+                <img id="greenpiglocalsnight3" src="<?php echo $tue_gallery_image_4['url'] ?>" alt="<?php echo $tue_gallery_image_4['alt'] ?>">
+              <?php } else {?>
                 <img id="greenpiglocalsnight3" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/paint_nite-1_300w.jpg" alt="Paint Nite painters.">
+              <?php } ?>
               </div>
             </div>
 
             <div class="col col-sm-6 col-lg-4">
               <div class="gallery-item gallery-item-sm">
+              <!-- if user uploaded image -->
+              <?php if(!empty($tue_gallery_image_5) ) { ?>
+                <img id="greenpiglocalsnight4" src="<?php echo $tue_gallery_image_5['url'] ?>" alt="<?php echo $tue_gallery_image_5['alt'] ?>">
+              <?php } else {?>
                 <img id="greenpiglocalsnight4" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/paint_nite-2_300w.jpg" alt="Paint Nite painters.">
+              <?php } ?>
               </div>
             </div>
 
             <div class="col col-sm-6 col-lg-4">
               <div class="gallery-item gallery-item-sm">
+              <!-- if user uploaded image -->
+              <?php if(!empty($tue_gallery_image_6) ) { ?>
+                <img id="greenpiglocalsnight5" src="<?php echo $tue_gallery_image_6['url'] ?>" alt="<?php echo $tue_gallery_image_6['alt'] ?>">
+              <?php } else {?>
                 <img id="greenpiglocalsnight5" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/paint_nite-3_300w.jpg" alt="Paint Nite painters.">
+              <?php } ?>
               </div>
             </div>
           </div> <!-- fade-left -->
@@ -284,21 +397,34 @@ get_header(); ?>
   <div id="event-wed">
 
     <!-- =========== WEDNESDAY - GENERAL TRIVIA BANNER ====================== -->
-    <section class="banner events-wed-banner sub-menu-banner-gap">
-      <div class="banner-container">
+    <!-- if user uploaded image -->
+    <?php if(!empty($wed_banner) ) { ?>
+      <section class="banner events-wed-banner sub-menu-banner-gap" style="background: #333 url(<?php echo $wed_banner['url']; ?>) center center no-repeat; background-size: cover;">
+    <?php } else {?>
+      <section class="banner events-wed-banner sub-menu-banner-gap">
+    <?php } ?>
+        <div class="banner-container">
+      <!-- if user uploaded copy -->
+      <?php if(!empty($wed_title) ) { ?>
+        <h3><?php echo $wed_title; ?></h3>
+      <?php } else {?>
         <h3>General Trivia</h3>
-      </div>
-    </section>
+      <?php } ?>
+        </div>
+      </section>
 
     <!-- =========== WEDNESDAY - GENERAL TRIVIA SECT ====================== -->
     <section class="events-wed-section">
       <div class="container">
         <div class="intro">
-          <p class="bottom-gap">Think you’re a trivia wizard? Grab some witty friends and come test your knowledge
-            against other teams for a chance to win a Green Pig Gift Certificate or just plain ol' bragging rights! Call
-            to reserve your team's spot now. Oh, by the way...Daisy can be quite ferocious so if this isn't the first
-            question, you'd better put your phone away...</p>
+        <!-- if user uploaded copy -->
+        <?php if(!empty($wed_body) ) { ?>
+          <p><?php echo $wed_body; ?></p>
+          <a href="<?php echo $first_question_url; ?>" target="_blank" class="button"><?php echo $first_question_name; ?></a>
+        <?php } else {?>
+          <p class="bottom-gap">Think you’re a trivia wizard? Grab some witty friends and come test your knowledge against other teams for a chance to win a Green Pig Gift Certificate or just plain ol' bragging rights! Call to reserve your team's spot now. Oh, by the way...Daisy can be quite ferocious so if this isn't the first question, you'd better put your phone away...</p>
           <a href="https://www.facebook.com/trivianight" target="_blank" class="button">1st question</a>
+        <?php } ?>
         </div>
 
         <script>instafeed('greenpigtrivia');</script>
@@ -306,37 +432,67 @@ get_header(); ?>
         <div class="row">
           <div class="col col-sm-6 col-lg-4">
             <div class="gallery-item gallery-item-sm">
-              <img id="greenpigtrivia0" src="assets/img/trivia/trivia_300w_1.jpg" alt="Paint Nite painters.">
+              <!-- if user uploaded image -->
+              <?php if(!empty($wed_gallery_image_1) ) { ?>
+                <img id="greenpigtrivia0" src="<?php echo $wed_gallery_image_1['url'] ?>" alt="<?php echo $wed_gallery_image_1['alt'] ?>">
+              <?php } else {?>
+              <img id="greenpigtrivia0" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/trivia/trivia_300w_1.jpg" alt="Paint Nite painters.">
+              <?php } ?>
             </div>
           </div>
 
           <div class="col col-sm-6 col-lg-4">
             <div class="gallery-item gallery-item-sm">
-              <img id="greenpigtrivia1" src="assets/img/trivia/trivia_300w_2.jpg" alt="Paint Nite painters.">
+              <!-- if user uploaded image -->
+              <?php if(!empty($wed_gallery_image_2) ) { ?>
+                <img id="greenpigtrivia1" src="<?php echo $wed_gallery_image_2['url'] ?>" alt="<?php echo $wed_gallery_image_2['alt'] ?>">
+              <?php } else {?>
+              <img id="greenpigtrivia1" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/trivia/trivia_300w_2.jpg" alt="Paint Nite painters.">
+              <?php } ?>
             </div>
           </div>
 
           <div class="col col-sm-6 col-lg-4">
             <div class="gallery-item gallery-item-sm">
-              <img id="greenpigtrivia2" src="assets/img/trivia/trivia_300w_3.jpg" alt="Paint Nite painters.">
+              <!-- if user uploaded image -->
+              <?php if(!empty($wed_gallery_image_3) ) { ?>
+                <img id="greenpigtrivia2" src="<?php echo $wed_gallery_image_3['url'] ?>" alt="<?php echo $wed_gallery_image_3['alt'] ?>">
+              <?php } else {?>
+              <img id="greenpigtrivia2" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/trivia/trivia_300w_3.jpg" alt="Paint Nite painters.">
+              <?php } ?>
             </div>
           </div>
 
           <div class="col col-sm-6 col-lg-4">
             <div class="gallery-item gallery-item-sm">
-              <img id="greenpigtrivia3" src="assets/img/trivia/trivia_300w_4.jpg" alt="Paint Nite painters.">
+              <!-- if user uploaded image -->
+              <?php if(!empty($wed_gallery_image_4) ) { ?>
+                <img id="greenpigtrivia3" src="<?php echo $wed_gallery_image_4['url'] ?>" alt="<?php echo $wed_gallery_image_4['alt'] ?>">
+              <?php } else {?>
+              <img id="greenpigtrivia3" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/trivia/trivia_300w_4.jpg" alt="Paint Nite painters.">
+              <?php } ?>
             </div>
           </div>
 
           <div class="col col-sm-6 col-lg-4">
             <div class="gallery-item gallery-item-sm">
-              <img id="greenpigtrivia4" src="assets/img/trivia/trivia_300w_5.jpg" alt="Paint Nite painters.">
+              <!-- if user uploaded image -->
+              <?php if(!empty($wed_gallery_image_5) ) { ?>
+                <img id="greenpigtrivia4" src="<?php echo $wed_gallery_image_5['url'] ?>" alt="<?php echo $wed_gallery_image_5['alt'] ?>">
+              <?php } else {?>
+              <img id="greenpigtrivia4" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/trivia/trivia_300w_5.jpg" alt="Paint Nite painters.">
+              <?php } ?>
             </div>
           </div>
 
           <div class="col col-sm-6 col-lg-4">
             <div class="gallery-item gallery-item-sm">
-              <img id="greenpigtrivia5" src="assets/img/trivia/trivia_300w_6.jpg" alt="Paint Nite painters.">
+              <!-- if user uploaded image -->
+              <?php if(!empty($wed_gallery_image_6) ) { ?>
+                <img id="greenpigtrivia5" src="<?php echo $wed_gallery_image_6['url'] ?>" alt="<?php echo $wed_gallery_image_6['alt'] ?>">
+              <?php } else {?>
+              <img id="greenpigtrivia5" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/trivia/trivia_300w_6.jpg" alt="Paint Nite painters.">
+              <?php } ?>
             </div>
           </div>
         </div> <!-- row -->
@@ -430,37 +586,37 @@ get_header(); ?>
         <div class="row">
           <div class="col col-sm-6 col-lg-4">
             <div class="gallery-item gallery-item-sm">
-              <img id="greenpiglive0" src="assets/img/live_music/live_300w_6.jpg" alt="live music.">
+              <img id="greenpiglive0" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/live_music/live_300w_6.jpg" alt="live music.">
             </div>
           </div>
 
           <div class="col col-sm-6 col-lg-4">
             <div class="gallery-item gallery-item-sm">
-              <img id="greenpiglive1" src="assets/img/live_music/live_300w_2.jpg" alt="live music.">
+              <img id="greenpiglive1" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/live_music/live_300w_2.jpg" alt="live music.">
             </div>
           </div>
 
           <div class="col col-sm-6 col-lg-4">
             <div class="gallery-item gallery-item-sm">
-              <img id="greenpiglive2" src="assets/img/live_music/live_300w_3.jpg" alt="live music.">
+              <img id="greenpiglive2" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/live_music/live_300w_3.jpg" alt="live music.">
             </div>
           </div>
 
           <div class="col col-sm-6 col-lg-4">
             <div class="gallery-item gallery-item-sm">
-              <img id="greenpiglive3" src="assets/img/live_music/live_300w_4.jpg" alt="live music.">
+              <img id="greenpiglive3" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/live_music/live_300w_4.jpg" alt="live music.">
             </div>
           </div>
 
           <div class="col col-sm-6 col-lg-4">
             <div class="gallery-item gallery-item-sm">
-              <img id="greenpiglive4" src="assets/img/live_music/live_300w_5.jpg" alt="live music.">
+              <img id="greenpiglive4" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/live_music/live_300w_5.jpg" alt="live music.">
             </div>
           </div>
 
           <div class="col col-sm-6 col-lg-4">
             <div class="gallery-item gallery-item-sm">
-              <img id="greenpiglive5" src="assets/img/live_music/live_300w_1.jpg" alt="live music.">
+              <img id="greenpiglive5" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/live_music/live_300w_1.jpg" alt="live music.">
             </div>
           </div>
         </div> <!-- row -->
@@ -492,37 +648,37 @@ get_header(); ?>
         <div class="row">
           <div class="col col-sm-6 col-lg-4">
             <div class="gallery-item gallery-item-sm">
-              <img id="greenpigdjlatu0" src="assets/img/dj_latu/latu_300w_1.jpg" alt="live music.">
+              <img id="greenpigdjlatu0" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/dj_latu/latu_300w_1.jpg" alt="live music.">
             </div>
           </div>
 
           <div class="col col-sm-6 col-lg-4">
             <div class="gallery-item gallery-item-sm">
-              <img id="greenpigdjlatu1" src="assets/img/dj_latu/latu_300w_2.jpg" alt="live music.">
+              <img id="greenpigdjlatu1" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/dj_latu/latu_300w_2.jpg" alt="live music.">
             </div>
           </div>
 
           <div class="col col-sm-6 col-lg-4">
             <div class="gallery-item gallery-item-sm">
-              <img id="greenpigdjlatu2" src="assets/img/dj_latu/latu_300w_3.jpg" alt="live music.">
+              <img id="greenpigdjlatu2" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/dj_latu/latu_300w_3.jpg" alt="live music.">
             </div>
           </div>
 
           <div class="col col-sm-6 col-lg-4">
             <div class="gallery-item gallery-item-sm">
-              <img id="greenpigdjlatu3" src="assets/img/dj_latu/latu_300w_4.jpg" alt="live music.">
+              <img id="greenpigdjlatu3" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/dj_latu/latu_300w_4.jpg" alt="live music.">
             </div>
           </div>
 
           <div class="col col-sm-6 col-lg-4">
             <div class="gallery-item gallery-item-sm">
-              <img id="greenpigdjlatu4" src="assets/img/dj_latu/latu_300w_5.jpg" alt="live music.">
+              <img id="greenpigdjlatu4" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/dj_latu/latu_300w_5.jpg" alt="live music.">
             </div>
           </div>
 
           <div class="col col-sm-6 col-lg-4">
             <div class="gallery-item gallery-item-sm">
-              <img id="greenpigdjlatu5" src="assets/img/dj_latu/latu_300w_6.jpg" alt="live music.">
+              <img id="greenpigdjlatu5" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/dj_latu/latu_300w_6.jpg" alt="live music.">
             </div>
           </div>
         </div> <!-- row -->
