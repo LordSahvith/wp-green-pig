@@ -104,7 +104,7 @@ get_header(); ?>
                 </div>
               </div> <!-- mobile-nav -->
 
-              <div class="mobile-icon menu-icon" style="width: 95%;" onclick="toggleMenu()">
+              <div class="mobile-icon menu-icon" style="width: 95%; margin-top: 0;" onclick="toggleMenu()">
                 <div class="fade-up">
                   <i class="fa fa-book" aria-hidden="true"></i>
                 </div>
@@ -118,6 +118,13 @@ get_header(); ?>
                 </div>
               </ul>
             </nav>
+
+
+
+            <!-- [wpforms id="484" title="false" description="false"] -->
+
+
+
 
             <div id="general-email" style="margin-top: 80px;">
               <form class="form" action="MAILTO:gppgeneral@gmail.com" method="post">
