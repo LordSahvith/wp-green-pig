@@ -3,45 +3,45 @@
   Template Name: Food Page
  */
 
- // ADVANCED CUSTOM FIELDS
- // intro
- $hero_image   = get_field('food_hero');
- $hero_title   = get_field('food_hero_title');
- $intro_body   = get_field('food_intro_body');
- // menus
- $menu_title        = get_field('food_menu_title');
- $classic_button    = get_field('classic_button');
- $vegan_button      = get_field('vegan_button');
- $late_night_button = get_field('late_night_button');
- $breakfast_button  = get_field('breakfast_button');
- // starters banners
- $starters_button     = get_field('banner_starters_button');
- $starters_title      = get_field('banner_starters_title');
- $starters_banner     = get_field('banner_starters_image');
- $specialties_button  = get_field('banner_specialties_button');
- $specialties_title   = get_field('banner_specialties_title');
- $specialties_banner  = get_field('banner_specialties_image');
- $sandwiches_button   = get_field('banner_sandwiches_button');
- $sandwiches_title    = get_field('banner_sandwiches_title');
- $sandwiches_banner   = get_field('banner_sandwiches_image');
- $burgers_button      = get_field('banner_burgers_button');
- $burgers_title       = get_field('banner_burgers_title');
- $burgers_banner      = get_field('banner_burgers_image');
- $bowls_button        = get_field('banner_bowls_button');
- $bowls_title         = get_field('banner_bowls_title');
- $bowls_banner        = get_field('banner_bowls_image');
- $daily_button        = get_field('banner_daily_button');
- $daily_title         = get_field('banner_daily_title');
- $daily_banner        = get_field('banner_daily_image');
- // vegan banners
- $vegan_title      = get_field('banner_vegan_title');
- $vegan_banner     = get_field('banner_vegan_image');
- // late night banners
- $late_night_title      = get_field('banner_late_night_title');
- $late_night_banner     = get_field('banner_late_night_image');
- // breakfast banners
- $breakfast_title      = get_field('banner_breakfast_title');
- $breakfast_banner     = get_field('banner_breakfast_image');
+// ADVANCED CUSTOM FIELDS
+// intro
+$hero_image   = get_field('food_hero');
+$hero_title   = get_field('food_hero_title');
+$intro_body   = get_field('food_intro_body');
+// menus
+$menu_title        = get_field('food_menu_title');
+$classic_button    = get_field('classic_button');
+$vegan_button      = get_field('vegan_button');
+$late_night_button = get_field('late_night_button');
+$breakfast_button  = get_field('breakfast_button');
+// starters banners
+$starters_button     = get_field('banner_starters_button');
+$starters_title      = get_field('banner_starters_title');
+$starters_banner     = get_field('banner_starters_image');
+$specialties_button  = get_field('banner_specialties_button');
+$specialties_title   = get_field('banner_specialties_title');
+$specialties_banner  = get_field('banner_specialties_image');
+$sandwiches_button   = get_field('banner_sandwiches_button');
+$sandwiches_title    = get_field('banner_sandwiches_title');
+$sandwiches_banner   = get_field('banner_sandwiches_image');
+$burgers_button      = get_field('banner_burgers_button');
+$burgers_title       = get_field('banner_burgers_title');
+$burgers_banner      = get_field('banner_burgers_image');
+$bowls_button        = get_field('banner_bowls_button');
+$bowls_title         = get_field('banner_bowls_title');
+$bowls_banner        = get_field('banner_bowls_image');
+$daily_button        = get_field('banner_daily_button');
+$daily_title         = get_field('banner_daily_title');
+$daily_banner        = get_field('banner_daily_image');
+// vegan banners
+$vegan_title      = get_field('banner_vegan_title');
+$vegan_banner     = get_field('banner_vegan_image');
+// late night banners
+$late_night_title      = get_field('banner_late_night_title');
+$late_night_banner     = get_field('banner_late_night_image');
+// breakfast banners
+$breakfast_title      = get_field('banner_breakfast_title');
+$breakfast_banner     = get_field('banner_breakfast_image');
 
 get_header(); ?>
 
@@ -49,12 +49,12 @@ get_header(); ?>
 <div class="fade-down">
 
   <!-- if user uploaded image -->
-  <?php 
-  if(!empty($hero_image) ) { 
-?>
-  <section class="hero hero-food" style="background: url(<?php echo $hero_image['url']; ?>) center center no-repeat; background-size: cover;">
-    <?php } else {?>
-    <section class="hero hero-food">
+  <?php
+  if (!empty($hero_image)) {
+    ?>
+    <section class="hero hero-food" style="background: url(<?php echo $hero_image['url']; ?>) center center no-repeat; background-size: cover;">
+    <?php } else { ?>
+      <section class="hero hero-food">
       <?php } ?>
       <div class="hero-container">
         <h2><?php echo $hero_title; ?></h2>
@@ -85,16 +85,12 @@ get_header(); ?>
     <div class="overlay-content">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <div class="container">
-        <li><button id="menu-classic-btn" class="sub-menu-btn sub-menu-food-btn"
-            onclick="closeNav()"><?php echo $classic_button;?></button>
+        <li><button id="menu-classic-btn" class="sub-menu-btn sub-menu-food-btn" onclick="closeNav()"><?php echo $classic_button; ?></button>
         </li>
-        <li><button id="menu-vegan-btn" class="sub-menu-btn sub-menu-food-btn"
-            onclick="closeNav()"><?php echo $vegan_button;?></button>
+        <li><button id="menu-vegan-btn" class="sub-menu-btn sub-menu-food-btn" onclick="closeNav()"><?php echo $vegan_button; ?></button>
         </li>
-        <li><button id="menu-late-night-btn" class="sub-menu-btn sub-menu-food-btn"
-            onclick="closeNav()"><?php echo $late_night_button;?></button></li>
-        <li><button id="menu-breakfast-btn" class="sub-menu-btn sub-menu-food-btn"
-            onclick="closeNav()"><?php echo $breakfast_button;?></button></li>
+        <li><button id="menu-late-night-btn" class="sub-menu-btn sub-menu-food-btn" onclick="closeNav()"><?php echo $late_night_button; ?></button></li>
+        <li><button id="menu-breakfast-btn" class="sub-menu-btn sub-menu-food-btn" onclick="closeNav()"><?php echo $breakfast_button; ?></button></li>
       </div>
     </div>
   </div> <!-- mobile-nav -->
@@ -107,13 +103,11 @@ get_header(); ?>
 
   <ul class="main-nav main-menu">
     <div class="fade-up">
-      <li><button id="menu-classic-btn" class="sub-menu-btn sub-menu-food-btn"><?php echo $classic_button;?></button>
+      <li><button id="menu-classic-btn" class="sub-menu-btn sub-menu-food-btn"><?php echo $classic_button; ?></button>
       </li>
-      <li><button id="menu-vegan-btn" class="sub-menu-btn sub-menu-food-btn"><?php echo $vegan_button;?></button></li>
-      <li><button id="menu-late-night-btn"
-          class="sub-menu-btn sub-menu-food-btn"><?php echo $late_night_button;?></button></li>
-      <li><button id="menu-breakfast-btn"
-          class="sub-menu-btn sub-menu-food-btn"><?php echo $breakfast_button;?></button></li>
+      <li><button id="menu-vegan-btn" class="sub-menu-btn sub-menu-food-btn"><?php echo $vegan_button; ?></button></li>
+      <li><button id="menu-late-night-btn" class="sub-menu-btn sub-menu-food-btn"><?php echo $late_night_button; ?></button></li>
+      <li><button id="menu-breakfast-btn" class="sub-menu-btn sub-menu-food-btn"><?php echo $breakfast_button; ?></button></li>
     </div>
   </ul>
 </nav>
@@ -146,13 +140,12 @@ get_header(); ?>
   <!-- =========== STARTERS BANNER ====================== -->
   <div class="fade-up">
     <!-- if user uploaded image -->
-    <?php 
-      if(!empty($starters_banner) ) { 
-    ?>
-    <section id="starters" class="banner food-starters-banner sub-menu-banner-gap"
-      style="background: url(<?php echo $starters_banner['url']; ?>) center center no-repeat; background-size: cover;">
-      <? } else {?>
-      <section id="starters" class="banner food-starters-banner sub-menu-banner-gap">
+    <?php
+    if (!empty($starters_banner)) {
+      ?>
+      <section id="starters" class="banner food-starters-banner sub-menu-banner-gap" style="background: url(<?php echo $starters_banner['url']; ?>) center center no-repeat; background-size: cover;">
+      <? } else { ?>
+        <section id="starters" class="banner food-starters-banner sub-menu-banner-gap">
         <?php } ?>
         <div class="banner-container">
           <h3><?php echo $starters_title; ?></h3>
@@ -164,9 +157,38 @@ get_header(); ?>
   <!-- =========== STARTERS SECT ====================== -->
   <section class="food-starters-section">
     <div class="container">
+
       <div class="row menu-item">
         <div class="fade-up-2">
-          <div class="col col-md-5">
+
+          <?php $loop = new WP_Query(array('post_type' => 'starters_food_item', 'oderby' => 'post_id', 'order' => 'ASC')); ?>
+
+          <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+
+            <div class="col col-md-5">
+              <?php
+
+              if (!empty(get_field('pig_favorite'))) {
+                ?>
+                <h4 class="pig-favorite"><?php the_title(); ?></h4>
+
+              <?php } else { ?>
+                <h4><?php the_title(); ?></h4>
+              <?php } ?>
+              <p><?php the_content(); ?></p>
+            </div>
+
+            <div class="col col-sm-1">
+              <p><em><strong><?php echo get_field('food_menu_item_price'); ?></strong></em></p>
+            </div>
+
+          <?php endwhile; ?>
+        </div> <!-- fade -->
+      </div> <!-- row -->
+
+
+
+      <!-- <div class="col col-md-5">
             <h4 class="pig-favorite">Chile Verde Nachos*</h4>
             <p>House cut tortilla chips smothered in chile verde and melted cheddar jack cheese then topped with
               jalapeno,
@@ -176,21 +198,21 @@ get_header(); ?>
 
           <div class="col col-sm-1">
             <p><em><strong>$11.99</strong></em></p>
-          </div>
+          </div> -->
 
-          <div class="col col-md-5">
-            <h4>House Wings*</h4>
-            <p>Ten jumbo wings tossed with your choice of traditional Buffalo hot sauce, honey Sriracha sauce, house
-              BBQ
-              sauce, or blackened, served with carrots, celery and ranch or bleu cheese dressing. Half order
-              <em><strong>$6.99</strong></em>.</p>
-          </div>
+      <!-- <div class="col col-md-5">
+        <h4>House Wings*</h4>
+        <p>Ten jumbo wings tossed with your choice of traditional Buffalo hot sauce, honey Sriracha sauce, house
+          BBQ
+          sauce, or blackened, served with carrots, celery and ranch or bleu cheese dressing. Half order
+          <em><strong>$6.99</strong></em>.</p>
+      </div>
 
-          <div class="col col-md-1">
-            <p><em><strong>$12.99</strong></em></p>
-          </div>
-        </div> <!-- fade -->
-      </div> <!-- row -->
+      <div class="col col-md-1">
+        <p><em><strong>$12.99</strong></em></p>
+      </div> -->
+      <!-- </div> 
+</div> -->
 
       <div class="row menu-item">
         <div class="fade-up-2">
@@ -206,10 +228,7 @@ get_header(); ?>
 
           <div class="col col-md-5">
             <h4 class="pig-favorite">The Green Pig Quesadilla</h4>
-            <p>Grilled Chipotle tortilla stuffed with cheddar jack cheese, black beans, onion and tomato, finshed with
-              roasted red pepper sauce and sour cream. Add chile verde or chicken for <em><strong>$3.00</strong></em>
-              or
-              marinated steak for <em><strong>$4.00</strong></em> more</p>
+            <p>Grilled Chipotle tortilla stuffed with cheddar jack cheese, black beans, onion and tomato, finshed with roasted red pepper sauce and sour cream. Add chile verde or chicken for <em><strong>$3.00</strong></em> or marinated steak for <em><strong>$4.00</strong></em> more</p>
           </div>
 
           <div class="col col-md-1">
@@ -333,12 +352,11 @@ get_header(); ?>
 
   <div class="fade-up">
     <!-- if user uploaded image -->
-    <?php 
-      if(!empty($specialties_banner) ) { 
-    ?>
-      <section id="specialties" class="banner food-specialties-banner"
-      style="background: url(<?php echo $specialties_banner['url']; ?>) center center no-repeat; background-size: cover;">
-      <? } else {?>
+    <?php
+    if (!empty($specialties_banner)) {
+      ?>
+      <section id="specialties" class="banner food-specialties-banner" style="background: url(<?php echo $specialties_banner['url']; ?>) center center no-repeat; background-size: cover;">
+      <? } else { ?>
         <section id="specialties" class="banner food-specialties-banner">
         <?php } ?>
 
@@ -468,22 +486,21 @@ get_header(); ?>
 
   <div class="fade-up">
     <!-- if user uploaded image -->
-    <?php 
-      if(!empty($sandwiches_banner) ) { 
-    ?>
-      <section id="sandwiches" class="banner food-sandwiches-banner"
-      style="background: url(<?php echo $sandwiches_banner['url']; ?>) center center no-repeat; background-size: cover;">
-      <? } else {?>
-      <section id="sandwiches" class="banner food-sandwiches-banner">
+    <?php
+    if (!empty($sandwiches_banner)) {
+      ?>
+      <section id="sandwiches" class="banner food-sandwiches-banner" style="background: url(<?php echo $sandwiches_banner['url']; ?>) center center no-repeat; background-size: cover;">
+      <? } else { ?>
+        <section id="sandwiches" class="banner food-sandwiches-banner">
         <?php } ?>
 
-      <div class="banner-container">
+        <div class="banner-container">
 
-      <h3><?php echo $sandwiches_title; ?></h3>
+          <h3><?php echo $sandwiches_title; ?></h3>
 
-      </div>
+        </div>
 
-    </section>
+      </section>
 
   </div>
 
@@ -624,23 +641,22 @@ get_header(); ?>
 
   <div class="fade-up">
     <!-- if user uploaded image -->
-    <?php 
-      if(!empty($burgers_banner) ) { 
-    ?>
-        <section id="burgers" class="banner food-burgers-banner"
-      style="background: url(<?php echo $burgers_banner['url']; ?>) center center no-repeat; background-size: cover;">
-      <? } else {?>
+    <?php
+    if (!empty($burgers_banner)) {
+      ?>
+      <section id="burgers" class="banner food-burgers-banner" style="background: url(<?php echo $burgers_banner['url']; ?>) center center no-repeat; background-size: cover;">
+      <? } else { ?>
         <section id="burgers" class="banner food-burgers-banner">
         <?php } ?>
 
 
-      <div class="banner-container">
+        <div class="banner-container">
 
-        <h3><?php echo $burgers_title; ?></h3>
+          <h3><?php echo $burgers_title; ?></h3>
 
-      </div>
+        </div>
 
-    </section>
+      </section>
 
   </div>
 
@@ -785,22 +801,21 @@ get_header(); ?>
 
   <div class="fade-up">
     <!-- if user uploaded image -->
-    <?php 
-      if(!empty($bowls_banner) ) { 
-    ?>
-      <section id="greens" class="banner food-greens-banner"
-      style="background: url(<?php echo $bowls_banner['url']; ?>) center center no-repeat; background-size: cover;">
-      <? } else {?>
-      <section id="greens" class="banner food-greens-banner">
+    <?php
+    if (!empty($bowls_banner)) {
+      ?>
+      <section id="greens" class="banner food-greens-banner" style="background: url(<?php echo $bowls_banner['url']; ?>) center center no-repeat; background-size: cover;">
+      <? } else { ?>
+        <section id="greens" class="banner food-greens-banner">
         <?php } ?>
 
-      <div class="banner-container">
+        <div class="banner-container">
 
-        <h3><?php echo $bowls_title; ?></h3>
+          <h3><?php echo $bowls_title; ?></h3>
 
-      </div>
+        </div>
 
-    </section>
+      </section>
 
   </div>
 
@@ -995,22 +1010,21 @@ get_header(); ?>
 
   <div class="fade-up">
     <!-- if user uploaded image -->
-    <?php 
-      if(!empty($daily_banner) ) { 
-    ?>
-      <section id="specials" class="banner food-greens-banner"
-      style="background: url(<?php echo $daily_banner['url']; ?>) center center no-repeat; background-size: cover;">
-      <? } else {?>
-      <section id="specials" class="banner food-greens-banner">
+    <?php
+    if (!empty($daily_banner)) {
+      ?>
+      <section id="specials" class="banner food-greens-banner" style="background: url(<?php echo $daily_banner['url']; ?>) center center no-repeat; background-size: cover;">
+      <? } else { ?>
+        <section id="specials" class="banner food-greens-banner">
         <?php } ?>
 
-      <div class="banner-container">
+        <div class="banner-container">
 
-        <h3><?php echo $daily_title; ?></h3>
+          <h3><?php echo $daily_title; ?></h3>
 
-      </div>
+        </div>
 
-    </section>
+      </section>
 
   </div>
 
@@ -1067,127 +1081,126 @@ get_header(); ?>
 <div id="menu-vegan">
 
   <!-- =========== VEGAN BANNER ====================== -->
-    <!-- if user uploaded image -->
-    <?php 
-      if(!empty($vegan_banner) ) { 
+  <!-- if user uploaded image -->
+  <?php
+  if (!empty($vegan_banner)) {
     ?>
-      <section class="banner food-vegan-banner sub-menu-banner-gap"
-      style="background: url(<?php echo $vegan_banner['url']; ?>) center center no-repeat; background-size: cover;">
-      <? } else {?>
+    <section class="banner food-vegan-banner sub-menu-banner-gap" style="background: url(<?php echo $vegan_banner['url']; ?>) center center no-repeat; background-size: cover;">
+    <? } else { ?>
       <section class="banner food-vegan-banner sub-menu-banner-gap">
-        <?php } ?>
-    <div class="banner-container">
-      <h3><?php echo $vegan_title; ?></h3>
-    </div>
-  </section>
+      <?php } ?>
+      <div class="banner-container">
+        <h3><?php echo $vegan_title; ?></h3>
+      </div>
+    </section>
 
-  <!-- =========== VEGAN SECT ====================== -->
-  <section class="food-vegan-section">
-    <div class="container">
-      <div class="row menu-item">
-        <div class="col col-md-5">
-          <h4>Vegan Tiger Wings</h4>
-          <p>A dozen vegan wings tossed in your choice of traditional Buffalo hot sauce, honey Sriracha sauce or house
-            BBQ
-            sauce, served with carrots, celery and vegan ranch or vegan bleu cheese dressing.</p>
-        </div>
+    <!-- =========== VEGAN SECT ====================== -->
+    <section class="food-vegan-section">
+      <div class="container">
+        <div class="row menu-item">
+          <div class="col col-md-5">
+            <h4>Vegan Tiger Wings</h4>
+            <p>A dozen vegan wings tossed in your choice of traditional Buffalo hot sauce, honey Sriracha sauce or house
+              BBQ
+              sauce, served with carrots, celery and vegan ranch or vegan bleu cheese dressing.</p>
+          </div>
 
-        <div class="col col-sm-1">
-          <p><em><strong>$12.99</strong></em></p>
-        </div>
+          <div class="col col-sm-1">
+            <p><em><strong>$12.99</strong></em></p>
+          </div>
 
-        <div class="col col-md-5">
-          <h4>Vegan Tacos</h4>
-          <p>Saut&eacute;ed peppers and onions, black beans and sweet corn served in 3 corn tortillas topped with
-            cabbage,
-            green onions and tomato served with lime and salsa fresca.</p>
-        </div>
+          <div class="col col-md-5">
+            <h4>Vegan Tacos</h4>
+            <p>Saut&eacute;ed peppers and onions, black beans and sweet corn served in 3 corn tortillas topped with
+              cabbage,
+              green onions and tomato served with lime and salsa fresca.</p>
+          </div>
 
-        <div class="col col-md-1">
-          <p><em><strong>$9.99</strong></em></p>
-        </div>
-      </div> <!-- row -->
+          <div class="col col-md-1">
+            <p><em><strong>$9.99</strong></em></p>
+          </div>
+        </div> <!-- row -->
 
-      <div class="row menu-item">
-        <div class="col col-md-5">
-          <h4>Black Bean Burger</h4>
-          <p>House made spicy black bean burger with lettuce, tomato, red onion and vegan chipotle aioli served on a
-            toasted challah bun.</p>
-        </div>
+        <div class="row menu-item">
+          <div class="col col-md-5">
+            <h4>Black Bean Burger</h4>
+            <p>House made spicy black bean burger with lettuce, tomato, red onion and vegan chipotle aioli served on a
+              toasted challah bun.</p>
+          </div>
 
-        <div class="col col-md-1">
-          <p><em><strong>$9.99</strong></em></p>
-        </div>
+          <div class="col col-md-1">
+            <p><em><strong>$9.99</strong></em></p>
+          </div>
 
-        <div class="col col-md-5">
-          <h4>The Impossible Burger</h4>
-          <p>Impossible patty, chao cheese, saut&#0233;ed onions, gegan mayo, spring mix, on a toasted ciabatta bun.
-          </p>
-        </div>
+          <div class="col col-md-5">
+            <h4>The Impossible Burger</h4>
+            <p>Impossible patty, chao cheese, saut&#0233;ed onions, gegan mayo, spring mix, on a toasted ciabatta bun.
+            </p>
+          </div>
 
-        <div class="col col-md-1">
-          <p><em><strong>$13.99</strong></em></p>
-        </div>
-      </div> <!-- row -->
+          <div class="col col-md-1">
+            <p><em><strong>$13.99</strong></em></p>
+          </div>
+        </div> <!-- row -->
 
-      <div class="row menu-item">
-        <div class="col col-md-5">
-          <h4>Angry Vegan Chick'n Sandwich</h4>
-          <p>Vegan chick'n, saut&eacute;ed onion &amp; jalapenos, chao coconut cheese, Cajun vegan bacon, lettuce and
-            tomato with vegan chipotle aioli on an ambassador roll.</p>
-        </div>
+        <div class="row menu-item">
+          <div class="col col-md-5">
+            <h4>Angry Vegan Chick'n Sandwich</h4>
+            <p>Vegan chick'n, saut&eacute;ed onion &amp; jalapenos, chao coconut cheese, Cajun vegan bacon, lettuce and
+              tomato with vegan chipotle aioli on an ambassador roll.</p>
+          </div>
 
-        <div class="col col-md-1">
-          <p><em><strong>$12.99</strong></em></p>
-        </div>
+          <div class="col col-md-1">
+            <p><em><strong>$12.99</strong></em></p>
+          </div>
 
-        <div class="col col-md-5">
-          <h4>Sweet Tiger Tacos</h4>
-          <p>Tiger wings tossed in our traditional salsa verde served in 3 corn tortillas topped with shredded romaine
-            lettuce, guacamole and vegan sour cream with salsa fresca.</p>
-        </div>
+          <div class="col col-md-5">
+            <h4>Sweet Tiger Tacos</h4>
+            <p>Tiger wings tossed in our traditional salsa verde served in 3 corn tortillas topped with shredded romaine
+              lettuce, guacamole and vegan sour cream with salsa fresca.</p>
+          </div>
 
-        <div class="col col-md-1">
-          <p><em><strong>$10.99</strong></em></p>
-        </div>
-      </div> <!-- row -->
+          <div class="col col-md-1">
+            <p><em><strong>$10.99</strong></em></p>
+          </div>
+        </div> <!-- row -->
 
-      <div class="row menu-item">
+        <div class="row menu-item">
 
-        <div class="col col-md-5">
+          <div class="col col-md-5">
 
-          <h4>Buffalo Tiger Wrap</h4>
-          <p>Tiger wings tossed in buffalo sauce, wrapped in a warm spinach tortilla with fresh mixed mesclun greens,
-            tomatoes, English cucumbers and served with a side of Vegan ranch dressing.</p>
+            <h4>Buffalo Tiger Wrap</h4>
+            <p>Tiger wings tossed in buffalo sauce, wrapped in a warm spinach tortilla with fresh mixed mesclun greens,
+              tomatoes, English cucumbers and served with a side of Vegan ranch dressing.</p>
 
-        </div>
+          </div>
 
-        <div class="col col-md-1">
+          <div class="col col-md-1">
 
-          <p><em><strong>$10.99</strong></em></p>
+            <p><em><strong>$10.99</strong></em></p>
 
-        </div>
+          </div>
 
-        <div class="col col-md-5">
+          <div class="col col-md-5">
 
-          <h4>Vegan Avocado Rolls</h4>
-          <p>Hand made eggrolls with chick'n, vegan bacon bits, black beans, avocado, vegan mozzarella and tomato,
-            served
-            with vegan ranch and agave blackberry jalapeno sauce.</p>
+            <h4>Vegan Avocado Rolls</h4>
+            <p>Hand made eggrolls with chick'n, vegan bacon bits, black beans, avocado, vegan mozzarella and tomato,
+              served
+              with vegan ranch and agave blackberry jalapeno sauce.</p>
 
-        </div>
+          </div>
 
-        <div class="col col-md-1">
+          <div class="col col-md-1">
 
-          <p><em><strong>$9.99</strong></em></p>
+            <p><em><strong>$9.99</strong></em></p>
 
-        </div>
+          </div>
 
-      </div> <!-- row -->
+        </div> <!-- row -->
 
-    </div> <!-- container -->
+      </div> <!-- container -->
 
-  </section> <!-- vegan -->
+    </section> <!-- vegan -->
 
 </div> <!-- menu-vegan -->
 
@@ -1199,234 +1212,233 @@ get_header(); ?>
 
 
   <!-- =========== LATE NIGHT BANNER ====================== -->
-    <!-- if user uploaded image -->
-    <?php 
-      if(!empty($late_night_banner) ) { 
+  <!-- if user uploaded image -->
+  <?php
+  if (!empty($late_night_banner)) {
     ?>
-      <section class="banner food-late-banner sub-menu-banner-gap"
-      style="background: url(<?php echo $late_night_banner['url']; ?>) center center no-repeat; background-size: cover;">
-      <? } else {?>
+    <section class="banner food-late-banner sub-menu-banner-gap" style="background: url(<?php echo $late_night_banner['url']; ?>) center center no-repeat; background-size: cover;">
+    <? } else { ?>
       <section class="banner food-late-banner sub-menu-banner-gap">
-        <?php } ?>
+      <?php } ?>
 
-    <div class="banner-container">
+      <div class="banner-container">
 
-      <h3><?php echo $late_night_title; ?></h3>
+        <h3><?php echo $late_night_title; ?></h3>
 
-    </div>
+      </div>
 
-  </section>
+    </section>
 
 
-  <!-- =========== LATE NIGHT SECT ====================== -->
+    <!-- =========== LATE NIGHT SECT ====================== -->
 
-  <section class="food-late-section">
+    <section class="food-late-section">
 
-    <div class="container">
+      <div class="container">
 
-      <p class="additions">Late Night Menu starts at 10:00p and kitchen closes at 12:00a.</p>
+        <p class="additions">Late Night Menu starts at 10:00p and kitchen closes at 12:00a.</p>
 
-      <div class="row menu-item">
+        <div class="row menu-item">
 
-        <div class="col col-md-5">
+          <div class="col col-md-5">
 
-          <h4 class="pig-favorite">Chile Verde Nachos*</h4>
-          <p>House cut tortilla chips smothered in chile verde and melted cheddar jack cheese then topped with
-            jalapeno,
-            red onion, olives, tomato, green onion, salsa, sour cream and cilantro.</p>
+            <h4 class="pig-favorite">Chile Verde Nachos*</h4>
+            <p>House cut tortilla chips smothered in chile verde and melted cheddar jack cheese then topped with
+              jalapeno,
+              red onion, olives, tomato, green onion, salsa, sour cream and cilantro.</p>
 
-        </div>
+          </div>
 
-        <div class="col col-sm-1">
+          <div class="col col-sm-1">
 
-          <p><em><strong>$11.99</strong></em></p>
+            <p><em><strong>$11.99</strong></em></p>
 
-        </div>
+          </div>
 
-        <div class="col col-md-5">
+          <div class="col col-md-5">
 
-          <h4>House Wings*</h4>
-          <p>A dozen jumbo wings tossed with your choice of traditional Buffalo hot sauce, honey Sriracha sauce, house
-            BBQ
-            sauce, or blackened, served with carrots, celery and ranch or bleu cheese dressing.</p>
+            <h4>House Wings*</h4>
+            <p>A dozen jumbo wings tossed with your choice of traditional Buffalo hot sauce, honey Sriracha sauce, house
+              BBQ
+              sauce, or blackened, served with carrots, celery and ranch or bleu cheese dressing.</p>
 
-        </div>
+          </div>
 
-        <div class="col col-md-1">
+          <div class="col col-md-1">
 
-          <p><em><strong>$12.99</strong></em></p>
+            <p><em><strong>$12.99</strong></em></p>
 
-        </div>
+          </div>
 
-      </div> <!-- row -->
+        </div> <!-- row -->
 
-      <div class="row menu-item">
+        <div class="row menu-item">
 
-        <div class="col col-md-5">
+          <div class="col col-md-5">
 
-          <h4>Angus Beef Sliders*</h4>
-          <p>3 Hand pressed 2 oz. Angus beef patties topped with caramelized onions, bacon bits, and chipotle aioli.
-          </p>
+            <h4>Angus Beef Sliders*</h4>
+            <p>3 Hand pressed 2 oz. Angus beef patties topped with caramelized onions, bacon bits, and chipotle aioli.
+            </p>
 
-        </div>
+          </div>
 
-        <div class="col col-md-1">
+          <div class="col col-md-1">
 
-          <p><em><strong>$8.99</strong></em></p>
+            <p><em><strong>$8.99</strong></em></p>
 
-        </div>
+          </div>
 
-        <div class="col col-md-5">
+          <div class="col col-md-5">
 
-          <h4 class="pig-favorite">The Green Pig Quesadilla</h4>
-          <p>Grilled Chipotle tortilla stuffed with cheddar jack cheese, black beans, onion and tomato, finshed with
-            roasted red pepper sauce and sour cream. Add chile verde or chicken for <em><strong>$3.00</strong></em> or
-            marinated steak for <em><strong>$4.00</strong></em> more</p>
+            <h4 class="pig-favorite">The Green Pig Quesadilla</h4>
+            <p>Grilled Chipotle tortilla stuffed with cheddar jack cheese, black beans, onion and tomato, finshed with
+              roasted red pepper sauce and sour cream. Add chile verde or chicken for <em><strong>$3.00</strong></em> or
+              marinated steak for <em><strong>$4.00</strong></em> more</p>
 
-        </div>
+          </div>
 
-        <div class="col col-md-1">
+          <div class="col col-md-1">
 
-          <p><em><strong>$8.99</strong></em></p>
+            <p><em><strong>$8.99</strong></em></p>
 
-        </div>
+          </div>
 
-      </div> <!-- row -->
+        </div> <!-- row -->
 
-      <div class="row menu-item">
+        <div class="row menu-item">
 
-        <div class="col col-md-5">
+          <div class="col col-md-5">
 
-          <h4>Chicken Tender Basket</h4>
-          <p>3 large battered chicken tenders, served with hand cut, house fries and your choice of dipping sauce:
-            chipotle
-            ranch, jalapeno ranch, house BBQ or buffalo.</p>
+            <h4>Chicken Tender Basket</h4>
+            <p>3 large battered chicken tenders, served with hand cut, house fries and your choice of dipping sauce:
+              chipotle
+              ranch, jalapeno ranch, house BBQ or buffalo.</p>
 
-        </div>
+          </div>
 
-        <div class="col col-md-1">
+          <div class="col col-md-1">
 
-          <p><em><strong>$9.99</strong></em></p>
+            <p><em><strong>$9.99</strong></em></p>
 
-        </div>
+          </div>
 
-        <div class="col col-md-5">
+          <div class="col col-md-5">
 
-          <h4>The 31st East Avocado Rolls</h4>
-          <p>House made eggrolls filled with chicken, bacon, black beans, avocado, tomato and cheddar jack cheese,
-            served
-            with jalapeno ranch or chipotle ranch.</p>
+            <h4>The 31st East Avocado Rolls</h4>
+            <p>House made eggrolls filled with chicken, bacon, black beans, avocado, tomato and cheddar jack cheese,
+              served
+              with jalapeno ranch or chipotle ranch.</p>
 
-        </div>
+          </div>
 
-        <div class="col col-md-1">
+          <div class="col col-md-1">
 
-          <p><em><strong>$9.99</strong></em></p>
+            <p><em><strong>$9.99</strong></em></p>
 
-        </div>
+          </div>
 
-      </div> <!-- row -->
+        </div> <!-- row -->
 
-      <div class="row menu-item">
+        <div class="row menu-item">
 
-        <div class="col col-md-5">
+          <div class="col col-md-5">
 
-          <h4>Vegan Avocado Rolls</h4>
-          <p>Hand made eggrolls with chick'n, vegan bacon bits, black beans, avocado, vegan mozzarella and tomato,
-            served
-            with vegan ranch and agave blackberry jalapeno sauce.</p>
+            <h4>Vegan Avocado Rolls</h4>
+            <p>Hand made eggrolls with chick'n, vegan bacon bits, black beans, avocado, vegan mozzarella and tomato,
+              served
+              with vegan ranch and agave blackberry jalapeno sauce.</p>
 
-        </div>
+          </div>
 
-        <div class="col col-md-1">
+          <div class="col col-md-1">
 
-          <p><em><strong>$9.99</strong></em></p>
+            <p><em><strong>$9.99</strong></em></p>
 
-        </div>
+          </div>
 
-        <div class="col col-md-5">
+          <div class="col col-md-5">
 
-          <h4>Vegan Tiger Wings</h4>
-          <p>A dozen vegan wings tossed in your choice of traditional Buffalo hot sauce, honey Sriracha sauce or house
-            BBQ
-            sauce, served with carrots, celery and vegan ranch or vegan bleu cheese dressing.</p>
+            <h4>Vegan Tiger Wings</h4>
+            <p>A dozen vegan wings tossed in your choice of traditional Buffalo hot sauce, honey Sriracha sauce or house
+              BBQ
+              sauce, served with carrots, celery and vegan ranch or vegan bleu cheese dressing.</p>
 
-        </div>
+          </div>
 
-        <div class="col col-md-1">
+          <div class="col col-md-1">
 
-          <p><em><strong>$12.99</strong></em></p>
+            <p><em><strong>$12.99</strong></em></p>
 
-        </div>
+          </div>
 
-      </div> <!-- row -->
+        </div> <!-- row -->
 
-      <div class="row menu-item">
+        <div class="row menu-item">
 
-        <div class="col col-md-5">
+          <div class="col col-md-5">
 
-          <h4>Dinner Salad</h4>
-          <p>Fresh mesclun mixed greens, tomato wedge, julienne red onions, English cucumbers and house made croutons.
-          </p>
+            <h4>Dinner Salad</h4>
+            <p>Fresh mesclun mixed greens, tomato wedge, julienne red onions, English cucumbers and house made croutons.
+            </p>
 
-        </div>
+          </div>
 
-        <div class="col col-md-1">
+          <div class="col col-md-1">
 
-          <p><em><strong>$9.99</strong></em></p>
+            <p><em><strong>$9.99</strong></em></p>
 
-        </div>
+          </div>
 
-        <div class="col col-md-5">
+          <div class="col col-md-5">
 
-          <h4>House Fries*</h4>
-          <p>Fresh Idaho potatoes, hand cut, double fried and tossed in house seasoning, served with Utah Fry Sauce.
-            Add
-            cheese and bacon crumbles <em><strong>$3.00</strong></em></p>
+            <h4>House Fries*</h4>
+            <p>Fresh Idaho potatoes, hand cut, double fried and tossed in house seasoning, served with Utah Fry Sauce.
+              Add
+              cheese and bacon crumbles <em><strong>$3.00</strong></em></p>
 
-        </div>
+          </div>
 
-        <div class="col col-md-1">
+          <div class="col col-md-1">
 
-          <p><em><strong>$5.99</strong></em></p>
+            <p><em><strong>$5.99</strong></em></p>
 
-        </div>
+          </div>
 
-      </div> <!-- row -->
+        </div> <!-- row -->
 
-      <div class="row menu-item">
+        <div class="row menu-item">
 
-        <div class="col col-md-5">
+          <div class="col col-md-5">
 
-          <h4>Bavarian Pretzel &amp; Beer Cheese</h4>
-          <p>2 soft pretzels served hot with Fat Tire Ale Beer Cheese and whole grain mustard.</p>
+            <h4>Bavarian Pretzel &amp; Beer Cheese</h4>
+            <p>2 soft pretzels served hot with Fat Tire Ale Beer Cheese and whole grain mustard.</p>
 
-        </div>
+          </div>
 
-        <div class="col col-md-1">
+          <div class="col col-md-1">
 
-          <p><em><strong>$4.99</strong></em></p>
+            <p><em><strong>$4.99</strong></em></p>
 
-        </div>
+          </div>
 
-        <div class="col col-md-5">
+          <div class="col col-md-5">
 
-          <h4>Chips &amp; Salsa*</h4>
-          <p>House cut tortilla chips served with salsa fresca. Add Guacamole <em><strong>3.50</strong></em></p>
+            <h4>Chips &amp; Salsa*</h4>
+            <p>House cut tortilla chips served with salsa fresca. Add Guacamole <em><strong>3.50</strong></em></p>
 
-        </div>
+          </div>
 
-        <div class="col col-md-1">
+          <div class="col col-md-1">
 
-          <p><em><strong>$4.99</strong></em></p>
+            <p><em><strong>$4.99</strong></em></p>
 
-        </div>
+          </div>
 
-      </div> <!-- row -->
+        </div> <!-- row -->
 
-    </div> <!-- container -->
+      </div> <!-- container -->
 
-  </section> <!-- late night -->
+    </section> <!-- late night -->
 
 </div> <!-- menu-late -->
 
@@ -1436,136 +1448,135 @@ get_header(); ?>
 <div id="menu-breakfast">
 
   <!-- =========== BREAKFAST BANNER ====================== -->
-    <!-- if user uploaded image -->
-    <?php 
-      if(!empty($breakfast_banner) ) { 
+  <!-- if user uploaded image -->
+  <?php
+  if (!empty($breakfast_banner)) {
     ?>
-        <section class="banner food-breakfast-banner sub-menu-banner-gap"
-      style="background: url(<?php echo $breakfast_banner['url']; ?>) center center no-repeat; background-size: cover;">
-      <? } else {?>
-        <section class="banner food-breakfast-banner sub-menu-banner-gap">
-        <?php } ?>
-    <div class="banner-container">
-      <h3><?php echo $breakfast_title; ?></h3>
-    </div>
-  </section>
-
-  <!-- =========== BREAKFAST SECT ====================== -->
-  <section class="food-breakfast-section">
-    <div class="container">
-
-      <p class="additions">Breakfast is served every Saturday between 11:00a - 2:00p.</p>
-      <p class="additions">We got $3 Bloody Mary's & Mimosa's.</p>
-
-      <div class="row menu-item">
-
-        <div class="col col-md-5">
-
-          <h4>Green Pig Breakfast</h4>
-          <p>2 eggs cooked to order, sausage, bacon, hash browns and fresh fruit.</p>
-
-        </div>
-
-        <div class="col col-md-1">
-
-          <p><em><strong>$8.50</strong></em></p>
-
-        </div>
-
-        <div class="col col-md-5">
-
-          <h4>Breakfast Burrito</h4>
-          <p>Scrambled eggs, sausage, bacon, potatoes, peppers &amp; cheese in a flour tortilla served with fruit.</p>
-
-        </div>
-
-        <div class="col col-md-1">
-
-          <p><em><strong>$8.50</strong></em></p>
-
-        </div>
-
-      </div> <!-- row -->
-
-      <div class="row menu-item">
-
-        <div class="col col-md-5">
-
-          <h4>French Toast</h4>
-          <p>French toast with your choice of sausage or bacon served with fresh fruit.</p>
-
-        </div>
-
-        <div class="col col-md-1">
-
-          <p><em><strong>$8.50</strong></em></p>
-
-        </div>
-
-        <div class="col col-md-5">
-
-          <h4>Mac Pig Sandwich</h4>
-          <p>Egg, cheese &amp; your choice of ham, bacon, sausage or corned beef served with hash browns and fresh
-            fruit.</p>
-
-        </div>
-
-        <div class="col col-md-1">
-
-          <p><em><strong>$7.50</strong></em></p>
-
-        </div>
-
-      </div> <!-- row -->
-
-      <div class="row menu-item">
-
-        <div class="col col-md-5 last-item">
-
-          <h4>Huevos Rancheros</h4>
-          <p>3 fried eggs with black beans, ranchero salsa on corn tortillas with avocado &amp; queso fresco.</p>
-
-        </div>
-
-        <div class="col col-md-1">
-
-          <p><em><strong>$8.50</strong></em></p>
-
-        </div>
-
-      </div> <!-- row -->
-
-    </div> <!-- container -->
-
-  </section> <!-- breakfast -->
-
-  <!-- =========== SUNDAY - BREAKFAST BUFFET BANNER ====================== -->
-  <section class="banner events-sun-banner sub-menu-banner-gap">
-    <div class="banner-container">
-      <h3>Sunday Brunch Buffet</h3>
-    </div>
-  </section>
-
-  <!-- =========== BREAKFAST SECT ====================== -->
-  <section class="food-breakfast-section">
-    <div class="container">
-      <p class="additions">Brunch is served every Sunday between 10:00a - 2:00p.</p>
-      <p class="additions">We got $3 Bloody Mary's & Mimosa's.</p>
-
-      <div class="fade-in">
-        <div class="divider"></div>
+    <section class="banner food-breakfast-banner sub-menu-banner-gap" style="background: url(<?php echo $breakfast_banner['url']; ?>) center center no-repeat; background-size: cover;">
+    <? } else { ?>
+      <section class="banner food-breakfast-banner sub-menu-banner-gap">
+      <?php } ?>
+      <div class="banner-container">
+        <h3><?php echo $breakfast_title; ?></h3>
       </div>
+    </section>
 
-      <div class="fade-in">
-        <p>All you can eat brunch buffet only $12. With a variety of breakfast items you won't be disappointed.
-          Everything is made fresh each Sunday morning including omlets which are cooked to order. We also have maple
-          bacon, french toast, fresh fruit and much more,
-          including an assortment of vegan friendly options. Don't miss out this Sunday and come enjoy your last day
-          before back
-          to the&nbsp;grind.</p>
+    <!-- =========== BREAKFAST SECT ====================== -->
+    <section class="food-breakfast-section">
+      <div class="container">
+
+        <p class="additions">Breakfast is served every Saturday between 11:00a - 2:00p.</p>
+        <p class="additions">We got $3 Bloody Mary's & Mimosa's.</p>
+
+        <div class="row menu-item">
+
+          <div class="col col-md-5">
+
+            <h4>Green Pig Breakfast</h4>
+            <p>2 eggs cooked to order, sausage, bacon, hash browns and fresh fruit.</p>
+
+          </div>
+
+          <div class="col col-md-1">
+
+            <p><em><strong>$8.50</strong></em></p>
+
+          </div>
+
+          <div class="col col-md-5">
+
+            <h4>Breakfast Burrito</h4>
+            <p>Scrambled eggs, sausage, bacon, potatoes, peppers &amp; cheese in a flour tortilla served with fruit.</p>
+
+          </div>
+
+          <div class="col col-md-1">
+
+            <p><em><strong>$8.50</strong></em></p>
+
+          </div>
+
+        </div> <!-- row -->
+
+        <div class="row menu-item">
+
+          <div class="col col-md-5">
+
+            <h4>French Toast</h4>
+            <p>French toast with your choice of sausage or bacon served with fresh fruit.</p>
+
+          </div>
+
+          <div class="col col-md-1">
+
+            <p><em><strong>$8.50</strong></em></p>
+
+          </div>
+
+          <div class="col col-md-5">
+
+            <h4>Mac Pig Sandwich</h4>
+            <p>Egg, cheese &amp; your choice of ham, bacon, sausage or corned beef served with hash browns and fresh
+              fruit.</p>
+
+          </div>
+
+          <div class="col col-md-1">
+
+            <p><em><strong>$7.50</strong></em></p>
+
+          </div>
+
+        </div> <!-- row -->
+
+        <div class="row menu-item">
+
+          <div class="col col-md-5 last-item">
+
+            <h4>Huevos Rancheros</h4>
+            <p>3 fried eggs with black beans, ranchero salsa on corn tortillas with avocado &amp; queso fresco.</p>
+
+          </div>
+
+          <div class="col col-md-1">
+
+            <p><em><strong>$8.50</strong></em></p>
+
+          </div>
+
+        </div> <!-- row -->
+
+      </div> <!-- container -->
+
+    </section> <!-- breakfast -->
+
+    <!-- =========== SUNDAY - BREAKFAST BUFFET BANNER ====================== -->
+    <section class="banner events-sun-banner sub-menu-banner-gap">
+      <div class="banner-container">
+        <h3>Sunday Brunch Buffet</h3>
       </div>
-    </div> <!-- container -->
-  </section> <!-- breakfast -->
+    </section>
+
+    <!-- =========== BREAKFAST SECT ====================== -->
+    <section class="food-breakfast-section">
+      <div class="container">
+        <p class="additions">Brunch is served every Sunday between 10:00a - 2:00p.</p>
+        <p class="additions">We got $3 Bloody Mary's & Mimosa's.</p>
+
+        <div class="fade-in">
+          <div class="divider"></div>
+        </div>
+
+        <div class="fade-in">
+          <p>All you can eat brunch buffet only $12. With a variety of breakfast items you won't be disappointed.
+            Everything is made fresh each Sunday morning including omlets which are cooked to order. We also have maple
+            bacon, french toast, fresh fruit and much more,
+            including an assortment of vegan friendly options. Don't miss out this Sunday and come enjoy your last day
+            before back
+            to the&nbsp;grind.</p>
+        </div>
+      </div> <!-- container -->
+    </section> <!-- breakfast -->
 </div> <!-- menu-breakfast -->
 
 <?php
