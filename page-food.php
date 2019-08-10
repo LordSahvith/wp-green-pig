@@ -158,33 +158,31 @@ get_header(); ?>
   <section class="food-starters-section">
     <div class="container">
 
-      <div class="row menu-item">
-        <div class="fade-up-2">
+      <div class="fade-up-2 food-menu">
 
-          <?php $loop = new WP_Query(array('post_type' => 'starters_food_item', 'oderby' => 'post_id', 'order' => 'ASC')); ?>
+        <?php $loop = new WP_Query(array('post_type' => 'starters_food_item', 'oderby' => 'post_id', 'order' => 'ASC')); ?>
 
-          <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+        <?php while ($loop->have_posts()) : $loop->the_post(); ?>
 
-            <div class="col col-md-5">
+          <div class="food-menu-item">
+            <div class="food-description">
               <?php
-
               if (!empty(get_field('pig_favorite'))) {
                 ?>
                 <h4 class="pig-favorite"><?php the_title(); ?></h4>
-
               <?php } else { ?>
                 <h4><?php the_title(); ?></h4>
               <?php } ?>
               <p><?php the_content(); ?></p>
             </div>
-
-            <div class="col col-sm-1">
+            <div class="price">
               <p><em><strong><?php echo get_field('food_menu_item_price'); ?></strong></em></p>
             </div>
+          </div>
 
-          <?php endwhile; ?>
-        </div> <!-- fade -->
-      </div> <!-- row -->
+        <?php endwhile; ?>
+
+      </div> <!-- food-menu -->
 
 
 
@@ -214,7 +212,7 @@ get_header(); ?>
       <!-- </div> 
 </div> -->
 
-      <div class="row menu-item">
+      <!-- <div class="row menu-item">
         <div class="fade-up-2">
           <div class="col col-md-5">
             <h4>Angus Beef Sliders*</h4>
@@ -234,16 +232,14 @@ get_header(); ?>
           <div class="col col-md-1">
             <p><em><strong>$8.99</strong></em></p>
           </div>
-        </div> <!-- fade -->
-      </div> <!-- row -->
+        </div> 
+      </div>  -->
 
-      <div class="row menu-item">
+      <!-- <div class="row menu-item">
         <div class="fade-up-2">
           <div class="col col-md-5">
             <h4>The 31st East Avocado Rolls</h4>
-            <p>House made eggrolls filled with chicken, bacon, black beans, avocado, tomato and cheddar jack cheese,
-              served
-              with jalapeno ranch or chipotle ranch.</p>
+            <p>House made eggrolls filled with chicken, bacon, black beans, avocado, tomato and cheddar jack cheese, served with jalapeno ranch or chipotle ranch.</p>
           </div>
 
           <div class="col col-md-1">
@@ -252,22 +248,20 @@ get_header(); ?>
 
           <div class="col col-md-5">
             <h4>Chicken Tender Basket</h4>
-            <p>3 large battered chicken tenders, served with hand cut, house fries and your choice of dipping sauce:
-              chipotle ranch, jalapeno ranch, house BBQ or buffalo.</p>
+            <p>3 large battered chicken tenders, served with hand cut, house fries and your choice of dipping sauce: chipotle ranch, jalapeno ranch, house BBQ or buffalo.</p>
           </div>
 
           <div class="col col-md-1">
             <p><em><strong>$9.99</strong></em></p>
           </div>
-        </div> <!-- fade -->
-      </div> <!-- row -->
+        </div> 
+      </div>  -->
 
-      <div class="row menu-item">
+      <!-- <div class="row menu-item">
         <div class="fade-up-2">
           <div class="col col-md-5">
             <h4>Chicken Chicharrons*</h4>
-            <p>Bites sized pieces of skin and moist thigh meat lightly dusted with rice flour &amp; chilito salt, deep
-              fried, served with fresh lime wedges, chipotle ranch and roasted tomato salsa.</p>
+            <p>Bites sized pieces of skin and moist thigh meat lightly dusted with rice flour &amp; chilito salt, deep fried, served with fresh lime wedges, chipotle ranch and roasted tomato salsa.</p>
           </div>
 
           <div class="col col-md-1">
@@ -275,27 +269,24 @@ get_header(); ?>
           </div>
 
           <div class="col col-md-5">
-            <h4>Shimp Basket</h4>
-            <p>Jumbo butterflied shirimp, fried golden brown, house fries, cocktail sauce, fry sauce and a lemon
-              wedge.</p>
+            <h4>Shrimp Basket</h4>
+            <p>Jumbo butterflied shirimp, fried golden brown, house fries, cocktail sauce, fry sauce and a lemon wedge.</p>
           </div>
 
           <div class="col col-md-1">
             <p><em><strong>$10.99</strong></em></p>
           </div>
-        </div> <!-- fade -->
-      </div> <!-- row -->
+        </div>
+      </div>  -->
 
-      <div class="row menu-item">
+      <!-- <div class="row menu-item">
 
         <div class="fade-up-2">
 
           <div class="col col-md-5">
 
             <h4>House Fries*</h4>
-            <p>Fresh Idaho potatoes, hand cut, double fried and tossed in house seasoning, served with Utah Fry Sauce.
-              Add
-              cheese and bacon crumbles <em><strong>$3.00</strong></em></p>
+            <p>Fresh Idaho potatoes, hand cut, double fried and tossed in house seasoning, served with Utah Fry Sauce. Add cheese and bacon crumbles <em><strong>$3.00</strong></em></p>
 
           </div>
 
@@ -320,9 +311,9 @@ get_header(); ?>
 
         </div>
 
-      </div> <!-- row -->
+      </div>  -->
 
-      <div class="row menu-item">
+      <!-- <div class="row menu-item">
 
         <div class="fade-up-2">
 
@@ -341,7 +332,7 @@ get_header(); ?>
 
         </div>
 
-      </div> <!-- row -->
+      </div> -->
 
     </div> <!-- container -->
 
@@ -377,6 +368,40 @@ get_header(); ?>
 
     <div class="container">
 
+
+
+      <div class="fade-up-2 food-menu">
+
+        <?php $loop = new WP_Query(array('post_type' => 'specialtys_food_item', 'oderby' => 'post_id', 'order' => 'ASC')); ?>
+
+        <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+
+          <div class="food-menu-item">
+            <div class="food-description">
+              <?php
+              if (!empty(get_field('pig_favorite'))) {
+                ?>
+                <h4 class="pig-favorite"><?php the_title(); ?></h4>
+              <?php } else { ?>
+                <h4><?php the_title(); ?></h4>
+              <?php } ?>
+              <p><?php the_content(); ?></p>
+            </div>
+            <div class="price">
+              <p><em><strong><?php echo get_field('food_menu_item_price'); ?></strong></em></p>
+            </div>
+          </div>
+
+        <?php endwhile; ?>
+
+      </div> <!-- food-menu -->
+
+
+
+
+
+
+
       <div class="row menu-item">
 
         <div class="fade-up-2">
@@ -384,9 +409,7 @@ get_header(); ?>
           <div class="col col-md-5">
 
             <h4 class="pig-favorite">Blackend Salmon Tacos*</h4>
-            <p>Blackend salmon served in 3 warm flour tortillas, topped with chipotle aioli, coleslaw, green and red
-              onion,
-              tomato, queso fresco and cilantro, served with fresh lime wedges and blackberry jalapeno sauce.</p>
+            <p>Blackend salmon served in 3 warm flour tortillas, topped with chipotle aioli, coleslaw, green and red onion, tomato, queso fresco and cilantro, served with fresh lime wedges and blackberry jalapeno sauce.</p>
 
           </div>
 

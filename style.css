@@ -983,13 +983,13 @@ a.sub-class {
 }
 
 @media screen and (min-width: 1200px) {
-  .container { width: 960px; }
+  .container { width: 1200px; }
   
   body { font-size: 1.3rem; }    
 }
 
 @media screen and (min-width: 1500px) {
-  .container { width: 1080px; }
+  /* .container { width: 1080px; } */
 }
 
 
@@ -1617,6 +1617,42 @@ padding-bottom: 20px;
 
 .additions {
   font-size: 1.2rem;
+}    
+
+.food-menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.food-menu-item {
+  width: 100%;
+  flex: 0 0 100%;
+  display: inline-flex;
+  flex-direction: row;
+  padding: 40px;
+  text-align: left;
+}
+
+@media screen and (min-width: 991px) {
+  .food-menu-item {
+    width: calc(46% - 40px);
+    flex: 1 0 calc(46% - 40px);
+  }
+}
+
+.food-description {
+  padding-right: 20px; 
+}
+
+.food-description h4 {
+  margin-bottom: 20px;
+}
+
+.food-description p:first-of-type,
+.food-description p:last-of-type {
+  display: none;
 }
 
 .hero-food {
