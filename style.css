@@ -995,10 +995,6 @@ a.sub-class {
 
 /* ==== GRID SYSTEM ===== */
 
-.row {
-  margin-right: -40px;
-}
-
 .col {
   float: left;
   width: 100%;
@@ -1281,6 +1277,8 @@ padding: 40px 20px;
 .banner {
   height: 300px;
   background-size: cover;
+  /* max-width: 1600px;
+  margin: 0 auto; */
 }
 
 .banner-container {
@@ -1338,7 +1336,7 @@ padding: 40px 20px;
 
 @media screen and (min-width: 1500px) {        
   .banner {
-      height: 700px;
+      height: 800px;
   }
   
   .banner-container {      
