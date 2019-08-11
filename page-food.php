@@ -62,6 +62,12 @@ $late_night_body     = get_field('banner_late_night_body');
 // breakfast banners
 $breakfast_title      = get_field('banner_breakfast_title');
 $breakfast_banner     = get_field('banner_breakfast_image');
+$breakfast_body       = get_field('banner_breakfast_body');
+// breakfast banners
+$brunch_title      = get_field('banner_brunch_title');
+$brunch_banner     = get_field('banner_brunch_image');
+$brunch_intro_body       = get_field('banner_brunch_intro_body');
+$brunch_main_body       = get_field('banner_brunch_main_body');
 
 get_header(); ?>
 
@@ -749,8 +755,6 @@ get_header(); ?>
 
       <div class="container">
 
-
-
         <div class="fade-up">
 
           <!-- if user uploaded body copy -->
@@ -821,118 +825,96 @@ get_header(); ?>
     <section class="food-breakfast-section">
       <div class="container">
 
-        <p class="additions">Breakfast is served every Saturday between 11:00a - 2:00p.</p>
-        <p class="additions">We got $3 Bloody Mary's & Mimosa's.</p>
+        <div class="fade-up">
 
-        <div class="row menu-item">
+          <!-- if user uploaded body copy -->
+          <?php
+          if (!empty($breakfast_body)) {
+            ?>
 
-          <div class="col col-md-5">
+            <p class="additions"><?php echo $breakfast_body; ?></p>
 
-            <h4>Green Pig Breakfast</h4>
-            <p>2 eggs cooked to order, sausage, bacon, hash browns and fresh fruit.</p>
+          <?php } ?>
 
-          </div>
+        </div>
 
-          <div class="col col-md-1">
+        <div class="fade-up-2 food-menu">
 
-            <p><em><strong>$8.50</strong></em></p>
+          <!-- start of loop for food item -->
 
-          </div>
+          <?php $loop = new WP_Query(array('post_type' => 'breakfast_food_item', 'oderby' => 'post_id', 'order' => 'ASC')); ?>
 
-          <div class="col col-md-5">
+          <?php while ($loop->have_posts()) : $loop->the_post(); ?>
 
-            <h4>Breakfast Burrito</h4>
-            <p>Scrambled eggs, sausage, bacon, potatoes, peppers &amp; cheese in a flour tortilla served with fruit.</p>
+            <div class="food-menu-item">
+              <div class="food-description">
+                <?php
+                if (!empty(get_field('pig_favorite'))) {
+                  ?>
+                  <h4 class="pig-favorite"><?php the_title(); ?></h4>
+                <?php } else { ?>
+                  <h4><?php the_title(); ?></h4>
+                <?php } ?>
+                <p><?php the_content(); ?></p>
+              </div>
+              <div class="price">
+                <p><em><strong><?php echo get_field('food_menu_item_price'); ?></strong></em></p>
+              </div>
+            </div>
 
-          </div>
+          <?php endwhile; ?>
 
-          <div class="col col-md-1">
-
-            <p><em><strong>$8.50</strong></em></p>
-
-          </div>
-
-        </div> <!-- row -->
-
-        <div class="row menu-item">
-
-          <div class="col col-md-5">
-
-            <h4>French Toast</h4>
-            <p>French toast with your choice of sausage or bacon served with fresh fruit.</p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$8.50</strong></em></p>
-
-          </div>
-
-          <div class="col col-md-5">
-
-            <h4>Mac Pig Sandwich</h4>
-            <p>Egg, cheese &amp; your choice of ham, bacon, sausage or corned beef served with hash browns and fresh
-              fruit.</p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$7.50</strong></em></p>
-
-          </div>
-
-        </div> <!-- row -->
-
-        <div class="row menu-item">
-
-          <div class="col col-md-5 last-item">
-
-            <h4>Huevos Rancheros</h4>
-            <p>3 fried eggs with black beans, ranchero salsa on corn tortillas with avocado &amp; queso fresco.</p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$8.50</strong></em></p>
-
-          </div>
-
-        </div> <!-- row -->
+        </div> <!-- food-menu -->
 
       </div> <!-- container -->
 
     </section> <!-- breakfast -->
 
     <!-- =========== SUNDAY - BREAKFAST BUFFET BANNER ====================== -->
-    <section class="banner events-sun-banner sub-menu-banner-gap">
-      <div class="banner-container">
-        <h3>Sunday Brunch Buffet</h3>
-      </div>
-    </section>
-
-    <!-- =========== BREAKFAST SECT ====================== -->
-    <section class="food-breakfast-section">
-      <div class="container">
-        <p class="additions">Brunch is served every Sunday between 10:00a - 2:00p.</p>
-        <p class="additions">We got $3 Bloody Mary's & Mimosa's.</p>
-
-        <div class="fade-in">
-          <div class="divider"></div>
+    <!-- if user uploaded image -->
+    <?php
+    if (!empty($brunch_banner)) {
+      ?>
+      <section class="banner food-breakfast-banner sub-menu-banner-gap" style="background: url(<?php echo $brunch_banner['url']; ?>) center center no-repeat; background-size: cover;">
+      <? } else { ?>
+        <section class="banner events-sun-banner sub-menu-banner-gap">
+        <?php } ?>
+        <div class="banner-container">
+          <h3><?php echo $brunch_title; ?></h3>
         </div>
+      </section>
 
-        <div class="fade-in">
-          <p>All you can eat brunch buffet only $12. With a variety of breakfast items you won't be disappointed.
-            Everything is made fresh each Sunday morning including omlets which are cooked to order. We also have maple
-            bacon, french toast, fresh fruit and much more,
-            including an assortment of vegan friendly options. Don't miss out this Sunday and come enjoy your last day
-            before back
-            to the&nbsp;grind.</p>
-        </div>
-      </div> <!-- container -->
-    </section> <!-- breakfast -->
+      <!-- =========== BREAKFAST SECT ====================== -->
+      <section class="food-breakfast-section">
+        <div class="container">
+
+          <!-- if user uploaded body copy -->
+          <?php
+          if (!empty($brunch_intro_body)) {
+            ?>
+
+            <p class="additions"><?php echo $brunch_intro_body; ?></p>
+
+          <?php } ?>
+
+
+          <div class="fade-in">
+            <div class="divider"></div>
+          </div>
+
+          <div class="fade-in">
+
+            <!-- if user uploaded body copy -->
+            <?php
+            if (!empty($brunch_main_body)) {
+              ?>
+
+              <p><?php echo $brunch_main_body; ?></p>
+
+            <?php } ?>
+          </div>
+        </div> <!-- container -->
+      </section> <!-- breakfast -->
 </div> <!-- menu-breakfast -->
 
 <?php
