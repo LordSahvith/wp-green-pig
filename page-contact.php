@@ -3,6 +3,21 @@
   Template Name: Contact Page
  */
 
+ // ADVANCED CUSTOM FIELDS
+ // intro
+ $page_title          = get_field('contact_page_title');
+ $hours_title         = get_field('contact_hours_title');
+ $hours_body          = get_field('contact_hours_body');
+ $events_title        = get_field('daily_events_title');
+ $events_body         = get_field('daily_events_body');
+ $form_title          = get_field('form_title');
+ $general_button      = get_field('general_email_button');
+ $general_email       = get_field('general_email');
+ $band_button         = get_field('band_email_button');
+ $band_email          = get_field('band_email');
+ $resvervation_button = get_field('reservation_email_button');
+ $resvervation_email  = get_field('reservation_email');
+
 get_header(); ?>
 
   <!-- ======= HERO ========================== -->
@@ -31,7 +46,7 @@ get_header(); ?>
 
       <div class="fade-down">
 
-        <h3>Contact Us</h3>
+        <h3><?php echo $page_title; ?></h3>
 
       </div>
 
@@ -50,11 +65,10 @@ get_header(); ?>
 
             <div class="hours">
 
-              <h4 style="padding-bottom: 0;">Our Hours</h4>
+              <h4 style="padding-bottom: 0;"><?php echo $hours_title; ?></h4>
 
               <ul>
-                <li><i class="fa fa-clock-o"></i> Mon-Sat 11:00a - 2:00a</li>
-                <li><i class="fa fa-tv"></i> Sun 10:00a - 2:00a</li>
+                <?php echo $hours_body; ?>
               </ul>
 
             </div>
@@ -63,16 +77,10 @@ get_header(); ?>
 
             <div class="events">
 
-              <h4 style="padding-bottom: 0;">Daily Events</h4>
+              <h4 style="padding-bottom: 0;"><?php echo $events_title; ?></h4>
 
               <ul>
-                <li>Monday - Open Blues Jam 10pm</li>
-                <li>Tuesday - $2 Tuesday</li>
-                <li>Wednesday - General Trivia 7pm</li>
-                <li>Thrusday - Karaoke 9pm</li>
-                <li>Friday - Live Music 10pm</li>
-                <li>Saturday - Breakfast 11am - 2pm<br>DJ Latu 10pm</li>
-                <li>Sunday - Brunch Buffet 10am - 2pm<br>Adult Trivia 7pm</li>
+                <?php echo $events_body; ?>
               </ul>
 
             </div> <!-- events -->
@@ -84,7 +92,7 @@ get_header(); ?>
         <div class="fade-left">
 
           <div class="col col-md-6 contact-form">
-            <h3>Looking for answers?</h3>
+            <h3><?php echo $form_title; ?></h3>
 
             <!-- =========== SUB MENU ====================== -->
 
@@ -94,12 +102,12 @@ get_header(); ?>
                   <a href="javascript:void(0)" class="closebtn" style="top: 0; margin-top: 0;" onclick="closeNav()">&times;</a>
                   <div class="container">
                     <li><button id="general-email-btn" class="sub-menu-btn form-btn"
-                        onclick="closeNav()">General</button>
+                        onclick="closeNav()"><?php echo $general_button; ?></button>
                     </li>
-                    <li><button id="band-email-btn" class="sub-menu-btn form-btn" onclick="closeNav()">Band</button>
+                    <li><button id="band-email-btn" class="sub-menu-btn form-btn" onclick="closeNav()"><?php echo $band_button; ?></button>
                     </li>
                     <li><button id="reservation-email-btn" class="sub-menu-btn form-btn"
-                        onclick="closeNav()">Reservation</button></li>
+                        onclick="closeNav()"><?php echo $resvervation_button; ?></button></li>
                   </div>
                 </div>
               </div> <!-- mobile-nav -->
@@ -127,7 +135,7 @@ get_header(); ?>
 
 
             <div id="general-email" style="margin-top: 80px;">
-              <form class="form" action="MAILTO:gppgeneral@gmail.com" method="post">
+              <form class="form" action="MAILTO:<?php echo $general_email; ?>" method="post">
 
                 <input type="text" id="name" placeholder="Your name">
                 <input type="text" id="email" placeholder="Your email">
@@ -144,7 +152,7 @@ get_header(); ?>
             </div>
 
             <div id="band-email" style="margin-top: 80px;">
-              <form class="form" action="MAILTO:gppband@gmail.com" method="post">
+              <form class="form" action="MAILTO:<?php echo $band_email; ?>" method="post">
 
                 <input type="text" id="name" placeholder="Your name">
                 <input type="text" id="email" placeholder="Your email">
@@ -161,7 +169,7 @@ get_header(); ?>
             </div>
 
             <div id="reservation-email" style="margin-top: 80px;">
-              <form class="form" action="MAILTO:gppreservation@gmail.com" method="post">
+              <form class="form" action="MAILTO:<?php echo $resvervation_email; ?>" method="post">
 
                 <input type="text" id="name" placeholder="Your name">
                 <input type="text" id="email" placeholder="Your email">
