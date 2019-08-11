@@ -1,4 +1,10 @@
 <?php
+
+//refresh the page after 5 seconds
+// header('Refresh: '. $redirect_delay . ';url='. $redirect .'');
+header( "Refresh: ". $redirect_delay . "; url=" . $redirect . "", true, 303);
+
+?><?php
 /*
   Template Name: Confirmation Page
  */
@@ -58,14 +64,6 @@ get_header(); ?>
     </div>
   </div> <!-- container -->
 </section>
-
-
-<?php
-
-//refresh the page after 5 seconds
-header('Refresh: '. $redirect_delay . ';url='. $redirect .'');
-
-?>
 
 <?php
 get_footer();
