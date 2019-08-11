@@ -1342,7 +1342,6 @@ button:focus {
 .hero-container {
   margin: 0 auto;
   max-width: 200px;
-  padding-top: 130px;
 }
 
 .hero h2 {
@@ -1358,7 +1357,7 @@ button:focus {
 
   .hero-container {
     max-width: 250px;
-    padding-top: 180px;
+    padding-top: 15px;
   }
 }
 
@@ -1369,7 +1368,7 @@ button:focus {
 
   .hero-container {
     max-width: 300px;
-    padding-top: 230px;
+    padding-top: 50px;
   }
 }
 
@@ -1379,7 +1378,7 @@ button:focus {
   }
 
   .hero-container {
-    padding-top: 300px;
+    padding-top: 60px;
   }
 }
 
