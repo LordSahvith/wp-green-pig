@@ -1266,27 +1266,28 @@ a.sub-class {
 
 
 .button {
+  border: none !important;
   position: absolute;
-  padding: 20px 30px;
-  background-color: #aee238;
-  border-radius: 15px;
-  font-size: 1.2rem;
-  color: #222;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
+  padding: 20px 30px !important;
+  background-color: #aee238 !important;
+  border-radius: 15px !important;
+  font-size: 1.2rem !important;
+  color: #222 !important;
+  -webkit-transition: all 0.5s !important;
+  -o-transition: all 0.5s !important;
+  transition: all 0.5s !important;
 }
 
 .button:hover {
-  background-color: #4dbb04;
-  color: #222;
-  -webkit-transform: scale(0.85);
-  -ms-transform: scale(0.85);
-  transform: scale(0.85);
+  background-color: #4dbb04 !important;
+  color: #222 !important;
+  -webkit-transform: scale(0.85) !important;
+  -ms-transform: scale(0.85) !important;
+  transform: scale(0.85) !important;
 }
 
 button:focus {
-  outline: none;
+  outline: none !important;
 }
 
 .fade-left>*,
@@ -1479,6 +1480,12 @@ button:focus {
   .form-btn {
     padding: 40px;
   }
+}
+
+.page-template-page-contact div.wpforms-container-full .wpforms-form input.wpforms-field-medium,
+.page-template-page-contact div.wpforms-container-full .wpforms-form select.wpforms-field-medium,
+.page-template-page-contact div.wpforms-container-full .wpforms-form .wpforms-field-row.wpforms-field-medium {
+  max-width: 100%;
 }
 
 

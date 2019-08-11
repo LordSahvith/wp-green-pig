@@ -20,8 +20,8 @@ if (isset($_POST["submit"])) {
       // Message lines should not exceed 70 characters (PHP rule), so wrap it
       $message = wordwrap($message, 70);
       // Send Mail By PHP Mail Function
-      mail(".com", $subject, $message, $headers);
-      echo "Your mail has been sent successfuly ! Thank you for your feedback";
+      mail("bulletproofchild@yahoo.com", $subject, $message, $headers);
+      echo "Your mail has been sent successfuly! Thank you for your feedback";
     }
   }
 }

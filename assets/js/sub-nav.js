@@ -100,27 +100,27 @@ $('.form-btn').click(function () {
 
   console.log(targetSection);
 
-  // $('#general-email').fadeOut(500);
-  // $('#band-email').fadeOut(500);
-  // $('#reservation-email').fadeOut(500);
-  // $(targetSection).delay(490).fadeIn(500);
+  $('#general-email').fadeOut(500);
+  $('#band-email').fadeOut(500);
+  $('#reservation-email').fadeOut(500);
+  $(targetSection).delay(490).fadeIn(500);
   $('.form').fadeOut(500);
   $('.form').fadeIn(500);
 
-  switch (targetSection) {
-    case '#general-email':
-      $('.form').attr("action", "MAILTO:gppgeneral@gmail.com");
-      break;
-    case '#band-email':
-      $('.form').attr("action", "MAILTO:gppband@gmail.com");
-      break;
-    case '#reservation-email':
-      $('.form').attr("action", "MAILTO:gppreservation@gmail.com");
-      break;
-    default:
-      $('.form').attr("action", "MAILTO:gppgeneral@gmail.com");
-      break;
-  }
+  // switch (targetSection) {
+  //   case '#general-email':
+  //     $('.form').attr("action", "MAILTO:gppgeneral@gmail.com");
+  //     break;
+  //   case '#band-email':
+  //     $('.form').attr("action", "MAILTO:gppband@gmail.com");
+  //     break;
+  //   case '#reservation-email':
+  //     $('.form').attr("action", "MAILTO:gppreservation@gmail.com");
+  //     break;
+  //   default:
+  //     $('.form').attr("action", "MAILTO:gppgeneral@gmail.com");
+  //     break;
+  // }
 
 });
 
