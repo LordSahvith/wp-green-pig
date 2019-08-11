@@ -121,9 +121,9 @@ get_header(); ?>
 
             <ul class="main-nav main-menu form-menu">
               <div class="fade-up" style="display: flex; justify-content: space-between;">
-                <li><button id="general-email-btn" class="sub-menu-btn form-btn form-choice">General</button></li>
-                <li><button id="band-email-btn" class="sub-menu-btn form-btn">Band</button></li>
-                <li><button id="reservation-email-btn" class="sub-menu-btn form-btn">Reservation</button></li>
+                <li><button id="general-email-btn" class="sub-menu-btn form-btn form-choice"><?php echo $general_button; ?></button></li>
+                <li><button id="band-email-btn" class="sub-menu-btn form-btn"><?php echo $band_button; ?></button></li>
+                <li><button id="reservation-email-btn" class="sub-menu-btn form-btn"><?php echo $resvervation_button; ?></button></li>
               </div>
             </ul>
           </nav>
@@ -140,13 +140,13 @@ get_header(); ?>
             <?php echo $reservation_form; ?>
           </div>
 
-        </div> <!-- col -->
+          </div> <!-- col -->
 
-      </div> <!-- fade -->
+        </div> <!-- fade -->
 
-    </div> <!-- row -->
+      </div> <!-- row -->
 
-  </div> <!-- container -->
+    </div> <!-- container -->
 
 </section>
 
