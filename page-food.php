@@ -35,16 +35,30 @@ $bowls_button        = get_field('banner_bowls_button');
 $bowls_title         = get_field('banner_bowls_title');
 $bowls_body          = get_field('banner_bowls_body');
 $bowls_banner        = get_field('banner_bowls_image');
+$bowls_soups_title   = get_field('bowls_title_copy');
+$bowls_soups_body    = get_field('bowls_title_body');
+$cup_name            = get_field('cup_name');
+$cup_price           = get_field('cup_price');
+$bowl_name           = get_field('bowl_name');
+$bowl_price          = get_field('bowl_price');
 $daily_button        = get_field('banner_daily_button');
 $daily_title         = get_field('banner_daily_title');
 $daily_body          = get_field('banner_daily_body');
 $daily_banner        = get_field('banner_daily_image');
+$lunch_body          = get_field('lunch_body');
+$lunch_name          = get_field('lunch_name');
+$lunch_price         = get_field('lunch_price');
+$all_day_copy        = get_field('all_day_copy');
+$all_day_price_1     = get_field('all_day_price_1');
+$all_day_price_2     = get_field('all_day_price_2');
 // vegan banners
 $vegan_title      = get_field('banner_vegan_title');
 $vegan_banner     = get_field('banner_vegan_image');
+$vegan_body       = get_field('banner_vegan_body');
 // late night banners
 $late_night_title      = get_field('banner_late_night_title');
 $late_night_banner     = get_field('banner_late_night_image');
+$late_night_body     = get_field('banner_late_night_body');
 // breakfast banners
 $breakfast_title      = get_field('banner_breakfast_title');
 $breakfast_banner     = get_field('banner_breakfast_image');
@@ -164,7 +178,7 @@ get_header(); ?>
   <section class="food-starters-section">
     <div class="container">
 
-      <div class="fade-up-2 food-menu">
+      <div class="fade-up">
 
         <!-- if user uploaded body copy -->
         <?php
@@ -174,6 +188,12 @@ get_header(); ?>
           <p class="additions"><?php echo $starters_body; ?></p>
 
         <?php } ?>
+
+      </div>
+
+      <div class="fade-up-2 food-menu">
+
+        <!-- start of loop for food item -->
 
         <?php $loop = new WP_Query(array('post_type' => 'starters_food_item', 'oderby' => 'post_id', 'order' => 'ASC')); ?>
 
@@ -198,27 +218,6 @@ get_header(); ?>
         <?php endwhile; ?>
 
       </div> <!-- food-menu -->
-
-      <!-- <div class="row menu-item">
-
-        <div class="fade-up-2">
-
-          <div class="col col-md-5 last-item">
-
-            <h4>Chips &amp; Salsa*</h4>
-            <p>House cut tortilla chips served with salsa fresca. Add Guacamole <em><strong>3.50</strong></em></p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$4.99</strong></em></p>
-
-          </div>
-
-        </div>
-
-      </div> -->
 
     </div> <!-- container -->
 
@@ -254,7 +253,7 @@ get_header(); ?>
 
     <div class="container">
 
-      <div class="fade-up-2 food-menu">
+      <div class="fade-up">
 
         <!-- if user uploaded body copy -->
         <?php
@@ -264,6 +263,12 @@ get_header(); ?>
           <p class="additions"><?php echo $specialties_body; ?></p>
 
         <?php } ?>
+
+      </div>
+
+      <div class="fade-up-2 food-menu">
+
+        <!-- start of loop for food item -->
 
         <?php $loop = new WP_Query(array('post_type' => 'specialtys_food_item', 'oderby' => 'post_id', 'order' => 'ASC')); ?>
 
@@ -339,14 +344,7 @@ get_header(); ?>
 
       <div class="fade-up-2 food-menu">
 
-        <!-- if user uploaded body copy -->
-        <?php
-        if (!empty($specialties_body)) {
-          ?>
-
-          <p class="additions"><?php echo $specialties_body; ?></p>
-
-        <?php } ?>
+        <!-- start of loop for food item -->
 
         <?php $loop = new WP_Query(array('post_type' => 'sandwiches_food_item', 'oderby' => 'post_id', 'order' => 'ASC')); ?>
 
@@ -371,127 +369,6 @@ get_header(); ?>
         <?php endwhile; ?>
 
       </div> <!-- food-menu -->
-
-
-
-
-
-
-
-
-
-
-      <div class="row menu-item">
-
-        <div class="fade-up-2">
-
-          <div class="col col-md-5">
-
-            <h4 class="pig-favorite">Cubano*</h4>
-            <p>Marinated shredded pork with grilled ham, Swiss cheese and pickles, with roasted garlic mayo on a
-              toasted
-              baguette.</p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$11.99</strong></em></p>
-
-          </div>
-
-          <div class="col col-md-5">
-
-            <h4 class="pig-favorite">Pig-A-Delphia Cheese Steak*</h4>
-            <p>Thinly sliced top round saut&eacute;ed with Anaheim peppers and onions topped with melted pepper jack
-              cheese
-              and piled high on a toasted ambassador roll served with a side of jalapeno ranch.</p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$11.99</strong></em></p>
-
-          </div>
-
-        </div>
-
-      </div> <!-- row -->
-
-      <div class="row menu-item">
-
-        <div class="fade-up-2">
-
-          <div class="col col-md-5">
-
-            <h4 class="pig-favorite">Angus Corned Beef Reuben*</h4>
-            <p>Melt in your mouth, house sliced corned beef, sauerkraut, Swiss cheese piled high with 1000 island
-              dressing
-              on toasted marbled rye.</p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$12.99</strong></em></p>
-
-          </div>
-
-          <div class="col col-md-5">
-
-            <h4>BBQ Pulled Pork*</h4>
-            <p>Marinated shredded pork smothered in BBQ sauce, topped with coleslaw and a pickle spear on a toasted
-              ambassador roll.</p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$11.99</strong></em></p>
-
-          </div>
-
-        </div>
-
-      </div> <!-- row -->
-
-      <div class="row menu-item">
-
-        <div class="fade-up-2">
-
-          <div class="col col-md-5">
-
-            <h4>Salmon Sandwich</h4>
-            <p>Grilled Atlantic salmon patty, tomato basil aioli, dressed arugula, tomato, onion, on a grilled brioche
-              bun.</p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$12.99</strong></em></p>
-
-          </div>
-
-          <div class="col col-md-5">
-
-            <h4>Chicken Parmesan Sandwich</h4>
-            <p>Chicken breast cutlet dredged in seasoned parmesan panko breading, pan fried, topped with homemade
-              marinara, melted fresh mozzarella, dressed arugula and garlic aioli, served on a grilled ciabatta bun.
-            </p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$11.99</strong></em></p>
-
-          </div>
-
-        </div>
-
-      </div> <!-- row -->
 
     </div> <!-- container -->
 
@@ -528,130 +405,46 @@ get_header(); ?>
 
     <div class="container">
 
-      <div class="fade-up-2">
+      <div class="fade-up">
 
-        <p class="additions">
-          <strong>Additions</strong><em>
-            <br>
-            <strong>1.00</strong> </em>| cheddar, provolone, pepper jack, Swiss, mushrooms, jalapenos
-          <br>
-          <em><strong>2.00</strong></em> | avocado, blue cheese, white cheddar, green chillies, fried egg
-          <br>
-          <em><strong>3.00</strong> </em>| Applewood smoked bacon, Cajun bacon
-        </p>
+        <!-- if user uploaded body copy -->
+        <?php
+        if (!empty($burgers_body)) {
+          ?>
+
+          <p class="additions"><?php echo $burgers_body; ?></p>
+
+        <?php } ?>
 
       </div>
 
-      <div class="row menu-item">
+      <div class="fade-up-2 food-menu">
 
-        <div class="fade-up-2">
+        <!-- start of loop for food item -->
 
-          <div class="col col-md-5">
+        <?php $loop = new WP_Query(array('post_type' => 'burgers_food_item', 'oderby' => 'post_id', 'order' => 'ASC')); ?>
 
-            <h4>House Burger*</h4>
-            <p>Hand pressed 6 oz. ground Angus beef topped with lettuce, tomato, red onion and pickle served with 1000
-              island dressing on a toasted challah bun.</p>
+        <?php while ($loop->have_posts()) : $loop->the_post(); ?>
 
+          <div class="food-menu-item">
+            <div class="food-description">
+              <?php
+              if (!empty(get_field('pig_favorite'))) {
+                ?>
+                <h4 class="pig-favorite"><?php the_title(); ?></h4>
+              <?php } else { ?>
+                <h4><?php the_title(); ?></h4>
+              <?php } ?>
+              <p><?php the_content(); ?></p>
+            </div>
+            <div class="price">
+              <p><em><strong><?php echo get_field('food_menu_item_price'); ?></strong></em></p>
+            </div>
           </div>
 
-          <div class="col col-md-1">
+        <?php endwhile; ?>
 
-            <p><em><strong>$8.99</strong></em></p>
-
-          </div>
-
-          <div class="col col-md-5">
-
-            <h4 class="pig-favorite">Denver Burger*</h4>
-            <p>Hand pressed 6oz. ground Angus beef topped with caramelized onions, jalapeno cream cheese, Applewood
-              smoked
-              bacon served on a toasted ciabatta bun.</p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$12.99</strong></em></p>
-
-          </div>
-
-        </div>
-
-      </div> <!-- row -->
-
-      <div class="row menu-item">
-
-        <div class="fade-up-2">
-
-          <div class="col col-md-5">
-
-            <h4>Jim Beam Bourbon Burger</h4>
-            <p>Hand pressed 6 oz. ground Angus beef patty topped with bourbon & agave caramelized onions, white
-              cheddar and garlic aioli served on a grilled brioche bun.</p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$14.99</strong></em></p>
-
-          </div>
-
-          <div class="col col-md-5">
-
-            <h4 class="pig-favorite">The Angus Burger*</h4>
-            <p>Hand pressed 8oz. ground, 100% grass fed Angus beef topped with Swiss cheese, white cheddar, lettuce,
-              tomato,
-              Vidalia onion and sweet ionion aioli served on a toasted ciabatta bun.</p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$13.99</strong></em></p>
-
-          </div>
-
-        </div>
-
-      </div> <!-- row -->
-
-      <div class="row menu-item">
-
-        <div class="fade-up-2">
-
-          <div class="col col-md-5">
-
-            <h4>Magnolia Burger*</h4>
-            <p>Hand pressed 6oz. ground Angus beef blackened and topped with Applewood smoked bleu cheese crumbles,
-              Cajun
-              bacon, lettuce, tomato, onion and chipotle aioli served on a toasted ciabatta bun.</p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$12.99</strong></em></p>
-
-          </div>
-
-          <div class="col col-md-5">
-
-            <h4>Diner Double Cheese</h4>
-            <p>Classic Double meat, double cheese, lettuce, tomato, onion, pickle, piled high on a grilled brioche
-              bun.</p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$12.99</strong></em></p>
-
-          </div>
-
-        </div>
-
-      </div> <!-- row -->
+      </div> <!-- food-menu -->
 
     </div> <!-- container -->
 
@@ -687,137 +480,46 @@ get_header(); ?>
 
     <div class="container">
 
-      <div class="fade-up-2">
+      <div class="fade-up">
 
-        <p class="additions">
-          <strong>Add protein to any salad</strong>
-          <br>
-          3.00 | Chicken
-          <br>
-          4.00 | Salmon
-          <br>
-          5.00 | Top Sirloin Coulotte
-          <br>
-          <strong>Dressings</strong> | balsamic vinaigrette, ranch, bleu cheese, Caesar, tequila lime or house
-          vinaigrette
-        </p>
+        <!-- if user uploaded body copy -->
+        <?php
+        if (!empty($bowls_body)) {
+          ?>
+
+          <p class="additions"><?php echo $bowls_body; ?></p>
+
+        <?php } ?>
 
       </div>
 
-      <div class="row menu-item">
+      <div class="fade-up-2 food-menu">
 
-        <div class="fade-up-2">
+        <!-- start of loop for food item -->
 
-          <div class="col col-md-5">
+        <?php $loop = new WP_Query(array('post_type' => 'bowls_food_item', 'oderby' => 'post_id', 'order' => 'ASC')); ?>
 
-            <h4 class="pig-favorite">Salmon Salad</h4>
-            <p>Fresh mixed greens topped with seared Atlantic salmon, oven roasted, marinated tomatoes, cucumber
-              salad, red
-              onion and radish sprouts, drizzled with olive oil and rasberry red wine vinegar.</p>
+        <?php while ($loop->have_posts()) : $loop->the_post(); ?>
 
+          <div class="food-menu-item">
+            <div class="food-description">
+              <?php
+              if (!empty(get_field('pig_favorite'))) {
+                ?>
+                <h4 class="pig-favorite"><?php the_title(); ?></h4>
+              <?php } else { ?>
+                <h4><?php the_title(); ?></h4>
+              <?php } ?>
+              <p><?php the_content(); ?></p>
+            </div>
+            <div class="price">
+              <p><em><strong><?php echo get_field('food_menu_item_price'); ?></strong></em></p>
+            </div>
           </div>
 
-          <div class="col col-md-1">
+        <?php endwhile; ?>
 
-            <p><em><strong>$14.99</strong></em></p>
-
-          </div>
-
-          <div class="col col-md-5">
-
-            <h4>Southwestern Cobb Salad</h4>
-            <p>Fresh spinach tossed in tequila lime vinaigrette, topped with Applewood smoked bacon, sweet corn, black
-              beans, red onion, heirloom cherry tomatoes, Applewood smoked bleu cheese, tortilla strips, hard boiled
-              egg and
-              sliced avocado.</p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$13.99</strong></em></p>
-
-          </div>
-
-        </div>
-
-      </div> <!-- row -->
-
-      <div class="row menu-item">
-
-        <div class="fade-up-2">
-
-          <div class="col col-md-5">
-
-            <h4>Steak &amp; Arugula Salad</h4>
-            <p>Fresh arugula topped with Top Sirloin Coulotte steak, heirloom cherry tomatoes, julienne red onion and
-              pecorino cheese.</p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$14.99</strong></em></p>
-
-          </div>
-
-          <div class="col col-md-5">
-
-            <h4>Smoked Buffalo Chicken Salad</h4>
-            <p>Buttermilk marinated chicken breast, fried &amp; tossed in Buffalo sauce, on fresh romaine with
-              Applewood
-              smoked bacon, herloom cherry tomatoes, julienne red onion and Applewood smoked bleu cheese crumbles with
-              Bleu
-              Cheese dressing.</p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$9.99</strong></em></p>
-
-          </div>
-
-        </div>
-
-      </div> <!-- row -->
-
-      <div class="row menu-item">
-
-        <div class="fade-up-2">
-
-          <div class="col col-md-5">
-
-            <h4>Classic Caesar Salad</h4>
-            <p>Fresh romaine, house made croutons, shaved Parmesan and creamy Caesar dressing. Add chicken for
-              <em><strong>$3.00</strong></em>
-              or salmon for <em><strong>$6.00</strong></em> more</p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$9.99</strong></em></p>
-
-          </div>
-
-          <div class="col col-md-5">
-
-            <h4>Dinner Salad</h4>
-            <p>Fresh mesclun mixed greens, tomato wedge, julienne red onions, English cucumbers and house made
-              croutons.</p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$9.99</strong></em></p>
-
-          </div>
-
-        </div>
-
-      </div> <!-- row -->
+      </div> <!-- food-menu -->
 
       <div class="row menu-item">
 
@@ -825,32 +527,32 @@ get_header(); ?>
 
           <div class="col col-md-5 last-item">
 
-            <h4>Soup of The Day</h4>
-            <p>Soup prepared from scratch daily. Ask server for details.</p>
+            <h4><?php echo $bowls_soups_title; ?></h4>
+            <p><?php echo $bowls_soups_body; ?></p>
 
             <div class="row">
 
               <div class="col col-md-6">
 
-                <p><em><strong>Cup</strong></em></p>
+                <p><em><strong><?php echo $cup_name; ?></strong></em></p>
 
               </div>
 
               <div class="col col-md-6">
 
-                <p><em><strong>$4.99</strong></em></p>
+                <p><em><strong><?php echo $cup_price; ?></strong></em></p>
 
               </div>
 
               <div class="col col-md-6">
 
-                <p><em><strong>Bowl</strong></em></p>
+                <p><em><strong><?php echo $bowl_name; ?></strong></em></p>
 
               </div>
 
               <div class="col col-md-6">
 
-                <p><em><strong>$5.99</strong></em></p>
+                <p><em><strong><?php echo $bowl_price; ?></strong></em></p>
 
               </div>
 
@@ -894,9 +596,18 @@ get_header(); ?>
   <section class="daily-specials-section" style="margin-bottom: 60px;">
     <div class="container">
 
-      <p class="additions">
-        <strong>Specials change daily. Ask server for details.</strong>
-      </p>
+      <div class="fade-up">
+
+        <!-- if user uploaded body copy -->
+        <?php
+        if (!empty($daily_body)) {
+          ?>
+
+          <p class="additions"><?php echo $daily_body; ?></p>
+
+        <?php } ?>
+
+      </div>
     </div>
 
     <div class="fade-in">
@@ -905,27 +616,27 @@ get_header(); ?>
     <div class="row">
       <div class="fade-up-2">
         <div class="col col-md-5 last-item">
-          <p>Lunch Special M-F until 4:30 pm</p>
+          <p><?php echo $lunch_body; ?></p>
 
           <div class="row">
             <div class="col col-md-6">
-              <p><em><strong>Lunch</strong></em></p>
+              <p><em><strong><?php echo $lunch_name; ?></strong></em></p>
             </div>
 
             <div class="col col-md-6" style="text-align: right;">
-              <p><em><strong>$5.99</strong></em></p>
+              <p><em><strong><?php echo $lunch_price; ?></strong></em></p>
             </div>
           </div> <!-- row -->
 
-          <p>Everyday is all day everyday</p>
+          <p><?php echo $all_day_copy; ?></p>
 
           <div class="row">
             <div class="col col-md-6">
-              <p><em><strong>$8.50</strong></em></p>
+              <p><em><strong><?php echo $all_day_price_1; ?></strong></em></p>
             </div>
 
             <div class="col col-md-6" style="text-align: right;">
-              <p><em><strong>$10.00</strong></em></p>
+              <p><em><strong><?php echo $all_day_price_2; ?></strong></em></p>
             </div>
           </div> <!-- row -->
         </div> <!-- col -->
@@ -958,106 +669,47 @@ get_header(); ?>
     <!-- =========== VEGAN SECT ====================== -->
     <section class="food-vegan-section">
       <div class="container">
-        <div class="row menu-item">
-          <div class="col col-md-5">
-            <h4>Vegan Tiger Wings</h4>
-            <p>A dozen vegan wings tossed in your choice of traditional Buffalo hot sauce, honey Sriracha sauce or house
-              BBQ
-              sauce, served with carrots, celery and vegan ranch or vegan bleu cheese dressing.</p>
-          </div>
 
-          <div class="col col-sm-1">
-            <p><em><strong>$12.99</strong></em></p>
-          </div>
+        <div class="fade-up">
 
-          <div class="col col-md-5">
-            <h4>Vegan Tacos</h4>
-            <p>Saut&eacute;ed peppers and onions, black beans and sweet corn served in 3 corn tortillas topped with
-              cabbage,
-              green onions and tomato served with lime and salsa fresca.</p>
-          </div>
+          <!-- if user uploaded body copy -->
+          <?php
+          if (!empty($vegan_body)) {
+            ?>
 
-          <div class="col col-md-1">
-            <p><em><strong>$9.99</strong></em></p>
-          </div>
-        </div> <!-- row -->
+            <p class="additions"><?php echo $vegan_body; ?></p>
 
-        <div class="row menu-item">
-          <div class="col col-md-5">
-            <h4>Black Bean Burger</h4>
-            <p>House made spicy black bean burger with lettuce, tomato, red onion and vegan chipotle aioli served on a
-              toasted challah bun.</p>
-          </div>
+          <?php } ?>
 
-          <div class="col col-md-1">
-            <p><em><strong>$9.99</strong></em></p>
-          </div>
+        </div>
 
-          <div class="col col-md-5">
-            <h4>The Impossible Burger</h4>
-            <p>Impossible patty, chao cheese, saut&#0233;ed onions, gegan mayo, spring mix, on a toasted ciabatta bun.
-            </p>
-          </div>
+        <div class="fade-up-2 food-menu">
 
-          <div class="col col-md-1">
-            <p><em><strong>$13.99</strong></em></p>
-          </div>
-        </div> <!-- row -->
+          <!-- start of loop for food item -->
 
-        <div class="row menu-item">
-          <div class="col col-md-5">
-            <h4>Angry Vegan Chick'n Sandwich</h4>
-            <p>Vegan chick'n, saut&eacute;ed onion &amp; jalapenos, chao coconut cheese, Cajun vegan bacon, lettuce and
-              tomato with vegan chipotle aioli on an ambassador roll.</p>
-          </div>
+          <?php $loop = new WP_Query(array('post_type' => 'vegan_food_item', 'oderby' => 'post_id', 'order' => 'ASC')); ?>
 
-          <div class="col col-md-1">
-            <p><em><strong>$12.99</strong></em></p>
-          </div>
+          <?php while ($loop->have_posts()) : $loop->the_post(); ?>
 
-          <div class="col col-md-5">
-            <h4>Sweet Tiger Tacos</h4>
-            <p>Tiger wings tossed in our traditional salsa verde served in 3 corn tortillas topped with shredded romaine
-              lettuce, guacamole and vegan sour cream with salsa fresca.</p>
-          </div>
+            <div class="food-menu-item">
+              <div class="food-description">
+                <?php
+                if (!empty(get_field('pig_favorite'))) {
+                  ?>
+                  <h4 class="pig-favorite"><?php the_title(); ?></h4>
+                <?php } else { ?>
+                  <h4><?php the_title(); ?></h4>
+                <?php } ?>
+                <p><?php the_content(); ?></p>
+              </div>
+              <div class="price">
+                <p><em><strong><?php echo get_field('food_menu_item_price'); ?></strong></em></p>
+              </div>
+            </div>
 
-          <div class="col col-md-1">
-            <p><em><strong>$10.99</strong></em></p>
-          </div>
-        </div> <!-- row -->
+          <?php endwhile; ?>
 
-        <div class="row menu-item">
-
-          <div class="col col-md-5">
-
-            <h4>Buffalo Tiger Wrap</h4>
-            <p>Tiger wings tossed in buffalo sauce, wrapped in a warm spinach tortilla with fresh mixed mesclun greens,
-              tomatoes, English cucumbers and served with a side of Vegan ranch dressing.</p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$10.99</strong></em></p>
-
-          </div>
-
-          <div class="col col-md-5">
-
-            <h4>Vegan Avocado Rolls</h4>
-            <p>Hand made eggrolls with chick'n, vegan bacon bits, black beans, avocado, vegan mozzarella and tomato,
-              served
-              with vegan ranch and agave blackberry jalapeno sauce.</p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$9.99</strong></em></p>
-
-          </div>
-
-        </div> <!-- row -->
+        </div> <!-- food-menu -->
 
       </div> <!-- container -->
 
@@ -1097,205 +749,48 @@ get_header(); ?>
 
       <div class="container">
 
-        <p class="additions">Late Night Menu starts at 10:00p and kitchen closes at 12:00a.</p>
 
-        <div class="row menu-item">
 
-          <div class="col col-md-5">
+        <div class="fade-up">
 
-            <h4 class="pig-favorite">Chile Verde Nachos*</h4>
-            <p>House cut tortilla chips smothered in chile verde and melted cheddar jack cheese then topped with
-              jalapeno,
-              red onion, olives, tomato, green onion, salsa, sour cream and cilantro.</p>
+          <!-- if user uploaded body copy -->
+          <?php
+          if (!empty($late_night_body)) {
+            ?>
 
-          </div>
+            <p class="additions"><?php echo $late_night_body; ?></p>
 
-          <div class="col col-sm-1">
+          <?php } ?>
 
-            <p><em><strong>$11.99</strong></em></p>
+        </div>
 
-          </div>
+        <div class="fade-up-2 food-menu">
 
-          <div class="col col-md-5">
+          <!-- start of loop for food item -->
 
-            <h4>House Wings*</h4>
-            <p>A dozen jumbo wings tossed with your choice of traditional Buffalo hot sauce, honey Sriracha sauce, house
-              BBQ
-              sauce, or blackened, served with carrots, celery and ranch or bleu cheese dressing.</p>
+          <?php $loop = new WP_Query(array('post_type' => 'late_food_item', 'oderby' => 'post_id', 'order' => 'ASC')); ?>
 
-          </div>
+          <?php while ($loop->have_posts()) : $loop->the_post(); ?>
 
-          <div class="col col-md-1">
+            <div class="food-menu-item">
+              <div class="food-description">
+                <?php
+                if (!empty(get_field('pig_favorite'))) {
+                  ?>
+                  <h4 class="pig-favorite"><?php the_title(); ?></h4>
+                <?php } else { ?>
+                  <h4><?php the_title(); ?></h4>
+                <?php } ?>
+                <p><?php the_content(); ?></p>
+              </div>
+              <div class="price">
+                <p><em><strong><?php echo get_field('food_menu_item_price'); ?></strong></em></p>
+              </div>
+            </div>
 
-            <p><em><strong>$12.99</strong></em></p>
+          <?php endwhile; ?>
 
-          </div>
-
-        </div> <!-- row -->
-
-        <div class="row menu-item">
-
-          <div class="col col-md-5">
-
-            <h4>Angus Beef Sliders*</h4>
-            <p>3 Hand pressed 2 oz. Angus beef patties topped with caramelized onions, bacon bits, and chipotle aioli.
-            </p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$8.99</strong></em></p>
-
-          </div>
-
-          <div class="col col-md-5">
-
-            <h4 class="pig-favorite">The Green Pig Quesadilla</h4>
-            <p>Grilled Chipotle tortilla stuffed with cheddar jack cheese, black beans, onion and tomato, finshed with
-              roasted red pepper sauce and sour cream. Add chile verde or chicken for <em><strong>$3.00</strong></em> or
-              marinated steak for <em><strong>$4.00</strong></em> more</p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$8.99</strong></em></p>
-
-          </div>
-
-        </div> <!-- row -->
-
-        <div class="row menu-item">
-
-          <div class="col col-md-5">
-
-            <h4>Chicken Tender Basket</h4>
-            <p>3 large battered chicken tenders, served with hand cut, house fries and your choice of dipping sauce:
-              chipotle
-              ranch, jalapeno ranch, house BBQ or buffalo.</p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$9.99</strong></em></p>
-
-          </div>
-
-          <div class="col col-md-5">
-
-            <h4>The 31st East Avocado Rolls</h4>
-            <p>House made eggrolls filled with chicken, bacon, black beans, avocado, tomato and cheddar jack cheese,
-              served
-              with jalapeno ranch or chipotle ranch.</p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$9.99</strong></em></p>
-
-          </div>
-
-        </div> <!-- row -->
-
-        <div class="row menu-item">
-
-          <div class="col col-md-5">
-
-            <h4>Vegan Avocado Rolls</h4>
-            <p>Hand made eggrolls with chick'n, vegan bacon bits, black beans, avocado, vegan mozzarella and tomato,
-              served
-              with vegan ranch and agave blackberry jalapeno sauce.</p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$9.99</strong></em></p>
-
-          </div>
-
-          <div class="col col-md-5">
-
-            <h4>Vegan Tiger Wings</h4>
-            <p>A dozen vegan wings tossed in your choice of traditional Buffalo hot sauce, honey Sriracha sauce or house
-              BBQ
-              sauce, served with carrots, celery and vegan ranch or vegan bleu cheese dressing.</p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$12.99</strong></em></p>
-
-          </div>
-
-        </div> <!-- row -->
-
-        <div class="row menu-item">
-
-          <div class="col col-md-5">
-
-            <h4>Dinner Salad</h4>
-            <p>Fresh mesclun mixed greens, tomato wedge, julienne red onions, English cucumbers and house made croutons.
-            </p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$9.99</strong></em></p>
-
-          </div>
-
-          <div class="col col-md-5">
-
-            <h4>House Fries*</h4>
-            <p>Fresh Idaho potatoes, hand cut, double fried and tossed in house seasoning, served with Utah Fry Sauce.
-              Add
-              cheese and bacon crumbles <em><strong>$3.00</strong></em></p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$5.99</strong></em></p>
-
-          </div>
-
-        </div> <!-- row -->
-
-        <div class="row menu-item">
-
-          <div class="col col-md-5">
-
-            <h4>Bavarian Pretzel &amp; Beer Cheese</h4>
-            <p>2 soft pretzels served hot with Fat Tire Ale Beer Cheese and whole grain mustard.</p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$4.99</strong></em></p>
-
-          </div>
-
-          <div class="col col-md-5">
-
-            <h4>Chips &amp; Salsa*</h4>
-            <p>House cut tortilla chips served with salsa fresca. Add Guacamole <em><strong>3.50</strong></em></p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$4.99</strong></em></p>
-
-          </div>
-
-        </div> <!-- row -->
+        </div> <!-- food-menu -->
 
       </div> <!-- container -->
 
