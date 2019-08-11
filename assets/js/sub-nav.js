@@ -41,6 +41,11 @@ $(document).ready(function () {
 
     $(targetSection).delay(490).fadeIn(500);
 
+    setTimeout(() => {
+      $("html, body").animate({ scrollTop: $(targetSection).offset().top }, 1500);
+    }, 600);
+
+
   });
 
   // drink menu fade in/out        
