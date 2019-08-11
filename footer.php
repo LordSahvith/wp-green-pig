@@ -75,7 +75,10 @@
 <script src="<?php bloginfo('template_directory'); ?>/assets/js/dates.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/assets/js/events-nav.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/assets/js/instafeed.js"></script>
-<script src="<?php bloginfo('template_directory'); ?>/assets/js/map-contact.js"></script>
+
+<?php if (get_the_ID() === 482) { ?>
+  <script src="<?php bloginfo('template_directory'); ?>/assets/js/map-contact.js"></script>
+<?php } ?>
 
 </body>
 

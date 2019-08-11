@@ -103,7 +103,7 @@ get_header(); ?>
 
       <div>
 
-        <a href="about.html" id="more-story" class="fade-up button"><?php echo $intro_button; ?></a>
+        <a href="about" id="more-story" class="fade-up button"><?php echo $intro_button; ?></a>
 
       </div>
 
