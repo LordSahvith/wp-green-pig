@@ -17,21 +17,27 @@ $breakfast_button  = get_field('breakfast_button');
 // starters banners
 $starters_button     = get_field('banner_starters_button');
 $starters_title      = get_field('banner_starters_title');
+$starters_body       = get_field('banner_starters_body');
 $starters_banner     = get_field('banner_starters_image');
 $specialties_button  = get_field('banner_specialties_button');
 $specialties_title   = get_field('banner_specialties_title');
+$specialties_body    = get_field('banner_specialties_body');
 $specialties_banner  = get_field('banner_specialties_image');
 $sandwiches_button   = get_field('banner_sandwiches_button');
 $sandwiches_title    = get_field('banner_sandwiches_title');
+$sandwiches_body     = get_field('banner_sandwiches_body');
 $sandwiches_banner   = get_field('banner_sandwiches_image');
 $burgers_button      = get_field('banner_burgers_button');
 $burgers_title       = get_field('banner_burgers_title');
+$burgers_body        = get_field('banner_burgers_body');
 $burgers_banner      = get_field('banner_burgers_image');
 $bowls_button        = get_field('banner_bowls_button');
 $bowls_title         = get_field('banner_bowls_title');
+$bowls_body          = get_field('banner_bowls_body');
 $bowls_banner        = get_field('banner_bowls_image');
 $daily_button        = get_field('banner_daily_button');
 $daily_title         = get_field('banner_daily_title');
+$daily_body          = get_field('banner_daily_body');
 $daily_banner        = get_field('banner_daily_image');
 // vegan banners
 $vegan_title      = get_field('banner_vegan_title');
@@ -160,6 +166,15 @@ get_header(); ?>
 
       <div class="fade-up-2 food-menu">
 
+        <!-- if user uploaded body copy -->
+        <?php
+        if (!empty($starters_body)) {
+          ?>
+
+          <p class="additions"><?php echo $starters_body; ?></p>
+
+        <?php } ?>
+
         <?php $loop = new WP_Query(array('post_type' => 'starters_food_item', 'oderby' => 'post_id', 'order' => 'ASC')); ?>
 
         <?php while ($loop->have_posts()) : $loop->the_post(); ?>
@@ -183,135 +198,6 @@ get_header(); ?>
         <?php endwhile; ?>
 
       </div> <!-- food-menu -->
-
-
-
-      <!-- <div class="col col-md-5">
-            <h4 class="pig-favorite">Chile Verde Nachos*</h4>
-            <p>House cut tortilla chips smothered in chile verde and melted cheddar jack cheese then topped with
-              jalapeno,
-              red onion, olives, tomato, green onion, salsa, sour cream and cilantro. Vegetarian option
-              <em><strong>$8.99</strong></em>.</p>
-          </div>
-
-          <div class="col col-sm-1">
-            <p><em><strong>$11.99</strong></em></p>
-          </div> -->
-
-      <!-- <div class="col col-md-5">
-        <h4>House Wings*</h4>
-        <p>Ten jumbo wings tossed with your choice of traditional Buffalo hot sauce, honey Sriracha sauce, house
-          BBQ
-          sauce, or blackened, served with carrots, celery and ranch or bleu cheese dressing. Half order
-          <em><strong>$6.99</strong></em>.</p>
-      </div>
-
-      <div class="col col-md-1">
-        <p><em><strong>$12.99</strong></em></p>
-      </div> -->
-      <!-- </div> 
-</div> -->
-
-      <!-- <div class="row menu-item">
-        <div class="fade-up-2">
-          <div class="col col-md-5">
-            <h4>Angus Beef Sliders*</h4>
-            <p>3 Hand pressed 2 oz. Angus beef patties topped with caramelized onions, bacon bits, and chipotle aioli.
-            </p>
-          </div>
-
-          <div class="col col-md-1">
-            <p><em><strong>$8.99</strong></em></p>
-          </div>
-
-          <div class="col col-md-5">
-            <h4 class="pig-favorite">The Green Pig Quesadilla</h4>
-            <p>Grilled Chipotle tortilla stuffed with cheddar jack cheese, black beans, onion and tomato, finshed with roasted red pepper sauce and sour cream. Add chile verde or chicken for <em><strong>$3.00</strong></em> or marinated steak for <em><strong>$4.00</strong></em> more</p>
-          </div>
-
-          <div class="col col-md-1">
-            <p><em><strong>$8.99</strong></em></p>
-          </div>
-        </div> 
-      </div>  -->
-
-      <!-- <div class="row menu-item">
-        <div class="fade-up-2">
-          <div class="col col-md-5">
-            <h4>The 31st East Avocado Rolls</h4>
-            <p>House made eggrolls filled with chicken, bacon, black beans, avocado, tomato and cheddar jack cheese, served with jalapeno ranch or chipotle ranch.</p>
-          </div>
-
-          <div class="col col-md-1">
-            <p><em><strong>$9.99</strong></em></p>
-          </div>
-
-          <div class="col col-md-5">
-            <h4>Chicken Tender Basket</h4>
-            <p>3 large battered chicken tenders, served with hand cut, house fries and your choice of dipping sauce: chipotle ranch, jalapeno ranch, house BBQ or buffalo.</p>
-          </div>
-
-          <div class="col col-md-1">
-            <p><em><strong>$9.99</strong></em></p>
-          </div>
-        </div> 
-      </div>  -->
-
-      <!-- <div class="row menu-item">
-        <div class="fade-up-2">
-          <div class="col col-md-5">
-            <h4>Chicken Chicharrons*</h4>
-            <p>Bites sized pieces of skin and moist thigh meat lightly dusted with rice flour &amp; chilito salt, deep fried, served with fresh lime wedges, chipotle ranch and roasted tomato salsa.</p>
-          </div>
-
-          <div class="col col-md-1">
-            <p><em><strong>$8.99</strong></em></p>
-          </div>
-
-          <div class="col col-md-5">
-            <h4>Shrimp Basket</h4>
-            <p>Jumbo butterflied shirimp, fried golden brown, house fries, cocktail sauce, fry sauce and a lemon wedge.</p>
-          </div>
-
-          <div class="col col-md-1">
-            <p><em><strong>$10.99</strong></em></p>
-          </div>
-        </div>
-      </div>  -->
-
-      <!-- <div class="row menu-item">
-
-        <div class="fade-up-2">
-
-          <div class="col col-md-5">
-
-            <h4>House Fries*</h4>
-            <p>Fresh Idaho potatoes, hand cut, double fried and tossed in house seasoning, served with Utah Fry Sauce. Add cheese and bacon crumbles <em><strong>$3.00</strong></em></p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$5.99</strong></em></p>
-
-          </div>
-
-          <div class="col col-md-5">
-
-            <h4>Bavarian Pretzel &amp; Beer Cheese</h4>
-            <p>2 soft pretzels served hot with Fat Tire Ale Beer Cheese and whole grain mustard.</p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$4.99</strong></em></p>
-
-          </div>
-
-        </div>
-
-      </div>  -->
 
       <!-- <div class="row menu-item">
 
@@ -368,9 +254,16 @@ get_header(); ?>
 
     <div class="container">
 
-
-
       <div class="fade-up-2 food-menu">
+
+        <!-- if user uploaded body copy -->
+        <?php
+        if (!empty($specialties_body)) {
+          ?>
+
+          <p class="additions"><?php echo $specialties_body; ?></p>
+
+        <?php } ?>
 
         <?php $loop = new WP_Query(array('post_type' => 'specialtys_food_item', 'oderby' => 'post_id', 'order' => 'ASC')); ?>
 
@@ -395,101 +288,6 @@ get_header(); ?>
         <?php endwhile; ?>
 
       </div> <!-- food-menu -->
-
-
-
-
-
-
-
-      <!-- <div class="row menu-item">
-
-        <div class="fade-up-2"> -->
-
-          <!-- <div class="col col-md-5">
-
-            <h4 class="pig-favorite">Blackend Salmon Tacos*</h4>
-            <p>Blackend salmon served in 3 warm flour tortillas, topped with chipotle aioli, coleslaw, green and red onion, tomato, queso fresco and cilantro, served with fresh lime wedges and blackberry jalapeno sauce.</p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$12.99</strong></em></p>
-
-          </div> -->
-
-          <!-- <div class="col col-md-5">
-
-            <h4>Carne Asada Tacos*</h4>
-            <p>Tender, thinly sliced, marinated steak served in 3 corn tortillas topped with cabbage, green and red onion, tomato and queso fresco with sour cream and salsa on the side.</p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$12.99</strong></em></p>
-
-          </div>
-
-        </div> -->
-
-      <!-- </div> row -->
-
-      <!-- <div class="row menu-item">
-
-        <div class="fade-up-2"> -->
-<!-- 
-          <div class="col col-md-5">
-
-            <h4>Carnitas Street Tacos</h4>
-            <p>Marinated shredded pork served in 3 tortillas topped with diced onion, cilantro, avocado and lime crema served with chips and salsa &amp; traditional salsa verde on the side.</p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$10.99</strong></em></p>
-
-          </div>
-
-          <div class="col col-md-5">
-
-            <h4 class="pig-favorite">Fish Tacos</h4>
-            <p>Cod hand battered in Pig pilsner beer batter, fried and served in 3 flour tortillas, served with chipotle aioli, coleslaw, green and red onion, tomato, queso fresco and cilantro with blackberry jalapeno sauce on the side.</p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$12.99</strong></em></p>
-
-          </div>
-
-        </div> -->
-
-      <!-- </div> row -->
-
-      <!-- <div class="row menu-item">
-
-        <div class="fade-up-2">
-
-          <div class="col col-md-5 last-item">
-
-            <h4 class="pig-favorite">Fish &amp; Chips</h4>
-            <p>Cod hand battered in Pig pilsner beer batter, fried and served with hand cut, house fries, tartar sauce, malt vinegar and lemon wedges.</p>
-
-          </div>
-
-          <div class="col col-md-1">
-
-            <p><em><strong>$13.99</strong></em></p>
-
-          </div>
-
-        </div> -->
-
-      <!-- </div> row -->
 
     </div> <!-- container -->
 
@@ -528,11 +326,60 @@ get_header(); ?>
 
       <div class="fade-up">
 
-        <p class="additions">All sandwiches are served with your choice of house fries, soup de jour, green salad or
-          pasta
-          salad.</p>
+        <!-- if user uploaded body copy -->
+        <?php
+        if (!empty($sandwiches_body)) {
+          ?>
+
+          <p class="additions"><?php echo $sandwiches_body; ?></p>
+
+        <?php } ?>
 
       </div>
+
+      <div class="fade-up-2 food-menu">
+
+        <!-- if user uploaded body copy -->
+        <?php
+        if (!empty($specialties_body)) {
+          ?>
+
+          <p class="additions"><?php echo $specialties_body; ?></p>
+
+        <?php } ?>
+
+        <?php $loop = new WP_Query(array('post_type' => 'sandwiches_food_item', 'oderby' => 'post_id', 'order' => 'ASC')); ?>
+
+        <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+
+          <div class="food-menu-item">
+            <div class="food-description">
+              <?php
+              if (!empty(get_field('pig_favorite'))) {
+                ?>
+                <h4 class="pig-favorite"><?php the_title(); ?></h4>
+              <?php } else { ?>
+                <h4><?php the_title(); ?></h4>
+              <?php } ?>
+              <p><?php the_content(); ?></p>
+            </div>
+            <div class="price">
+              <p><em><strong><?php echo get_field('food_menu_item_price'); ?></strong></em></p>
+            </div>
+          </div>
+
+        <?php endwhile; ?>
+
+      </div> <!-- food-menu -->
+
+
+
+
+
+
+
+
+
 
       <div class="row menu-item">
 
