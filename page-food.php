@@ -402,11 +402,11 @@ get_header(); ?>
 
 
 
-      <div class="row menu-item">
+      <!-- <div class="row menu-item">
 
-        <div class="fade-up-2">
+        <div class="fade-up-2"> -->
 
-          <div class="col col-md-5">
+          <!-- <div class="col col-md-5">
 
             <h4 class="pig-favorite">Blackend Salmon Tacos*</h4>
             <p>Blackend salmon served in 3 warm flour tortillas, topped with chipotle aioli, coleslaw, green and red onion, tomato, queso fresco and cilantro, served with fresh lime wedges and blackberry jalapeno sauce.</p>
@@ -417,14 +417,12 @@ get_header(); ?>
 
             <p><em><strong>$12.99</strong></em></p>
 
-          </div>
+          </div> -->
 
-          <div class="col col-md-5">
+          <!-- <div class="col col-md-5">
 
             <h4>Carne Asada Tacos*</h4>
-            <p>Tender, thinly sliced, marinated steak served in 3 corn tortillas topped with cabbage, green and red
-              onion,
-              tomato and queso fresco with sour cream and salsa on the side.</p>
+            <p>Tender, thinly sliced, marinated steak served in 3 corn tortillas topped with cabbage, green and red onion, tomato and queso fresco with sour cream and salsa on the side.</p>
 
           </div>
 
@@ -434,19 +432,18 @@ get_header(); ?>
 
           </div>
 
-        </div>
+        </div> -->
 
-      </div> <!-- row -->
+      <!-- </div> row -->
 
-      <div class="row menu-item">
+      <!-- <div class="row menu-item">
 
-        <div class="fade-up-2">
-
+        <div class="fade-up-2"> -->
+<!-- 
           <div class="col col-md-5">
 
             <h4>Carnitas Street Tacos</h4>
-            <p>Marinated shredded pork served in 3 tortillas topped with diced onion, cilantro, avocado and lime crema
-              served with chips and salsa &amp; traditional salsa verde on the side.</p>
+            <p>Marinated shredded pork served in 3 tortillas topped with diced onion, cilantro, avocado and lime crema served with chips and salsa &amp; traditional salsa verde on the side.</p>
 
           </div>
 
@@ -459,11 +456,7 @@ get_header(); ?>
           <div class="col col-md-5">
 
             <h4 class="pig-favorite">Fish Tacos</h4>
-            <p>Cod hand battered in Pig pilsner beer batter, fried and served in 3 flour tortillas, served with
-              chipotle
-              aioli, coleslaw, green and red onion, tomato, queso fresco and cilantro with blackberry jalapeno sauce
-              on the
-              side.</p>
+            <p>Cod hand battered in Pig pilsner beer batter, fried and served in 3 flour tortillas, served with chipotle aioli, coleslaw, green and red onion, tomato, queso fresco and cilantro with blackberry jalapeno sauce on the side.</p>
 
           </div>
 
@@ -473,20 +466,18 @@ get_header(); ?>
 
           </div>
 
-        </div>
+        </div> -->
 
-      </div> <!-- row -->
+      <!-- </div> row -->
 
-      <div class="row menu-item">
+      <!-- <div class="row menu-item">
 
         <div class="fade-up-2">
 
           <div class="col col-md-5 last-item">
 
             <h4 class="pig-favorite">Fish &amp; Chips</h4>
-            <p>Cod hand battered in Pig pilsner beer batter, fried and served with hand cut, house fries, tartar
-              sauce, malt
-              vinegar and lemon wedges.</p>
+            <p>Cod hand battered in Pig pilsner beer batter, fried and served with hand cut, house fries, tartar sauce, malt vinegar and lemon wedges.</p>
 
           </div>
 
@@ -496,9 +487,9 @@ get_header(); ?>
 
           </div>
 
-        </div>
+        </div> -->
 
-      </div> <!-- row -->
+      <!-- </div> row -->
 
     </div> <!-- container -->
 
