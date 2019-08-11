@@ -2405,7 +2405,7 @@ a#contact-us {
   top: 33%;
   height: auto;
   width: auto;
-  right: 0px;
+  right: 8px;
   padding: 10px;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.5);
@@ -2423,7 +2423,7 @@ a#contact-us {
 .unhide {
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
-  transform: translateX(0);
+  transform: translateX(8px);
 }
 
 .slide {
