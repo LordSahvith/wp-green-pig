@@ -14,6 +14,7 @@
  $banner_pub_title = get_field('banner_pub_title');
  $pub_body         = get_field('pub_body');
  // gallery pub
+ $instagram           = get_field('instagram');
  $gallery_pub_image_1 = get_field('pub_gallery_1');
  $gallery_pub_image_2 = get_field('pub_gallery_2');
  $gallery_pub_image_3 = get_field('pub_gallery_3');
@@ -98,6 +99,8 @@ get_header(); ?>
       </div>
 
       <script>instafeed('greenpigpub');</script>
+
+      <?php echo $instagram; ?>
 
       <div class="row">
 
