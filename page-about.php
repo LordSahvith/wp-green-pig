@@ -114,7 +114,7 @@ get_header(); ?>
             <?php } else {?>
               <img id="greenpigpub0" src="" alt="something in the pub">
             <?php } ?>
-            </div>
+            </div>asdfasdfsadfasdfasdfasdfasdfasd     
           </div>
 
           <div class="col col-sm-6 col-lg-4">
