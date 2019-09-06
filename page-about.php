@@ -14,7 +14,7 @@
  $banner_pub_title = get_field('banner_pub_title');
  $pub_body         = get_field('pub_body');
  // gallery pub
- $instagram           = get_field('instagram');
+ $instagram           = get_field('pub_instagram');
  $gallery_pub_image_1 = get_field('pub_gallery_1');
  $gallery_pub_image_2 = get_field('pub_gallery_2');
  $gallery_pub_image_3 = get_field('pub_gallery_3');
@@ -26,6 +26,7 @@
  $banner_patio_title = get_field('banner_patio_title');
  $patio_body         = get_field('patio_body');
  // gallery patio
+ $instagram           = get_field('patio_instagram');
  $gallery_patio_image_1 = get_field('patio_gallery_1');
  $gallery_patio_image_2 = get_field('patio_gallery_2');
  $gallery_patio_image_3 = get_field('patio_gallery_3');
@@ -97,10 +98,12 @@ get_header(); ?>
         <p><?php echo $pub_body; ?></p>
 
       </div>
-
-      <script>instafeed('greenpigpub');</script>
-
-      <?php echo $instagram; ?>
+    <!-- if user uploaded image -->
+    <?php 
+      if(!empty($pub_instagram) ) { 
+      } else {
+        echo $pub_instagram; 
+    ?>
 
       <div class="row">
 
@@ -114,7 +117,7 @@ get_header(); ?>
             <?php } else {?>
               <img id="greenpigpub0" src="" alt="something in the pub">
             <?php } ?>
-            </div>asdfasdfsadfasdfasdfasdfasdfasd     
+            </div>
           </div>
 
           <div class="col col-sm-6 col-lg-4">
@@ -175,6 +178,7 @@ get_header(); ?>
         </div>
 
       </div>
+            <?php } ?>
 
     </div>
 
@@ -220,8 +224,12 @@ get_header(); ?>
         <p><?php echo $patio_body; ?></p>
 
       </div>
-
-      <script>instafeed('greenpigpatio');</script>
+    <!-- if user uploaded image -->
+    <?php 
+      if(!empty($patio_instagram) ) { 
+        echo $patio_instagram; 
+      } else {
+    ?>
 
       <div class="row">
 
@@ -296,6 +304,8 @@ get_header(); ?>
         </div>
 
       </div>
+
+            <?php } ?>
 
     </div>
 
