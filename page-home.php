@@ -3,76 +3,76 @@
   Template Name: Home Page
  */
 
- // ADVANCED CUSTOM FIELDS
- // intro
- $hero_image   = get_field('home_hero');
- $intro_title  = get_field('home_intro_title');
- $intro_body   = get_field('home_intro_body');
- $intro_button = get_field('home_intro_button');
- // menus
- $banner_menu_image = get_field('banner_menu_image');
- $banner_menu_title = get_field('banner_menu_title');
- $menu_title        = get_field('menu_title');
- $menu_food_image   = get_field('menu_food_image');
- $menu_food_copy    = get_field('menu_food_copy');
- $menu_drink_image  = get_field('menu_drink_image');
- $menu_drink_copy   = get_field('menu_drink_copy');
- // events
- $banner_events_image = get_field('banner_events_image');
- $banner_events_title = get_field('banner_events_title');
- $events_title        = get_field('events_title');
- $events_body         = get_field('events_body');
- // gallery images
- $gallery_image_1   = get_field('home_gallery_1');
- $gallery_image_2   = get_field('home_gallery_2');
- $gallery_image_3   = get_field('home_gallery_3');
- $gallery_image_4   = get_field('home_gallery_4');
- $gallery_image_5   = get_field('home_gallery_5');
- $gallery_image_6   = get_field('home_gallery_6');
- // gallery content
- $gallery_content_1 = get_field('home_gallery_1_content');
- $gallery_content_2 = get_field('home_gallery_2_content');
- $gallery_content_3 = get_field('home_gallery_3_content');
- $gallery_content_4 = get_field('home_gallery_4_content');
- $gallery_content_5 = get_field('home_gallery_5_content');
- $gallery_content_6 = get_field('home_gallery_6_content');
- // outro
- $home_outro_body   = get_field('home_outro_body');
- $home_outro_button = get_field('home_outro_button');
+// ADVANCED CUSTOM FIELDS
+// intro
+$hero_image   = get_field('home_hero');
+$intro_title  = get_field('home_intro_title');
+$intro_body   = get_field('home_intro_body');
+$intro_button = get_field('home_intro_button');
+// menus
+$banner_menu_image = get_field('banner_menu_image');
+$banner_menu_title = get_field('banner_menu_title');
+$menu_title        = get_field('menu_title');
+$menu_food_image   = get_field('menu_food_image');
+$menu_food_copy    = get_field('menu_food_copy');
+$menu_drink_image  = get_field('menu_drink_image');
+$menu_drink_copy   = get_field('menu_drink_copy');
+// events
+$banner_events_image = get_field('banner_events_image');
+$banner_events_title = get_field('banner_events_title');
+$events_title        = get_field('events_title');
+$events_body         = get_field('events_body');
+// gallery images
+$home_instagram   = get_field('home_instagram');
+$gallery_image_2  = get_field('home_gallery_2');
+$gallery_image_1  = get_field('home_gallery_1');
+$gallery_image_3  = get_field('home_gallery_3');
+$gallery_image_4  = get_field('home_gallery_4');
+$gallery_image_5  = get_field('home_gallery_5');
+$gallery_image_6  = get_field('home_gallery_6');
+// gallery content
+$gallery_content_1 = get_field('home_gallery_1_content');
+$gallery_content_2 = get_field('home_gallery_2_content');
+$gallery_content_3 = get_field('home_gallery_3_content');
+$gallery_content_4 = get_field('home_gallery_4_content');
+$gallery_content_5 = get_field('home_gallery_5_content');
+$gallery_content_6 = get_field('home_gallery_6_content');
+// outro
+$home_outro_body   = get_field('home_outro_body');
+$home_outro_button = get_field('home_outro_button');
 
 get_header(); ?>
 
 <!-- ======= WELCOME ========================== -->
 <!-- if user uploaded image -->
-<?php 
-  if(!empty($hero_image) ) { 
-?>
+<?php
+if (!empty($hero_image)) {
+  ?>
 
-<div class="fade-down">
+  <div class="fade-down">
 
-  <section class="welcome-hero"
-    style="background: #333 url(<?php echo $hero_image['url']; ?>) center center no-repeat; background-size: cover;">
+    <section class="welcome-hero" style="background: #333 url(<?php echo $hero_image['url']; ?>) center center no-repeat; background-size: cover;">
 
-  </section>
+    </section>
 
-</div>
+  </div>
 
-<?php } else {?>
+<?php } else { ?>
 
-<div class="fade-down">
+  <div class="fade-down">
 
-  <section class="welcome-hero">
+    <section class="welcome-hero">
 
-  </section>
+    </section>
 
-</div>
+  </div>
 
 <?php } ?>
 
 
 <!-- ======= THE PIG STORY ========================== -->
 
-<section class="home-pig-story"> 
+<section class="home-pig-story">
 
   <div class="container">
 
@@ -119,13 +119,12 @@ get_header(); ?>
 
 <div class="fade-up">
   <!-- if user uploads image -->
-  <?php 
-  if(!empty($banner_menu_image) ) { 
-?>
-  <section class="banner banner-shrink home-menu-banner"
-    style="background: #333 url(<?php echo $banner_menu_image['url']; ?>) center center no-repeat; background-size: cover;">
-    <?php } else {?>
-    <section class="banner banner-shrink home-menu-banner">
+  <?php
+  if (!empty($banner_menu_image)) {
+    ?>
+    <section class="banner banner-shrink home-menu-banner" style="background: #333 url(<?php echo $banner_menu_image['url']; ?>) center center no-repeat; background-size: cover;">
+    <?php } else { ?>
+      <section class="banner banner-shrink home-menu-banner">
       <?php }  ?>
 
       <div class="banner-container">
@@ -136,7 +135,7 @@ get_header(); ?>
 
       </div>
 
-    </section>
+      </section>
 
 </div>
 
@@ -164,49 +163,47 @@ get_header(); ?>
 
       <div class="col col-sm-6">
         <!-- if user uploads image -->
-        <?php 
-          if(!empty($menu_food_image) ) { 
-        ?>
+        <?php
+        if (!empty($menu_food_image)) {
+          ?>
 
-        <div class="menu-opt food"
-          style="background: #333 url(<?php echo $menu_food_image['url']; ?>) center center no-repeat; background-size: cover;">
-          <?php } else {?>
+          <div class="menu-opt food" style="background: #333 url(<?php echo $menu_food_image['url']; ?>) center center no-repeat; background-size: cover;">
+          <?php } else { ?>
 
-          <div class="menu-opt food">
+            <div class="menu-opt food">
             <?php }  ?>
 
             <a href="food.html">
               <h4><?php echo $menu_food_copy; ?></h4>
             </a>
 
-          </div>
-
-        </div>
-
-
-        <div class="col col-sm-6">
-          <!-- if user uploads image -->
-          <?php 
-            if(!empty($menu_drink_image) ) { 
-          ?>
-
-          <div class="menu-opt drinks"
-            style="background: #333 url(<?php echo $menu_drink_image['url']; ?>) center center no-repeat; background-size: cover;">
-            <?php } else {?>
-
-            <div class="menu-opt drinks">
-              <?php }  ?>
-
-              <a href="drinks.html">
-                <h4><?php echo $menu_drink_copy; ?></h4>
-              </a>
-
             </div>
 
-
           </div>
 
-        </div>
+
+          <div class="col col-sm-6">
+            <!-- if user uploads image -->
+            <?php
+            if (!empty($menu_drink_image)) {
+              ?>
+
+              <div class="menu-opt drinks" style="background: #333 url(<?php echo $menu_drink_image['url']; ?>) center center no-repeat; background-size: cover;">
+              <?php } else { ?>
+
+                <div class="menu-opt drinks">
+                <?php }  ?>
+
+                <a href="drinks.html">
+                  <h4><?php echo $menu_drink_copy; ?></h4>
+                </a>
+
+                </div>
+
+
+              </div>
+
+          </div>
 
       </div>
 
@@ -217,13 +214,12 @@ get_header(); ?>
 
 <div class="fade-up">
   <!-- if user uploads image -->
-  <?php 
-  if(!empty($banner_events_image) ) { 
-?>
-  <section class="banner banner-shrink home-events-banner"
-    style="background: #333 url(<?php echo $banner_events_image['url']; ?>) center center no-repeat; background-size: cover;">
-    <?php } else {?>
-    <section class="banner banner-shrink home-events-banner">
+  <?php
+  if (!empty($banner_events_image)) {
+    ?>
+    <section class="banner banner-shrink home-events-banner" style="background: #333 url(<?php echo $banner_events_image['url']; ?>) center center no-repeat; background-size: cover;">
+    <?php } else { ?>
+      <section class="banner banner-shrink home-events-banner">
       <?php }  ?>
 
       <div class="banner-container">
@@ -234,7 +230,7 @@ get_header(); ?>
 
       </div>
 
-    </section>
+      </section>
 
 </div>
 
@@ -262,109 +258,111 @@ get_header(); ?>
       <div class="divider"></div>
 
     </div>
+    <!-- if user uploaded image -->
+    <?php
+    if (!empty($home_instagram)) {
+      echo $home_instagram;
+    } else {
+      ?>
 
-    <div class="row home-gallery">
+      <div class="row home-gallery">
 
-      <div class="fade-up-3">
+        <div class="fade-up-3">
 
-        <div class="col col-sm-6 col-lg-4">
+          <div class="col col-sm-6 col-lg-4">
 
-          <div class="gallery-item gallery-item-sm">
-            <!-- if user uploaded image -->
-            <?php if(!empty($gallery_image_1) ) { ?>
-              <img src="<?php echo $gallery_image_1['url'] ?>" alt="<?php echo $gallery_image_1['alt'] ?>">
-            <p class="img-description"><?php echo $gallery_content_1; ?></p>
-            <?php } else {?>
-            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/blues_draggers_300w.jpg"
-              alt="West Temple Tail Draggers. Drummer close up.">
-            <p class="img-description">Monday - Open Blues Jam</p>
-            <?php } ?>
+            <div class="gallery-item gallery-item-sm">
+              <!-- if user uploaded image -->
+              <?php if (!empty($gallery_image_1)) { ?>
+                <img src="<?php echo $gallery_image_1['url'] ?>" alt="<?php echo $gallery_image_1['alt'] ?>">
+                <p class="img-description"><?php echo $gallery_content_1; ?></p>
+              <?php } else { ?>
+                <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/blues_draggers_300w.jpg" alt="West Temple Tail Draggers. Drummer close up.">
+                <p class="img-description">Monday - Open Blues Jam</p>
+              <?php } ?>
+            </div>
+
+          </div>
+
+          <div class="col col-sm-6 col-lg-4">
+
+            <div class="gallery-item gallery-item-sm">
+              <!-- if user uploaded image -->
+              <?php if (!empty($gallery_image_2)) { ?>
+                <img src="<?php echo $gallery_image_2['url'] ?>" alt="<?php echo $gallery_image_2['alt'] ?>">
+                <p class="img-description"><?php echo $gallery_content_2; ?></p>
+              <?php } else { ?>
+                <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/paint_nite-1_300w.jpg" alt="Paint Nite group.">
+                <p class="img-description">Tuesday - $2 Tuesday</p>
+              <?php } ?>
+            </div>
+
+          </div>
+
+          <div class="col col-sm-6 col-lg-4">
+
+            <div class="gallery-item gallery-item-sm">
+              <!-- if user uploaded image -->
+              <?php if (!empty($gallery_image_3)) { ?>
+                <img src="<?php echo $gallery_image_3['url'] ?>" alt="<?php echo $gallery_image_3['alt'] ?>">
+                <p class="img-description"><?php echo $gallery_content_3; ?></p>
+              <?php } else { ?>
+                <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/trivia_group_300w.jpg" alt="Every trivia team.">
+                <p class="img-description">Wednesday - General Trivia</p>
+              <?php } ?>
+            </div>
+
+          </div>
+
+          <div class="col col-sm-6 col-lg-4">
+
+            <div class="gallery-item gallery-item-sm">
+              <!-- if user uploaded image -->
+              <?php if (!empty($gallery_image_4)) { ?>
+                <img src="<?php echo $gallery_image_4['url'] ?>" alt="<?php echo $gallery_image_4['alt'] ?>">
+                <p class="img-description"><?php echo $gallery_content_4; ?></p>
+              <?php } else { ?>
+                <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/karaoke_group_sing_300w.jpg" alt="West Temple Tail Draggers. Vocalist close up.">
+                <p class="img-description">Thursday - Karaoke</p>
+              <?php } ?>
+            </div>
+
+          </div>
+
+          <div class="col col-sm-6 col-lg-4">
+
+            <div class="gallery-item gallery-item-sm">
+              <!-- if user uploaded image -->
+              <?php if (!empty($gallery_image_5)) { ?>
+                <img src="<?php echo $gallery_image_5['url'] ?>" alt="<?php echo $gallery_image_5['alt'] ?>">
+                <p class="img-description"><?php echo $gallery_content_5; ?></p>
+              <?php } else { ?>
+                <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/live_music-2_300w.jpg" alt="Royal Bliss.">
+                <p class="img-description">Friday - Live Music</p>
+              <?php } ?>
+            </div>
+
+          </div>
+
+          <div class="col col-sm-6 col-lg-4">
+
+            <div class="gallery-item gallery-item-sm">
+              <!-- if user uploaded image -->
+              <?php if (!empty($gallery_image_6)) { ?>
+                <img src="<?php echo $gallery_image_6['url'] ?>" alt="<?php echo $gallery_image_6['alt'] ?>">
+                <p class="img-description"><?php echo $gallery_content_6; ?></p>
+              <?php } else { ?>
+                <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/dj-latu_300w.jpg" alt="DJ Latu at the green pig.">
+                <p class="img-description">Saturday - DJ Latu</p>
+              <?php } ?>
+            </div>
+
           </div>
 
         </div>
 
-        <div class="col col-sm-6 col-lg-4">
-
-          <div class="gallery-item gallery-item-sm">
-            <!-- if user uploaded image -->
-            <?php if(!empty($gallery_image_2) ) { ?>
-              <img src="<?php echo $gallery_image_2['url'] ?>" alt="<?php echo $gallery_image_2['alt'] ?>">
-            <p class="img-description"><?php echo $gallery_content_2; ?></p>
-            <?php } else {?>
-            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/paint_nite-1_300w.jpg"
-              alt="Paint Nite group.">
-            <p class="img-description">Tuesday - $2 Tuesday</p>
-            <?php } ?>
-          </div>
-
-        </div>
-
-        <div class="col col-sm-6 col-lg-4">
-
-          <div class="gallery-item gallery-item-sm">
-            <!-- if user uploaded image -->
-            <?php if(!empty($gallery_image_3) ) { ?>
-              <img src="<?php echo $gallery_image_3['url'] ?>" alt="<?php echo $gallery_image_3['alt'] ?>">
-            <p class="img-description"><?php echo $gallery_content_3; ?></p>
-            <?php } else {?>
-            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/trivia_group_300w.jpg"
-              alt="Every trivia team.">
-            <p class="img-description">Wednesday - General Trivia</p>
-            <?php } ?>
-          </div>
-
-        </div>
-
-        <div class="col col-sm-6 col-lg-4">
-
-          <div class="gallery-item gallery-item-sm">
-            <!-- if user uploaded image -->
-            <?php if(!empty($gallery_image_4) ) { ?>
-              <img src="<?php echo $gallery_image_4['url'] ?>" alt="<?php echo $gallery_image_4['alt'] ?>">
-            <p class="img-description"><?php echo $gallery_content_4; ?></p>
-            <?php } else {?>
-            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/karaoke_group_sing_300w.jpg"
-              alt="West Temple Tail Draggers. Vocalist close up.">
-            <p class="img-description">Thursday - Karaoke</p>
-            <?php } ?>
-          </div>
-
-        </div>
-
-        <div class="col col-sm-6 col-lg-4">
-
-          <div class="gallery-item gallery-item-sm">
-            <!-- if user uploaded image -->
-            <?php if(!empty($gallery_image_5) ) { ?>
-              <img src="<?php echo $gallery_image_5['url'] ?>" alt="<?php echo $gallery_image_5['alt'] ?>">
-            <p class="img-description"><?php echo $gallery_content_5; ?></p>
-            <?php } else {?>
-            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/live_music-2_300w.jpg" alt="Royal Bliss.">
-            <p class="img-description">Friday - Live Music</p>
-            <?php } ?>
-          </div>
-
-        </div>
-
-        <div class="col col-sm-6 col-lg-4">
-
-          <div class="gallery-item gallery-item-sm">
-            <!-- if user uploaded image -->
-            <?php if(!empty($gallery_image_6) ) { ?>
-              <img src="<?php echo $gallery_image_6['url'] ?>" alt="<?php echo $gallery_image_6['alt'] ?>">
-            <p class="img-description"><?php echo $gallery_content_6; ?></p>
-            <?php } else {?>
-            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/dj-latu_300w.jpg"
-              alt="DJ Latu at the green pig.">
-            <p class="img-description">Saturday - DJ Latu</p>
-            <?php } ?>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div> <!-- row -->
+      </div> <!-- row -->
+    <?php } ?>
 
     <div class="fade-up">
 

@@ -14,7 +14,7 @@
  $banner_pub_title = get_field('banner_pub_title');
  $pub_body         = get_field('pub_body');
  // gallery pub
- $instagram           = get_field('pub_instagram');
+ $pub_instagram       = get_field('pub_instagram');
  $gallery_pub_image_1 = get_field('pub_gallery_1');
  $gallery_pub_image_2 = get_field('pub_gallery_2');
  $gallery_pub_image_3 = get_field('pub_gallery_3');
@@ -26,7 +26,7 @@
  $banner_patio_title = get_field('banner_patio_title');
  $patio_body         = get_field('patio_body');
  // gallery patio
- $instagram           = get_field('patio_instagram');
+ $patio_instagram       = get_field('patio_instagram');
  $gallery_patio_image_1 = get_field('patio_gallery_1');
  $gallery_patio_image_2 = get_field('patio_gallery_2');
  $gallery_patio_image_3 = get_field('patio_gallery_3');
@@ -101,8 +101,8 @@ get_header(); ?>
     <!-- if user uploaded image -->
     <?php 
       if(!empty($pub_instagram) ) { 
-      } else {
         echo $pub_instagram; 
+      } else {
     ?>
 
       <div class="row">
