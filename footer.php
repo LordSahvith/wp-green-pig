@@ -55,7 +55,7 @@
       </div> <!-- row -->
 
       <div class="copyright">
-        <p>Site Creator: <a href="http://www.calebmckays.com" target="_blank">Caleb Anderson</a></p>
+        <p>Site Creator: <a href="http://calebmckays.com/mysite/" target="_blank">Caleb Anderson</a></p>
         <p>&copy; <span id="year"></span> - The Green Pig Pub</p>
       </div>
     </div> <!-- container -->
