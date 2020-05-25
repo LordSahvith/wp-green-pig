@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Caleb Anderson
 Author URI: http://thegreenpigpub.com/
 Description: Custom theme for The Green Pig Pub
-Version: 1.0.0
+Version: 1.0.3
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: the-/green-pig-pub
@@ -536,7 +536,6 @@ object {
 
     Site Creator - Caleb Anderson
 */
-
 html,
 body {
   height: 100%;
@@ -978,8 +977,8 @@ a.sub-class {
 
 .container {
   margin: 0 auto;
-  width: 250px;
-  padding: 60px 7px;
+  width: 320px;
+  padding: 15px 7px;
   text-align: center;
 }
 
@@ -1057,7 +1056,6 @@ a.sub-class {
 .col {
   float: left;
   width: 100%;
-  padding-right: 40px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -2118,6 +2116,29 @@ footer div div div {
 
 }
 
+.drink-menu {
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+
+@media screen and (min-width: 750px) {
+    .drink-menu {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .drink-menu {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.drink-menu p {
+    padding: 5px 0;
+    margin: 0;
+}
+
 
 
 /* =========== BEER SECT ====================== */
@@ -2390,12 +2411,14 @@ a#contact-us {
 .food {
   background: url(assets/img/table_side_view_1.jpg) center center no-repeat;
   background-size: cover;
+  margin-right: 20px;
 }
 
 
 .drinks {
   background: url(assets/img/drinks_1.jpg) center center no-repeat;
   background-size: cover;
+  margin-left: 10px;
 }
 
 /* ==== SCROLLING NAV ==== */
