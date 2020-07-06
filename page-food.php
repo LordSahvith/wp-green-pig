@@ -74,68 +74,44 @@ get_header(); ?>
 <!-- ======= HERO ========================== -->
 <div class="fade-down">
 
-  <!-- if user uploaded image -->
-  <?php
-  if (!empty($hero_image)) {
+    <!-- if user uploaded image -->
+    <?php
+    if (!empty($hero_image)) {
     ?>
-    <section class="hero hero-food" style="background: url(<?php echo $hero_image['url']; ?>) center center no-repeat; background-size: cover;">
-    <?php } else { ?>
-      <section class="hero hero-food">
-      <?php } ?>
-      <div class="hero-container">
-        <h2><?php echo $hero_title; ?></h2>
-      </div>
-    </section>
+        <section class="hero hero-food" style="background: url(<?php echo $hero_image['url']; ?>) center center no-repeat; background-size: cover;">
+        <?php } else { ?>
+            <section class="hero hero-food">
+            <?php } ?>
+            <div class="hero-container">
+                <h2><?php echo $hero_title; ?></h2>
+            </div>
+            </section>
 </div>
 
 
 <!-- =========== PAGE WELCOME ====================== -->
 <section class="welcome food-welcome">
-  <div class="container">
-    <div class="fade-left">
-      <p><?php echo $intro_body; ?></p>
-    </div>
+    <div class="container">
+        <div class="fade-left">
+            <p><?php echo $intro_body; ?></p>
+        </div>
 
-    <div class="fade-right">
-      <h4 class="header-gap-top"><?php echo $menu_title; ?></h4>
+        <div class="fade-right">
+            <h4 class="header-gap-top"><?php echo $menu_title; ?></h4>
+        </div>
     </div>
-  </div>
 </section>
 
 
 
 <!-- =========== SUB MENU ====================== -->
-
-<nav class="sub-menu">
-  <div id="mobile-menu" class="overlay">
-    <div class="overlay-content">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <div class="container">
-        <li><button id="menu-classic-btn" class="sub-menu-btn sub-menu-food-btn" onclick="closeNav()"><?php echo $classic_button; ?></button>
-        </li>
-        <li><button id="menu-vegan-btn" class="sub-menu-btn sub-menu-food-btn" onclick="closeNav()"><?php echo $vegan_button; ?></button>
-        </li>
-        <li><button id="menu-late-night-btn" class="sub-menu-btn sub-menu-food-btn" onclick="closeNav()"><?php echo $late_night_button; ?></button></li>
-        <li><button id="menu-breakfast-btn" class="sub-menu-btn sub-menu-food-btn" onclick="closeNav()"><?php echo $breakfast_button; ?></button></li>
-      </div>
-    </div>
-  </div> <!-- mobile-nav -->
-
-  <div class="mobile-icon menu-icon" onclick="toggleMenu()">
-    <div class="fade-up">
-      <i class="fas fa-utensils"></i>
-    </div>
-  </div>
-
-  <ul class="main-nav main-menu">
-    <div class="fade-up">
-      <li><button id="menu-classic-btn" class="sub-menu-btn sub-menu-food-btn"><?php echo $classic_button; ?></button>
-      </li>
-      <li><button id="menu-vegan-btn" class="sub-menu-btn sub-menu-food-btn"><?php echo $vegan_button; ?></button></li>
-      <li><button id="menu-late-night-btn" class="sub-menu-btn sub-menu-food-btn"><?php echo $late_night_button; ?></button></li>
-      <li><button id="menu-breakfast-btn" class="sub-menu-btn sub-menu-food-btn"><?php echo $breakfast_button; ?></button></li>
-    </div>
-  </ul>
+<nav class="sub-menu-2">
+    <ul>
+        <li><button id="menu-classic-btn" class="sub-menu-food-btn sub-menu-2-btn active"><span><?php echo $classic_button; ?></span></button></li>
+        <li><button id="menu-vegan-btn" class="sub-menu-food-btn sub-menu-2-btn"><span><?php echo $vegan_button; ?></span></button></li>
+        <li><button id="menu-late-night-btn" class="sub-menu-food-btn sub-menu-2-btn"><span><?php echo $late_night_button; ?></span></button></li>
+        <li><button id="menu-breakfast-btn" class="sub-menu-food-btn sub-menu-2-btn"><span><?php echo $breakfast_button; ?></span></button></li>
+    </ul>
 </nav>
 
 
@@ -143,18 +119,18 @@ get_header(); ?>
 <!-- =========== SCROLLING MENU ====================== -->
 
 <nav id="scrolling-food-menu" class="scrolling-menu hide slide">
-  <div class="scroll-hide">
-    <i class="fas fa-angle-double-left scroll-hide-btn scroll-hide-food-btn"></i>
-  </div>
+    <div class="scroll-hide">
+        <i class="fas fa-angle-double-left scroll-hide-btn scroll-hide-food-btn"></i>
+    </div>
 
-  <ul>
-    <li><button id="starters-btn" class="scrolling-btn"><?php echo $starters_button; ?></button></li>
-    <li><button id="specialties-btn" class="scrolling-btn"><?php echo $specialties_button; ?></button></li>
-    <li><button id="sandwiches-btn" class="scrolling-btn"><?php echo $sandwiches_button; ?></button></li>
-    <li><button id="burgers-btn" class="scrolling-btn"><?php echo $burgers_button; ?></button></li>
-    <li><button id="greens-btn" class="scrolling-btn"><?php echo $bowls_button; ?></button></li>
-    <li><button id="specials-btn" class="scrolling-btn"><?php echo $daily_button; ?></button></li>
-  </ul>
+    <ul>
+        <li><button id="starters-btn" class="scrolling-btn"><?php echo $starters_button; ?></button></li>
+        <li><button id="specialties-btn" class="scrolling-btn"><?php echo $specialties_button; ?></button></li>
+        <li><button id="sandwiches-btn" class="scrolling-btn"><?php echo $sandwiches_button; ?></button></li>
+        <li><button id="burgers-btn" class="scrolling-btn"><?php echo $burgers_button; ?></button></li>
+        <li><button id="greens-btn" class="scrolling-btn"><?php echo $bowls_button; ?></button></li>
+        <li><button id="specials-btn" class="scrolling-btn"><?php echo $daily_button; ?></button></li>
+    </ul>
 </nav>
 
 
@@ -163,493 +139,492 @@ get_header(); ?>
 
 <div id="menu-classic">
 
-  <!-- =========== STARTERS BANNER ====================== -->
-  <div class="fade-up">
-    <!-- if user uploaded image -->
-    <?php
-    if (!empty($starters_banner)) {
-      ?>
-      <section id="starters" class="banner food-starters-banner sub-menu-banner-gap" style="background: url(<?php echo $starters_banner['url']; ?>) center center no-repeat; background-size: cover;">
-      <? } else { ?>
-        <section id="starters" class="banner food-starters-banner sub-menu-banner-gap">
-        <?php } ?>
-        <div class="banner-container">
-          <h3><?php echo $starters_title; ?></h3>
-        </div>
-      </section>
-  </div>
-
-
-  <!-- =========== STARTERS SECT ====================== -->
-  <section class="food-starters-section">
-    <div class="container">
-
-      <div class="fade-up">
-
-        <!-- if user uploaded body copy -->
+    <!-- =========== STARTERS BANNER ====================== -->
+    <div class="fade-up">
+        <!-- if user uploaded image -->
         <?php
-        if (!empty($starters_body)) {
-          ?>
-
-          <p class="additions"><?php echo $starters_body; ?></p>
-
-        <?php } ?>
-
-      </div>
-
-      <div class="fade-up-2 food-menu">
-
-        <!-- start of loop for food item -->
-
-        <?php $loop = new WP_Query(array('post_type' => 'starters_food_item', 'oderby' => 'post_id', 'order' => 'ASC')); ?>
-
-        <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-
-          <div class="food-menu-item">
-            <div class="food-description">
-              <?php
-              if (!empty(get_field('pig_favorite'))) {
-                ?>
-                <h4 class="pig-favorite"><?php the_title(); ?></h4>
-              <?php } else { ?>
-                <h4><?php the_title(); ?></h4>
-              <?php } ?>
-              <p><?php the_content(); ?></p>
-            </div>
-            <div class="price">
-              <p><em><strong><?php echo get_field('food_menu_item_price'); ?></strong></em></p>
-            </div>
-          </div>
-
-        <?php endwhile; ?>
-
-      </div> <!-- food-menu -->
-
-    </div> <!-- container -->
-
-  </section> <!-- starters -->
-
-
-  <!-- =========== SPECIALTIES BANNER ====================== -->
-
-  <div class="fade-up">
-    <!-- if user uploaded image -->
-    <?php
-    if (!empty($specialties_banner)) {
-      ?>
-      <section id="specialties" class="banner food-specialties-banner" style="background: url(<?php echo $specialties_banner['url']; ?>) center center no-repeat; background-size: cover;">
-      <? } else { ?>
-        <section id="specialties" class="banner food-specialties-banner">
-        <?php } ?>
-
-        <div class="banner-container">
-
-          <h3><?php echo $specialties_title; ?></h3>
-
-        </div>
-
-      </section>
-
-  </div>
-
-
-  <!-- =========== SPECIALTIES SECT ====================== -->
-
-  <section class="food-specialties-section">
-
-    <div class="container">
-
-      <div class="fade-up">
-
-        <!-- if user uploaded body copy -->
-        <?php
-        if (!empty($specialties_body)) {
-          ?>
-
-          <p class="additions"><?php echo $specialties_body; ?></p>
-
-        <?php } ?>
-
-      </div>
-
-      <div class="fade-up-2 food-menu">
-
-        <!-- start of loop for food item -->
-
-        <?php $loop = new WP_Query(array('post_type' => 'specialtys_food_item', 'oderby' => 'post_id', 'order' => 'ASC')); ?>
-
-        <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-
-          <div class="food-menu-item">
-            <div class="food-description">
-              <?php
-              if (!empty(get_field('pig_favorite'))) {
-                ?>
-                <h4 class="pig-favorite"><?php the_title(); ?></h4>
-              <?php } else { ?>
-                <h4><?php the_title(); ?></h4>
-              <?php } ?>
-              <p><?php the_content(); ?></p>
-            </div>
-            <div class="price">
-              <p><em><strong><?php echo get_field('food_menu_item_price'); ?></strong></em></p>
-            </div>
-          </div>
-
-        <?php endwhile; ?>
-
-      </div> <!-- food-menu -->
-
-    </div> <!-- container -->
-
-  </section> <!-- specialties -->
-
-
-  <!-- =========== SANDWICHES BANNER ====================== -->
-
-  <div class="fade-up">
-    <!-- if user uploaded image -->
-    <?php
-    if (!empty($sandwiches_banner)) {
-      ?>
-      <section id="sandwiches" class="banner food-sandwiches-banner" style="background: url(<?php echo $sandwiches_banner['url']; ?>) center center no-repeat; background-size: cover;">
-      <? } else { ?>
-        <section id="sandwiches" class="banner food-sandwiches-banner">
-        <?php } ?>
-
-        <div class="banner-container">
-
-          <h3><?php echo $sandwiches_title; ?></h3>
-
-        </div>
-
-      </section>
-
-  </div>
-
-
-
-  <!-- =========== SANDWICHES SECT ====================== -->
-
-  <section class="food-sandwiches-section">
-
-    <div class="container">
-
-      <div class="fade-up">
-
-        <!-- if user uploaded body copy -->
-        <?php
-        if (!empty($sandwiches_body)) {
-          ?>
-
-          <p class="additions"><?php echo $sandwiches_body; ?></p>
-
-        <?php } ?>
-
-      </div>
-
-      <div class="fade-up-2 food-menu">
-
-        <!-- start of loop for food item -->
-
-        <?php $loop = new WP_Query(array('post_type' => 'sandwiches_food_item', 'oderby' => 'post_id', 'order' => 'ASC')); ?>
-
-        <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-
-          <div class="food-menu-item">
-            <div class="food-description">
-              <?php
-              if (!empty(get_field('pig_favorite'))) {
-                ?>
-                <h4 class="pig-favorite"><?php the_title(); ?></h4>
-              <?php } else { ?>
-                <h4><?php the_title(); ?></h4>
-              <?php } ?>
-              <p><?php the_content(); ?></p>
-            </div>
-            <div class="price">
-              <p><em><strong><?php echo get_field('food_menu_item_price'); ?></strong></em></p>
-            </div>
-          </div>
-
-        <?php endwhile; ?>
-
-      </div> <!-- food-menu -->
-
-    </div> <!-- container -->
-
-  </section> <!-- sandwiches -->
-
-
-  <!-- =========== BURGERS BANNER ====================== -->
-
-  <div class="fade-up">
-    <!-- if user uploaded image -->
-    <?php
-    if (!empty($burgers_banner)) {
-      ?>
-      <section id="burgers" class="banner food-burgers-banner" style="background: url(<?php echo $burgers_banner['url']; ?>) center center no-repeat; background-size: cover;">
-      <? } else { ?>
-        <section id="burgers" class="banner food-burgers-banner">
-        <?php } ?>
-
-
-        <div class="banner-container">
-
-          <h3><?php echo $burgers_title; ?></h3>
-
-        </div>
-
-      </section>
-
-  </div>
-
-
-  <!-- =========== BURGERS SECT ====================== -->
-
-  <section class="food-burgers-section">
-
-    <div class="container">
-
-      <div class="fade-up">
-
-        <!-- if user uploaded body copy -->
-        <?php
-        if (!empty($burgers_body)) {
-          ?>
-
-          <p class="additions"><?php echo $burgers_body; ?></p>
-
-        <?php } ?>
-
-      </div>
-
-      <div class="fade-up-2 food-menu">
-
-        <!-- start of loop for food item -->
-
-        <?php $loop = new WP_Query(array('post_type' => 'burgers_food_item', 'oderby' => 'post_id', 'order' => 'ASC')); ?>
-
-        <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-
-          <div class="food-menu-item">
-            <div class="food-description">
-              <?php
-              if (!empty(get_field('pig_favorite'))) {
-                ?>
-                <h4 class="pig-favorite"><?php the_title(); ?></h4>
-              <?php } else { ?>
-                <h4><?php the_title(); ?></h4>
-              <?php } ?>
-              <p><?php the_content(); ?></p>
-            </div>
-            <div class="price">
-              <p><em><strong><?php echo get_field('food_menu_item_price'); ?></strong></em></p>
-            </div>
-          </div>
-
-        <?php endwhile; ?>
-
-      </div> <!-- food-menu -->
-
-    </div> <!-- container -->
-
-  </section> <!-- burgers -->
-
-
-  <!-- =========== GREENS BANNER ====================== -->
-
-  <div class="fade-up">
-    <!-- if user uploaded image -->
-    <?php
-    if (!empty($bowls_banner)) {
-      ?>
-      <section id="greens" class="banner food-greens-banner" style="background: url(<?php echo $bowls_banner['url']; ?>) center center no-repeat; background-size: cover;">
-      <? } else { ?>
-        <section id="greens" class="banner food-greens-banner">
-        <?php } ?>
-
-        <div class="banner-container">
-
-          <h3><?php echo $bowls_title; ?></h3>
-
-        </div>
-
-      </section>
-
-  </div>
-
-
-  <!-- =========== GREENS SECT ====================== -->
-
-  <section class="food-greens-section">
-
-    <div class="container">
-
-      <div class="fade-up">
-
-        <!-- if user uploaded body copy -->
-        <?php
-        if (!empty($bowls_body)) {
-          ?>
-
-          <p class="additions"><?php echo $bowls_body; ?></p>
-
-        <?php } ?>
-
-      </div>
-
-      <div class="fade-up-2 food-menu">
-
-        <!-- start of loop for food item -->
-
-        <?php $loop = new WP_Query(array('post_type' => 'bowls_food_item', 'oderby' => 'post_id', 'order' => 'ASC')); ?>
-
-        <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-
-          <div class="food-menu-item">
-            <div class="food-description">
-              <?php
-              if (!empty(get_field('pig_favorite'))) {
-                ?>
-                <h4 class="pig-favorite"><?php the_title(); ?></h4>
-              <?php } else { ?>
-                <h4><?php the_title(); ?></h4>
-              <?php } ?>
-              <p><?php the_content(); ?></p>
-            </div>
-            <div class="price">
-              <p><em><strong><?php echo get_field('food_menu_item_price'); ?></strong></em></p>
-            </div>
-          </div>
-
-        <?php endwhile; ?>
-
-      </div> <!-- food-menu -->
-
-      <div class="row menu-item">
-
-        <div class="fade-up-2">
-
-          <div class="col col-md-5 last-item">
-
-            <h4><?php echo $bowls_soups_title; ?></h4>
-            <p><?php echo $bowls_soups_body; ?></p>
-
-            <div class="row">
-
-              <div class="col col-md-6">
-
-                <p><em><strong><?php echo $cup_name; ?></strong></em></p>
-
-              </div>
-
-              <div class="col col-md-6">
-
-                <p><em><strong><?php echo $cup_price; ?></strong></em></p>
-
-              </div>
-
-              <div class="col col-md-6">
-
-                <p><em><strong><?php echo $bowl_name; ?></strong></em></p>
-
-              </div>
-
-              <div class="col col-md-6">
-
-                <p><em><strong><?php echo $bowl_price; ?></strong></em></p>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div> <!-- row -->
-
-    </div> <!-- container -->
-
-  </section> <!-- bowls n greens -->
-
-
-  <!-- =========== DAILY SPECIALS BANNER ====================== -->
-
-  <div class="fade-up">
-    <!-- if user uploaded image -->
-    <?php
-    if (!empty($daily_banner)) {
-      ?>
-      <section id="specials" class="banner food-greens-banner" style="background: url(<?php echo $daily_banner['url']; ?>) center center no-repeat; background-size: cover;">
-      <? } else { ?>
-        <section id="specials" class="banner food-greens-banner">
-        <?php } ?>
-
-        <div class="banner-container">
-
-          <h3><?php echo $daily_title; ?></h3>
-
-        </div>
-
-      </section>
-
-  </div>
-
-  <!-- =========== DAILY SPECIALS SECT ====================== -->
-
-  <section class="daily-specials-section" style="margin-bottom: 60px;">
-    <div class="container">
-
-      <div class="fade-up">
-
-        <!-- if user uploaded body copy -->
-        <?php
-        if (!empty($daily_body)) {
-          ?>
-
-          <p class="additions"><?php echo $daily_body; ?></p>
-
-        <?php } ?>
-
-      </div>
+        if (!empty($starters_banner)) {
+        ?>
+            <section id="starters" class="banner food-starters-banner sub-menu-banner-gap" style="background: url(<?php echo $starters_banner['url']; ?>) center center no-repeat; background-size: cover;">
+            <? } else { ?>
+                <section id="starters" class="banner food-starters-banner sub-menu-banner-gap">
+                <?php } ?>
+                <div class="banner-container">
+                    <h3><?php echo $starters_title; ?></h3>
+                </div>
+                </section>
     </div>
 
-    <div class="fade-in">
-      <div class="divider" style="margin-top: 0px;"></div>
+
+    <!-- =========== STARTERS SECT ====================== -->
+    <section class="food-starters-section">
+        <div class="container">
+
+            <div class="fade-up">
+
+                <!-- if user uploaded body copy -->
+                <?php
+                if (!empty($starters_body)) {
+                ?>
+
+                    <p class="additions"><?php echo $starters_body; ?></p>
+
+                <?php } ?>
+
+            </div>
+
+            <div class="fade-up-2 food-menu">
+
+                <!-- start of loop for food item -->
+
+                <?php $loop = new WP_Query(array('post_type' => 'starters_food_item', 'oderby' => 'post_id', 'order' => 'ASC')); ?>
+
+                <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+
+                    <div class="food-menu-item">
+                        <div class="food-description">
+                            <?php
+                            if (!empty(get_field('pig_favorite'))) {
+                            ?>
+                                <h4 class="pig-favorite"><?php the_title(); ?></h4>
+                            <?php } else { ?>
+                                <h4><?php the_title(); ?></h4>
+                            <?php } ?>
+                            <p><?php the_content(); ?></p>
+                        </div>
+                        <div class="price">
+                            <p><em><strong><?php echo get_field('food_menu_item_price'); ?></strong></em></p>
+                        </div>
+                    </div>
+
+                <?php endwhile; ?>
+
+            </div> <!-- food-menu -->
+
+        </div> <!-- container -->
+
+    </section> <!-- starters -->
+
+
+    <!-- =========== SPECIALTIES BANNER ====================== -->
+
+    <div class="fade-up">
+        <!-- if user uploaded image -->
+        <?php
+        if (!empty($specialties_banner)) {
+        ?>
+            <section id="specialties" class="banner food-specialties-banner" style="background: url(<?php echo $specialties_banner['url']; ?>) center center no-repeat; background-size: cover;">
+            <? } else { ?>
+                <section id="specialties" class="banner food-specialties-banner">
+                <?php } ?>
+
+                <div class="banner-container">
+
+                    <h3><?php echo $specialties_title; ?></h3>
+
+                </div>
+
+                </section>
+
     </div>
-    <div class="row">
-      <div class="fade-up-2">
-        <div class="col col-md-5 last-item">
-          <p><?php echo $lunch_body; ?></p>
 
-          <div class="row">
-            <div class="col col-md-6">
-              <p><em><strong><?php echo $lunch_name; ?></strong></em></p>
+
+    <!-- =========== SPECIALTIES SECT ====================== -->
+
+    <section class="food-specialties-section">
+
+        <div class="container">
+
+            <div class="fade-up">
+
+                <!-- if user uploaded body copy -->
+                <?php
+                if (!empty($specialties_body)) {
+                ?>
+
+                    <p class="additions"><?php echo $specialties_body; ?></p>
+
+                <?php } ?>
+
             </div>
 
-            <div class="col col-md-6" style="text-align: right;">
-              <p><em><strong><?php echo $lunch_price; ?></strong></em></p>
-            </div>
-          </div> <!-- row -->
+            <div class="fade-up-2 food-menu">
 
-          <p><?php echo $all_day_copy; ?></p>
+                <!-- start of loop for food item -->
 
-          <div class="row">
-            <div class="col col-md-6">
-              <p><em><strong><?php echo $all_day_price_1; ?></strong></em></p>
+                <?php $loop = new WP_Query(array('post_type' => 'specialtys_food_item', 'oderby' => 'post_id', 'order' => 'ASC')); ?>
+
+                <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+
+                    <div class="food-menu-item">
+                        <div class="food-description">
+                            <?php
+                            if (!empty(get_field('pig_favorite'))) {
+                            ?>
+                                <h4 class="pig-favorite"><?php the_title(); ?></h4>
+                            <?php } else { ?>
+                                <h4><?php the_title(); ?></h4>
+                            <?php } ?>
+                            <p><?php the_content(); ?></p>
+                        </div>
+                        <div class="price">
+                            <p><em><strong><?php echo get_field('food_menu_item_price'); ?></strong></em></p>
+                        </div>
+                    </div>
+
+                <?php endwhile; ?>
+
+            </div> <!-- food-menu -->
+
+        </div> <!-- container -->
+
+    </section> <!-- specialties -->
+
+
+    <!-- =========== SANDWICHES BANNER ====================== -->
+
+    <div class="fade-up">
+        <!-- if user uploaded image -->
+        <?php
+        if (!empty($sandwiches_banner)) {
+        ?>
+            <section id="sandwiches" class="banner food-sandwiches-banner" style="background: url(<?php echo $sandwiches_banner['url']; ?>) center center no-repeat; background-size: cover;">
+            <? } else { ?>
+                <section id="sandwiches" class="banner food-sandwiches-banner">
+                <?php } ?>
+
+                <div class="banner-container">
+
+                    <h3><?php echo $sandwiches_title; ?></h3>
+
+                </div>
+
+                </section>
+
+    </div>
+
+
+
+    <!-- =========== SANDWICHES SECT ====================== -->
+
+    <section class="food-sandwiches-section">
+
+        <div class="container">
+
+            <div class="fade-up">
+
+                <!-- if user uploaded body copy -->
+                <?php
+                if (!empty($sandwiches_body)) {
+                ?>
+
+                    <p class="additions"><?php echo $sandwiches_body; ?></p>
+
+                <?php } ?>
+
             </div>
 
-            <div class="col col-md-6" style="text-align: right;">
-              <p><em><strong><?php echo $all_day_price_2; ?></strong></em></p>
+            <div class="fade-up-2 food-menu">
+
+                <!-- start of loop for food item -->
+
+                <?php $loop = new WP_Query(array('post_type' => 'sandwiches_food_item', 'oderby' => 'post_id', 'order' => 'ASC')); ?>
+
+                <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+
+                    <div class="food-menu-item">
+                        <div class="food-description">
+                            <?php
+                            if (!empty(get_field('pig_favorite'))) {
+                            ?>
+                                <h4 class="pig-favorite"><?php the_title(); ?></h4>
+                            <?php } else { ?>
+                                <h4><?php the_title(); ?></h4>
+                            <?php } ?>
+                            <p><?php the_content(); ?></p>
+                        </div>
+                        <div class="price">
+                            <p><em><strong><?php echo get_field('food_menu_item_price'); ?></strong></em></p>
+                        </div>
+                    </div>
+
+                <?php endwhile; ?>
+
+            </div> <!-- food-menu -->
+
+        </div> <!-- container -->
+
+    </section> <!-- sandwiches -->
+
+
+    <!-- =========== BURGERS BANNER ====================== -->
+
+    <div class="fade-up">
+        <!-- if user uploaded image -->
+        <?php
+        if (!empty($burgers_banner)) {
+        ?>
+            <section id="burgers" class="banner food-burgers-banner" style="background: url(<?php echo $burgers_banner['url']; ?>) center center no-repeat; background-size: cover;">
+            <? } else { ?>
+                <section id="burgers" class="banner food-burgers-banner">
+                <?php } ?>
+
+
+                <div class="banner-container">
+
+                    <h3><?php echo $burgers_title; ?></h3>
+
+                </div>
+
+                </section>
+
+    </div>
+
+
+    <!-- =========== BURGERS SECT ====================== -->
+
+    <section class="food-burgers-section">
+
+        <div class="container">
+
+            <div class="fade-up">
+
+                <!-- if user uploaded body copy -->
+                <?php
+                if (!empty($burgers_body)) {
+                ?>
+
+                    <p class="additions"><?php echo $burgers_body; ?></p>
+
+                <?php } ?>
+
             </div>
-          </div> <!-- row -->
-        </div> <!-- col -->
-      </div> <!-- fade -->
-    </div> <!-- row -->
-</div> <!-- container -->
-</section>
+
+            <div class="fade-up-2 food-menu">
+
+                <!-- start of loop for food item -->
+
+                <?php $loop = new WP_Query(array('post_type' => 'burgers_food_item', 'oderby' => 'post_id', 'order' => 'ASC')); ?>
+
+                <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+
+                    <div class="food-menu-item">
+                        <div class="food-description">
+                            <?php
+                            if (!empty(get_field('pig_favorite'))) {
+                            ?>
+                                <h4 class="pig-favorite"><?php the_title(); ?></h4>
+                            <?php } else { ?>
+                                <h4><?php the_title(); ?></h4>
+                            <?php } ?>
+                            <p><?php the_content(); ?></p>
+                        </div>
+                        <div class="price">
+                            <p><em><strong><?php echo get_field('food_menu_item_price'); ?></strong></em></p>
+                        </div>
+                    </div>
+
+                <?php endwhile; ?>
+
+            </div> <!-- food-menu -->
+
+        </div> <!-- container -->
+
+    </section> <!-- burgers -->
+
+
+    <!-- =========== GREENS BANNER ====================== -->
+
+    <div class="fade-up">
+        <!-- if user uploaded image -->
+        <?php
+        if (!empty($bowls_banner)) {
+        ?>
+            <section id="greens" class="banner food-greens-banner" style="background: url(<?php echo $bowls_banner['url']; ?>) center center no-repeat; background-size: cover;">
+            <? } else { ?>
+                <section id="greens" class="banner food-greens-banner">
+                <?php } ?>
+
+                <div class="banner-container">
+
+                    <h3><?php echo $bowls_title; ?></h3>
+
+                </div>
+
+                </section>
+
+    </div>
+
+
+    <!-- =========== GREENS SECT ====================== -->
+
+    <section class="food-greens-section">
+
+        <div class="container">
+
+            <div class="fade-up">
+
+                <!-- if user uploaded body copy -->
+                <?php
+                if (!empty($bowls_body)) {
+                ?>
+
+                    <p class="additions"><?php echo $bowls_body; ?></p>
+
+                <?php } ?>
+
+            </div>
+
+            <div class="fade-up-2 food-menu">
+
+                <!-- start of loop for food item -->
+
+                <?php $loop = new WP_Query(array('post_type' => 'bowls_food_item', 'oderby' => 'post_id', 'order' => 'ASC')); ?>
+
+                <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+
+                    <div class="food-menu-item">
+                        <div class="food-description">
+                            <?php
+                            if (!empty(get_field('pig_favorite'))) {
+                            ?>
+                                <h4 class="pig-favorite"><?php the_title(); ?></h4>
+                            <?php } else { ?>
+                                <h4><?php the_title(); ?></h4>
+                            <?php } ?>
+                            <p><?php the_content(); ?></p>
+                        </div>
+                        <div class="price">
+                            <p><em><strong><?php echo get_field('food_menu_item_price'); ?></strong></em></p>
+                        </div>
+                    </div>
+
+                <?php endwhile; ?>
+
+            </div> <!-- food-menu -->
+
+            <div class="row menu-item">
+
+                <div class="fade-up-2">
+
+                    <div class="col col-md-5 last-item">
+
+                        <h4><?php echo $bowls_soups_title; ?></h4>
+                        <p><?php echo $bowls_soups_body; ?></p>
+
+                        <div class="row">
+
+                            <div class="col col-xs-6 col-md-6">
+
+                                <p><em><strong><?php echo $cup_name; ?></strong></em></p>
+
+                            </div>
+
+                            <div class="col col-xs-6 col-md-6" style="text-align: right;">
+
+                                <p><em><strong><?php echo $cup_price; ?></strong></em></p>
+
+                            </div>
+
+                            <div class="col col-xs-6 col-md-6">
+
+                                <p><em><strong><?php echo $bowl_name; ?></strong></em></p>
+
+                            </div>
+
+                            <div class="col col-xs-6 col-md-6" style="text-align: right;">
+
+                                <p><em><strong><?php echo $bowl_price; ?></strong></em></p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div> <!-- row -->
+
+        </div> <!-- container -->
+
+    </section> <!-- bowls n greens -->
+
+
+    <!-- =========== DAILY SPECIALS BANNER ====================== -->
+
+    <div class="fade-up">
+        <!-- if user uploaded image -->
+        <?php
+        if (!empty($daily_banner)) {
+        ?>
+            <section id="specials" class="banner food-greens-banner" style="background: url(<?php echo $daily_banner['url']; ?>) center center no-repeat; background-size: cover;">
+            <? } else { ?>
+                <section id="specials" class="banner food-greens-banner">
+                <?php } ?>
+
+                <div class="banner-container">
+
+                    <h3><?php echo $daily_title; ?></h3>
+
+                </div>
+
+                </section>
+
+    </div>
+
+    <!-- =========== DAILY SPECIALS SECT ====================== -->
+
+    <section class="daily-specials-section" style="margin-bottom: 60px;">
+        <div class="container">
+
+            <div class="fade-up">
+
+                <!-- if user uploaded body copy -->
+                <?php
+                if (!empty($daily_body)) {
+                ?>
+
+                    <p class="additions"><?php echo $daily_body; ?></p>
+
+                <?php } ?>
+
+            </div>
+
+            <div class="fade-in">
+                <div class="divider" style="margin-top: 0px;"></div>
+            </div>
+            <div class="row menu-item">
+                <div class="fade-up-2">
+                    <div class="col col-md-5 last-item">
+                        <p><?php echo $lunch_body; ?></p>
+
+                        <div class="row">
+                            <div class="col col-xs-6 col-md-6">
+                                <p><em><strong><?php echo $lunch_name; ?></strong></em></p>
+                            </div>
+
+                            <div class="col col-xs-6 col-md-6" style="text-align: right;">
+                                <p><em><strong><?php echo $lunch_price; ?></strong></em></p>
+                            </div>
+                        </div> <!-- row -->
+
+                        <p><?php echo $all_day_copy; ?></p>
+
+                        <div class="row">
+                            <div class="col col-xs-6 col-md-6">
+                                <p><em><strong><?php echo $all_day_price_1; ?></strong></em></p>
+                            </div>
+
+                            <div class="col col-xs-6 col-md-6" style="text-align: right;">
+                                <p><em><strong><?php echo $all_day_price_2; ?></strong></em></p>
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- col -->
+                </div> <!-- fade -->
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
 
 </div> <!-- menu-classic -->
 
@@ -658,68 +633,68 @@ get_header(); ?>
 <!-- =========== VEGAN MENU ====================== -->
 <div id="menu-vegan">
 
-  <!-- =========== VEGAN BANNER ====================== -->
-  <!-- if user uploaded image -->
-  <?php
-  if (!empty($vegan_banner)) {
+    <!-- =========== VEGAN BANNER ====================== -->
+    <!-- if user uploaded image -->
+    <?php
+    if (!empty($vegan_banner)) {
     ?>
-    <section class="banner food-vegan-banner sub-menu-banner-gap" style="background: url(<?php echo $vegan_banner['url']; ?>) center center no-repeat; background-size: cover;">
-    <? } else { ?>
-      <section class="banner food-vegan-banner sub-menu-banner-gap">
-      <?php } ?>
-      <div class="banner-container">
-        <h3><?php echo $vegan_title; ?></h3>
-      </div>
-    </section>
-
-    <!-- =========== VEGAN SECT ====================== -->
-    <section class="food-vegan-section">
-      <div class="container">
-
-        <div class="fade-up">
-
-          <!-- if user uploaded body copy -->
-          <?php
-          if (!empty($vegan_body)) {
-            ?>
-
-            <p class="additions"><?php echo $vegan_body; ?></p>
-
-          <?php } ?>
-
-        </div>
-
-        <div class="fade-up-2 food-menu">
-
-          <!-- start of loop for food item -->
-
-          <?php $loop = new WP_Query(array('post_type' => 'vegan_food_item', 'oderby' => 'post_id', 'order' => 'ASC')); ?>
-
-          <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-
-            <div class="food-menu-item">
-              <div class="food-description">
-                <?php
-                if (!empty(get_field('pig_favorite'))) {
-                  ?>
-                  <h4 class="pig-favorite"><?php the_title(); ?></h4>
-                <?php } else { ?>
-                  <h4><?php the_title(); ?></h4>
-                <?php } ?>
-                <p><?php the_content(); ?></p>
-              </div>
-              <div class="price">
-                <p><em><strong><?php echo get_field('food_menu_item_price'); ?></strong></em></p>
-              </div>
+        <section class="banner food-vegan-banner sub-menu-banner-gap" style="background: url(<?php echo $vegan_banner['url']; ?>) center center no-repeat; background-size: cover;">
+        <? } else { ?>
+            <section class="banner food-vegan-banner sub-menu-banner-gap">
+            <?php } ?>
+            <div class="banner-container">
+                <h3><?php echo $vegan_title; ?></h3>
             </div>
+            </section>
 
-          <?php endwhile; ?>
+            <!-- =========== VEGAN SECT ====================== -->
+            <section class="food-vegan-section">
+                <div class="container">
 
-        </div> <!-- food-menu -->
+                    <div class="fade-up">
 
-      </div> <!-- container -->
+                        <!-- if user uploaded body copy -->
+                        <?php
+                        if (!empty($vegan_body)) {
+                        ?>
 
-    </section> <!-- vegan -->
+                            <p class="additions"><?php echo $vegan_body; ?></p>
+
+                        <?php } ?>
+
+                    </div>
+
+                    <div class="fade-up-2 food-menu">
+
+                        <!-- start of loop for food item -->
+
+                        <?php $loop = new WP_Query(array('post_type' => 'vegan_food_item', 'oderby' => 'post_id', 'order' => 'ASC')); ?>
+
+                        <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+
+                            <div class="food-menu-item">
+                                <div class="food-description">
+                                    <?php
+                                    if (!empty(get_field('pig_favorite'))) {
+                                    ?>
+                                        <h4 class="pig-favorite"><?php the_title(); ?></h4>
+                                    <?php } else { ?>
+                                        <h4><?php the_title(); ?></h4>
+                                    <?php } ?>
+                                    <p><?php the_content(); ?></p>
+                                </div>
+                                <div class="price">
+                                    <p><em><strong><?php echo get_field('food_menu_item_price'); ?></strong></em></p>
+                                </div>
+                            </div>
+
+                        <?php endwhile; ?>
+
+                    </div> <!-- food-menu -->
+
+                </div> <!-- container -->
+
+            </section> <!-- vegan -->
 
 </div> <!-- menu-vegan -->
 
@@ -730,75 +705,75 @@ get_header(); ?>
 <div id="menu-late-night">
 
 
-  <!-- =========== LATE NIGHT BANNER ====================== -->
-  <!-- if user uploaded image -->
-  <?php
-  if (!empty($late_night_banner)) {
+    <!-- =========== LATE NIGHT BANNER ====================== -->
+    <!-- if user uploaded image -->
+    <?php
+    if (!empty($late_night_banner)) {
     ?>
-    <section class="banner food-late-banner sub-menu-banner-gap" style="background: url(<?php echo $late_night_banner['url']; ?>) center center no-repeat; background-size: cover;">
-    <? } else { ?>
-      <section class="banner food-late-banner sub-menu-banner-gap">
-      <?php } ?>
+        <section class="banner food-late-banner sub-menu-banner-gap" style="background: url(<?php echo $late_night_banner['url']; ?>) center center no-repeat; background-size: cover;">
+        <? } else { ?>
+            <section class="banner food-late-banner sub-menu-banner-gap">
+            <?php } ?>
 
-      <div class="banner-container">
+            <div class="banner-container">
 
-        <h3><?php echo $late_night_title; ?></h3>
+                <h3><?php echo $late_night_title; ?></h3>
 
-      </div>
-
-    </section>
-
-
-    <!-- =========== LATE NIGHT SECT ====================== -->
-
-    <section class="food-late-section">
-
-      <div class="container">
-
-        <div class="fade-up">
-
-          <!-- if user uploaded body copy -->
-          <?php
-          if (!empty($late_night_body)) {
-            ?>
-
-            <p class="additions"><?php echo $late_night_body; ?></p>
-
-          <?php } ?>
-
-        </div>
-
-        <div class="fade-up-2 food-menu">
-
-          <!-- start of loop for food item -->
-
-          <?php $loop = new WP_Query(array('post_type' => 'late_food_item', 'oderby' => 'post_id', 'order' => 'ASC')); ?>
-
-          <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-
-            <div class="food-menu-item">
-              <div class="food-description">
-                <?php
-                if (!empty(get_field('pig_favorite'))) {
-                  ?>
-                  <h4 class="pig-favorite"><?php the_title(); ?></h4>
-                <?php } else { ?>
-                  <h4><?php the_title(); ?></h4>
-                <?php } ?>
-                <p><?php the_content(); ?></p>
-              </div>
-              <div class="price">
-                <p><em><strong><?php echo get_field('food_menu_item_price'); ?></strong></em></p>
-              </div>
             </div>
 
-          <?php endwhile; ?>
+            </section>
 
-        </div> <!-- food-menu -->
 
-      </div> <!-- container -->
+            <!-- =========== LATE NIGHT SECT ====================== -->
 
-    </section> <!-- late night -->
+            <section class="food-late-section">
+
+                <div class="container">
+
+                    <div class="fade-up">
+
+                        <!-- if user uploaded body copy -->
+                        <?php
+                        if (!empty($late_night_body)) {
+                        ?>
+
+                            <p class="additions"><?php echo $late_night_body; ?></p>
+
+                        <?php } ?>
+
+                    </div>
+
+                    <div class="fade-up-2 food-menu">
+
+                        <!-- start of loop for food item -->
+
+                        <?php $loop = new WP_Query(array('post_type' => 'late_food_item', 'oderby' => 'post_id', 'order' => 'ASC')); ?>
+
+                        <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+
+                            <div class="food-menu-item">
+                                <div class="food-description">
+                                    <?php
+                                    if (!empty(get_field('pig_favorite'))) {
+                                    ?>
+                                        <h4 class="pig-favorite"><?php the_title(); ?></h4>
+                                    <?php } else { ?>
+                                        <h4><?php the_title(); ?></h4>
+                                    <?php } ?>
+                                    <p><?php the_content(); ?></p>
+                                </div>
+                                <div class="price">
+                                    <p><em><strong><?php echo get_field('food_menu_item_price'); ?></strong></em></p>
+                                </div>
+                            </div>
+
+                        <?php endwhile; ?>
+
+                    </div> <!-- food-menu -->
+
+                </div> <!-- container -->
+
+            </section> <!-- late night -->
 
 </div> <!-- menu-late -->
 
@@ -807,114 +782,114 @@ get_header(); ?>
 <!-- =========== BREAKFAST MENU ====================== -->
 <div id="menu-breakfast">
 
-  <!-- =========== BREAKFAST BANNER ====================== -->
-  <!-- if user uploaded image -->
-  <?php
-  if (!empty($breakfast_banner)) {
-    ?>
-    <section class="banner food-breakfast-banner sub-menu-banner-gap" style="background: url(<?php echo $breakfast_banner['url']; ?>) center center no-repeat; background-size: cover;">
-    <? } else { ?>
-      <section class="banner food-breakfast-banner sub-menu-banner-gap">
-      <?php } ?>
-      <div class="banner-container">
-        <h3><?php echo $breakfast_title; ?></h3>
-      </div>
-    </section>
-
-    <!-- =========== BREAKFAST SECT ====================== -->
-    <section class="food-breakfast-section">
-      <div class="container">
-
-        <div class="fade-up">
-
-          <!-- if user uploaded body copy -->
-          <?php
-          if (!empty($breakfast_body)) {
-            ?>
-
-            <p class="additions"><?php echo $breakfast_body; ?></p>
-
-          <?php } ?>
-
-        </div>
-
-        <div class="fade-up-2 food-menu">
-
-          <!-- start of loop for food item -->
-
-          <?php $loop = new WP_Query(array('post_type' => 'breakfast_food_item', 'oderby' => 'post_id', 'order' => 'ASC')); ?>
-
-          <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-
-            <div class="food-menu-item">
-              <div class="food-description">
-                <?php
-                if (!empty(get_field('pig_favorite'))) {
-                  ?>
-                  <h4 class="pig-favorite"><?php the_title(); ?></h4>
-                <?php } else { ?>
-                  <h4><?php the_title(); ?></h4>
-                <?php } ?>
-                <p><?php the_content(); ?></p>
-              </div>
-              <div class="price">
-                <p><em><strong><?php echo get_field('food_menu_item_price'); ?></strong></em></p>
-              </div>
-            </div>
-
-          <?php endwhile; ?>
-
-        </div> <!-- food-menu -->
-
-      </div> <!-- container -->
-
-    </section> <!-- breakfast -->
-
-    <!-- =========== SUNDAY - BREAKFAST BUFFET BANNER ====================== -->
+    <!-- =========== BREAKFAST BANNER ====================== -->
     <!-- if user uploaded image -->
     <?php
-    if (!empty($brunch_banner)) {
-      ?>
-      <section class="banner food-breakfast-banner sub-menu-banner-gap" style="background: url(<?php echo $brunch_banner['url']; ?>) center center no-repeat; background-size: cover;">
-      <? } else { ?>
-        <section class="banner events-sun-banner sub-menu-banner-gap">
-        <?php } ?>
-        <div class="banner-container">
-          <h3><?php echo $brunch_title; ?></h3>
-        </div>
-      </section>
-
-      <!-- =========== BREAKFAST SECT ====================== -->
-      <section class="food-breakfast-section">
-        <div class="container">
-
-          <!-- if user uploaded body copy -->
-          <?php
-          if (!empty($brunch_intro_body)) {
-            ?>
-
-            <p class="additions"><?php echo $brunch_intro_body; ?></p>
-
-          <?php } ?>
-
-
-          <div class="fade-in">
-            <div class="divider"></div>
-          </div>
-
-          <div class="fade-in">
-
-            <!-- if user uploaded body copy -->
-            <?php
-            if (!empty($brunch_main_body)) {
-              ?>
-
-              <p><?php echo $brunch_main_body; ?></p>
-
+    if (!empty($breakfast_banner)) {
+    ?>
+        <section class="banner food-breakfast-banner sub-menu-banner-gap" style="background: url(<?php echo $breakfast_banner['url']; ?>) center center no-repeat; background-size: cover;">
+        <? } else { ?>
+            <section class="banner food-breakfast-banner sub-menu-banner-gap">
             <?php } ?>
-          </div>
-        </div> <!-- container -->
-      </section> <!-- breakfast -->
+            <div class="banner-container">
+                <h3><?php echo $breakfast_title; ?></h3>
+            </div>
+            </section>
+
+            <!-- =========== BREAKFAST SECT ====================== -->
+            <section class="food-breakfast-section">
+                <div class="container">
+
+                    <div class="fade-up">
+
+                        <!-- if user uploaded body copy -->
+                        <?php
+                        if (!empty($breakfast_body)) {
+                        ?>
+
+                            <p class="additions"><?php echo $breakfast_body; ?></p>
+
+                        <?php } ?>
+
+                    </div>
+
+                    <div class="fade-up-2 food-menu">
+
+                        <!-- start of loop for food item -->
+
+                        <?php $loop = new WP_Query(array('post_type' => 'breakfast_food_item', 'oderby' => 'post_id', 'order' => 'ASC')); ?>
+
+                        <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+
+                            <div class="food-menu-item">
+                                <div class="food-description">
+                                    <?php
+                                    if (!empty(get_field('pig_favorite'))) {
+                                    ?>
+                                        <h4 class="pig-favorite"><?php the_title(); ?></h4>
+                                    <?php } else { ?>
+                                        <h4><?php the_title(); ?></h4>
+                                    <?php } ?>
+                                    <p><?php the_content(); ?></p>
+                                </div>
+                                <div class="price">
+                                    <p><em><strong><?php echo get_field('food_menu_item_price'); ?></strong></em></p>
+                                </div>
+                            </div>
+
+                        <?php endwhile; ?>
+
+                    </div> <!-- food-menu -->
+
+                </div> <!-- container -->
+
+            </section> <!-- breakfast -->
+
+            <!-- =========== SUNDAY - BREAKFAST BUFFET BANNER ====================== -->
+            <!-- if user uploaded image -->
+            <?php
+            if (!empty($brunch_banner)) {
+            ?>
+                <section class="banner food-breakfast-banner sub-menu-banner-gap" style="background: url(<?php echo $brunch_banner['url']; ?>) center center no-repeat; background-size: cover;">
+                <? } else { ?>
+                    <section class="banner events-sun-banner sub-menu-banner-gap">
+                    <?php } ?>
+                    <div class="banner-container">
+                        <h3><?php echo $brunch_title; ?></h3>
+                    </div>
+                    </section>
+
+                    <!-- =========== BREAKFAST SECT ====================== -->
+                    <section class="food-breakfast-section">
+                        <div class="container">
+
+                            <!-- if user uploaded body copy -->
+                            <?php
+                            if (!empty($brunch_intro_body)) {
+                            ?>
+
+                                <p class="additions"><?php echo $brunch_intro_body; ?></p>
+
+                            <?php } ?>
+
+
+                            <div class="fade-in">
+                                <div class="divider"></div>
+                            </div>
+
+                            <div class="fade-in">
+
+                                <!-- if user uploaded body copy -->
+                                <?php
+                                if (!empty($brunch_main_body)) {
+                                ?>
+
+                                    <p><?php echo $brunch_main_body; ?></p>
+
+                                <?php } ?>
+                            </div>
+                        </div> <!-- container -->
+                    </section> <!-- breakfast -->
 </div> <!-- menu-breakfast -->
 
 <?php

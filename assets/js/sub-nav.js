@@ -20,9 +20,8 @@ $(document).ready(function () {
 
   // food menu fade in/out        
   foodLinks.click(function () {
-    var self = $(this),
-      targetLink = "#" + self.attr('id'),
-      targetSection = "#" + self.attr('id').slice(0, self.attr('id').length - 4);
+    var self = $(this);
+    var targetSection = "#" + self.attr('id').slice(0, self.attr('id').length - 4);
 
     console.log(targetSection);
 
@@ -33,6 +32,13 @@ $(document).ready(function () {
     } else if (targetSection != '#menu-beers') {
       classicMenu = true;
     }
+
+    $('#menu-classic-btn').removeClass('active');
+    $('#menu-vegan-btn').removeClass('active');
+    $('#menu-late-night-btn').removeClass('active');
+    $('#menu-breakfast-btn').removeClass('active');
+    
+    $(targetSection + "-btn").addClass('active');
 
     $('#menu-classic').fadeOut(500);
     $('#menu-vegan').fadeOut(500);
@@ -140,7 +146,9 @@ $(window).bind('scroll', function () {
 
   if ($(window).scrollTop() > navHeight) {
 
-    $('.sub-menu').addClass('sub-fixed');
+    if($(window).outerWidth() > 980) {
+        $('.sub-menu-2').addClass('sub-fixed');
+    }
 
     if (classicMenu) {
       $('#scrolling-food-menu').removeClass('slide');
@@ -159,7 +167,7 @@ $(window).bind('scroll', function () {
     }
 
   } else {
-    $('.sub-menu').removeClass('sub-fixed');
+    $('.sub-menu-2').removeClass('sub-fixed');
     $('#scrolling-food-menu').addClass('slide');
     $('#scrolling-cocktails-menu').addClass('slide');
     $('#scrolling-beers-menu').addClass('slide');

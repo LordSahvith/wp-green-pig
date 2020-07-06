@@ -99,7 +99,7 @@ get_header(); ?>
 
           <!-- =========== SUB MENU ====================== -->
 
-          <nav class="sub-menu">
+          <nav class="sub-menu" style="display: none;">
             <div id="mobile-menu" class="overlay">
               <div class="overlay-content" style="top: 0; margin-top: 0;">
                 <a href="javascript:void(0)" class="closebtn" style="top: 0; margin-top: 0;" onclick="closeNav()">&times;</a>
@@ -128,7 +128,8 @@ get_header(); ?>
             </ul>
           </nav>
 
-          <div id="general-email" style="margin-top: 80px;">
+          <!-- <div id="general-email" style="margin-top: 80px;"> -->
+          <div id="general-email" style="margin-top: 20px;">
             <?php echo $general_form; ?>
           </div>
 

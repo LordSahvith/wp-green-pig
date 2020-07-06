@@ -18,6 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="profile" href="https://gmpg.org/xfn/11">
   <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+  
 
   <!-- <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/styles.css">
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/sub_nav.css">
